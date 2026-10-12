@@ -1,0 +1,57 @@
+/* Themes and Contrast Tuning */
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .site-header {
+  background-color: rgba(23, 23, 23, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+[data-theme="dark"] .hero-section {
+  background: radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
+}
+
+[data-theme="dark"] .table th {
+  background-color: #242424;
+}
+
+[data-theme="dark"] .form-input,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] .form-textarea {
+  background-color: #1A1A1A;
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .card-footer {
+  background-color: #1A1A1A;
+}
+
+[data-theme="dark"] .alert-info {
+  background-color: rgba(2, 136, 209, 0.15);
+  color: #81D4FA;
+}
+
+[data-theme="dark"] .alert-success {
+  background-color: rgba(46, 125, 50, 0.15);
+  color: #A5D6A7;
+}
+
+[data-theme="dark"] .alert-warning {
+  background-color: rgba(237, 108, 2, 0.15);
+  color: #FFCC80;
+}
+
+[data-theme="dark"] .alert-error {
+  background-color: rgba(211, 47, 47, 0.15);
+  color: #EF9A9A;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

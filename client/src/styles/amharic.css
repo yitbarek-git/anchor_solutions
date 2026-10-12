@@ -1,0 +1,26 @@
+/* Amharic (Ethiopic) Script Specific Typography Polish */
+
+.lang-am {
+  font-family: 'Noto Sans Ethiopic', 'Plus Jakarta Sans', system-ui, sans-serif;
+  letter-spacing: 0.005em;
+  word-spacing: 0.05em;
+}
+
+.lang-am h1,
+.lang-am h2,
+.lang-am h3,
+.lang-am h4 {
+  font-family: 'Noto Sans Ethiopic', 'Plus Jakarta Sans', system-ui, sans-serif;
+  line-height: 1.35;
+}
+
+.lang-am .btn {
+  font-family: 'Noto Sans Ethiopic', 'Plus Jakarta Sans', system-ui, sans-serif;
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+}
+
+.lang-am .brand-name {
+  font-family: 'Noto Sans Ethiopic', 'Plus Jakarta Sans', system-ui, sans-serif;
+  letter-spacing: normal;
+}

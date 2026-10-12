@@ -1,0 +1,6 @@
+{
+  "name": "Anchor Solution - Bilingual Educational Platform",
+  "description": "Bilingual (English / Amharic) educational platform offering structured courses in Graphics Design, Video Editing, Photography, Digital Marketing, Hardware Maintenance, Basic Computer Skills, and AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,2670 @@
+/**
+ * Anchor Solution - Official Curriculum Dataset
+ * All Seven Official Courses with at least 4 modules and at least 3 lessons per module.
+ * Substantive educational demonstration content in English and authentic Amharic.
+ */
+
+export const officialCourses = [
+  // 1. GRAPHICS DESIGN
+  {
+    id: 1,
+    slug: 'graphics-design',
+    category: 'Design & Creative',
+    level: 'all_levels',
+    duration_weeks: 6,
+    total_hours: 36,
+    banner_image: '/assets/courses/graphics-design.jpg',
+    thumbnail_image: '/assets/courses/graphics-design.jpg',
+    is_published: 1,
+    is_featured: 1,
+    display_order: 1,
+    instructor_name: 'Anchor Solution Creative Faculty',
+    partner_name: 'Tis Abay College',
+    price: 1800,
+    regular_price: 2500,
+    difficulty: 'Beginner to Intermediate (Estimate: 6 weeks / 36 hrs)',
+    translations: {
+      en: {
+        title: 'Graphics Design',
+        tagline: 'Master visual identity, branding, Adobe Creative Suite, and commercial design for freelance and agency careers',
+        description: 'Comprehensive hands-on training in graphic design covering Adobe Photoshop, Illustrator, and InDesign. Learn typography, brand identity systems, social media graphics, print layouts, and portfolio presentation for international freelance platforms and local agencies.',
+        objectives: [
+          'Master Adobe Photoshop, Illustrator & InDesign tools from first principles',
+          'Design professional commercial brand packages, logos, and vector assets',
+          'Prepare high-resolution print files (CMYK, 300 DPI) and web-optimized social graphics',
+          'Build a client-ready design portfolio tailored for freelance platforms and studios',
+        ],
+        target_audience: 'Aspiring digital designers, marketing professionals, content creators, and career changers looking for high-income creative skills.',
+        prerequisites: 'Basic computer literacy and creative curiosity. No prior design software experience required.',
+      },
+      am: {
+        title: 'ግራፊክስ ዲዛይን',
+        tagline: 'የብራንዲንግ፣ የአዶቤ ሶፍትዌር እና የንግድ ዲዛይን ጥበብን በተግባር ይማሩ',
+        description: 'በአዶቤ ፎቶሾፕ፣ ኢለስትሬተር እና ኢንዲዛይን በመጠቀም አጠቃላይ ተግባራዊ የግራፊክስ ዲዛይን ስልጠና። የፊደላት ጥበብ (Typography)፣ የብራንድ መለያ ምስሎች፣ የማህበራዊ ሚዲያ ፖስተሮች፣ የህትመት ዲዛይን እና ለፍሪላንስ ገበያ የሚሆን የስራ ፖርትፎሊዮ ይገንቡ።',
+        objectives: [
+          'የአዶቤ ፎቶሾፕ እና ኢለስትሬተር መሳሪያዎችን ጠንቅቆ መረዳት',
+          'የባለሙያ ብራንዲንግ፣ ሎጎ እና ስታይል ጋይድ ማዘጋጀት',
+          'ለንግድ ማህበራዊ ሚዲያ እና ለህትመት የሚሆኑ ዲዛይኖችን መፍጠር',
+          'በአገር ውስጥና በውጭ አገር ፍሪላንስ ገበያ ተወዳዳሪ መሆን',
+        ],
+        target_audience: 'በዲዛይን መስክ ገቢ ማግኘት የሚፈልጉ ጀማሪዎች፣ የፈጠራ ሰዎች እና ተማሪዎች።',
+        prerequisites: 'መሰረታዊ የኮምፒውተር እውቀት። ምንም አይነት የዲዛይን ቅድመ ልምድ አይጠይቅም።',
+      },
+    },
+    modules: [
+      {
+        id: 101,
+        course_id: 1,
+        display_order: 1,
+        duration_minutes: 180,
+        translations: {
+          en: { title: 'Module 1: Principles of Visual Design & Color Theory', description: 'Foundations of visual hierarchy, contrast, balance, and commercial color palettes.' },
+          am: { title: 'ምዕራፍ 1፡ የቪዥዋል ዲዛይን እና የቀለም ህጎች', description: 'የፊደል አጣጣል፣ የንፅፅር፣ የሚዛን እና የቀለም ስምምነት መሰረቶች።' },
+        },
+        lessons: [
+          {
+            id: 1001,
+            module_id: 101,
+            course_id: 1,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 720,
+            is_free_preview: 1,
+            translations: {
+              en: {
+                title: 'Lesson 1.1: Visual Balance, Contrast & The Rule of Thirds',
+                summary: 'Understand how visual weight directs eye flow and communicates commercial intent.',
+                rich_content: `<h3>Foundations of Visual Hierarchy</h3>
+                <p>Every commercial design must answer one question within three seconds: <em>Where should the viewer look first?</em></p>
+                <h4>1. The Four Tenets of Visual Composition:</h4>
+                <ul>
+                  <li><strong>Dominance & Scale:</strong> Sizing elements in strict proportion to their priority. Primary headlines must never compete with supporting badges.</li>
+                  <li><strong>Contrast:</strong> Leveraging value, color, and size differences to ensure instant readability from across a room or on a small mobile screen.</li>
+                  <li><strong>Negative (White) Space:</strong> Uncluttered breathing room that elevates premium branding and prevents cognitive overload.</li>
+                  <li><strong>The Rule of Thirds:</strong> Placing focal subjects at the intersections of a 3x3 grid rather than default center alignment.</li>
+                </ul>
+                <h4>Practical Example:</h4>
+                <p>Compare a cluttered roadside event banner with an uncluttered technology poster. The technology poster uses 40% empty space, pulling the viewer's eye straight to the date and call to action.</p>`,
+                exercises: [
+                  'Find two commercial advertisements in Bahir Dar and sketch their visual hierarchy path on paper.',
+                  'Create a 3-tier typographic layout wireframe containing a headline, subheadline, and action button.',
+                ],
+              },
+              am: {
+                title: 'ትምህርት 1.1፡ የቪዥዋል ሚዛን፣ ንፅፅር እና የሶስተኛው ህግ',
+                summary: 'የተመልካችን ትኩረት እንዴት መሳብና መምራት እንደሚቻል፣ የፊደላትና የቀለማት ቅንብር መሰረታዊ መመሪያዎች።',
+                rich_content: `<h3>የቪዥዋል ሃይራርኪ መሰረቶች</h3>
+                <p>ማንኛውም የንግድ ማስታወቂያ ተመልካች በ3 ሰከንድ ውስጥ መልዕክቱን እንዲረዳ ማድረግ አለበት።</p>
+                <h4>1. አራቱ የዲዛይን መርሆዎች፡</h4>
+                <ul>
+                  <li><strong>ተዋረድ (Hierarchy)፦</strong> ዋና ርዕስ፣ ንዑስ ርዕስ እና ዝርዝር መረጃዎችን በደረጃ ማስቀመጥ።</li>
+                  <li><strong>ንፅፅር (Contrast)፦</strong> የተመልካችን አይን ወደ ዋናው መልዕክት ወዲያውኑ የመሳብ ጥበብ።</li>
+                  <li><strong>ክፍት ቦታ (White Space)፦</strong> ለዲዛይኑ እስትንፋስ መስጠት እና እይታን አለማጨናነቅ።</li>
+                  <li><strong>የሶስተኛው ህግ (Rule of Thirds)፦</strong> ዋናውን ምስል በግሪድ መገናኛ ነጥቦች ላይ ማስቀመጥ።</li>
+                </ul>`,
+                exercises: ['በአካባቢዎ ያሉ 2 የተለያዩ ማስታወቂያዎችን አይተው ዋና ትኩረታቸውን ይለዩ።', 'በወረቀት ላይ ሶስት የተዋረድ ደረጃዎች ያሉት የፖስተር ረቂቅ ይሳሉ።'],
+              },
+            },
+          },
+          {
+            id: 1002,
+            module_id: 101,
+            course_id: 1,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 840,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 1.2: Color Psychology & Commercial Palette Construction',
+                summary: 'Learn the emotional psychology of color, harmonies, and accessible contrast ratios.',
+                rich_content: `<h3>Color Wheel & Harmonious Schemes</h3>
+                <p>Colors evoke immediate psychological associations before a single word is read. Master color construction:</p>
+                <ul>
+                  <li><strong>Monochromatic:</strong> Variations in lightness and saturation of a single hue for understated, refined corporate materials.</li>
+                  <li><strong>Complementary:</strong> Opposite hues on the color wheel (e.g., Deep Gold #D4AF37 and Deep Blue) creating high energy and clear button contrast.</li>
+                  <li><strong>Analogous:</strong> Adjacent colors creating calming natural transitions.</li>
+                  <li><strong>Contrast Accessibility:</strong> Maintaining a minimum 4.5:1 ratio between text and background.</li>
+                </ul>`,
+                exercises: ['Generate a 5-color branded palette for a financial services startup using Adobe Color or Coolors.'],
+              },
+              am: {
+                title: 'ትምህርት 1.2፡ የቀለም ሳይንስ እና የንግድ ብራንድ ቀለማት መረጣ',
+                summary: 'የቀለም ህጎችን በመከተል ተስማሚና ገበያ የሚስቡ ቀለማትን የመምረጥ ጥበብ።',
+                rich_content: `<h3>የቀለም ቅንብር እና ስነ-ልቦና</h3>
+                <p>ቀለማት በተመልካች ስሜት ላይ ቀጥተኛ ተፅዕኖ ያሳድራሉ። እርስ በእርስ የሚስማሙ ቀለማትን መምረጥ የዲዛይን መሰረት ነው።</p>`,
+                exercises: ['ለአንድ የንግድ ድርጅት የሚሆኑ 5 የተጣመሩ ቀለማትን መርጠው ያዘጋጁ።'],
+              },
+            },
+          },
+          {
+            id: 1003,
+            module_id: 101,
+            course_id: 1,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 780,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 1.3: Typography Hierarchy & Bilingual Font Pairings',
+                summary: 'Pairing display headings with readable body typography across Latin and Ethiopic scripts.',
+                rich_content: `<h3>Typography: Voice of the Design</h3>
+                <p>Typography is the visual voice of written communication. Learn font categories and pairings:</p>
+                <ul>
+                  <li><strong>Serif vs. Sans-Serif:</strong> Traditional authority versus modern clean readability.</li>
+                  <li><strong>Ethiopic & Latin Pairings:</strong> Pairing geometric sans faces with balanced Noto Sans Ethiopic weights.</li>
+                  <li><strong>Kerning, Leading & Tracking:</strong> Adjusting character spacing and line height for effortless reading.</li>
+                </ul>`,
+                exercises: ['Select and pair two fonts (one for headers, one for body prose) and typeset a 100-word paragraph.'],
+              },
+              am: {
+                title: 'ትምህርት 1.3፡ የፊደላት ጥበብ (Typography) እና የአማርኛ ፎንቶች አጠቃቀም',
+                summary: 'የአማርኛና የእንግሊዝኛ ፎንቶችን በማስታወቂያ ላይ በሚያምር ሁኔታ የማጣመር ዘዴዎች።',
+                rich_content: `<h3>የፊደላት አጣጣል እና ጥራት</h3>
+                <p>ትክክለኛ ፎንት መምረጥ ማስታወቂያዎ በቅጽበት እንዲነበብና የድርጅትዎን ክብር እንዲገልጽ ያደርጋል።</p>`,
+                exercises: ['አንድ ዋና ርዕስ እና ንዑስ ፅሁፍ በተስማሚ ፎንቶች አቀናብረው ያዘጋጁ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 102,
+        course_id: 1,
+        display_order: 2,
+        duration_minutes: 240,
+        translations: {
+          en: { title: 'Module 2: Vector Art & Brand Identity in Adobe Illustrator', description: 'Pen tool mastery, geometric construction, vector logos, and brand asset packages.' },
+          am: { title: 'ምዕራፍ 2፡ ቬክተር አርት እና የሎጎ ስራ በኢለስትሬተር', description: 'የፔን ቱል አጠቃቀም፣ የጂኦሜትሪክ ቅርጾች እና የቬክተር ብራንዲንግ።' },
+        },
+        lessons: [
+          {
+            id: 1004,
+            module_id: 102,
+            course_id: 1,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 900,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.1: Mastering the Pen Tool & Bézier Curves',
+                summary: 'Precision vector drawing, anchor points, handles, and path construction.',
+                rich_content: `<h3>The Pen Tool: The Vector Sculptor</h3>
+                <p>Vectors scale infinitely without pixelation because they are mathematical coordinates. Learn how to place minimum anchor points on curve apexes for buttery-smooth vector curves.</p>`,
+                exercises: ['Trace complex geometric silhouettes using fewer than 12 anchor points.'],
+              },
+              am: {
+                title: 'ትምህርት 2.1፡ የፔን ቱል (Pen Tool) አጠቃቀም እና የቬክተር ስዕል',
+                summary: 'በኢለስትሬተር ውስጥ ጥራት ያላቸው የቬክተር መስመሮችንና ቅርጾችን የመሳል ዘዴ።',
+                rich_content: `<h3>የቬክተር አሰራር መሰረቶች</h3><p>ቬክተር ሳይደበዝዝ ወደ ሚፈለገው መጠን የሚያድግ የዲጂታል ዲዛይን አይነት ነው።</p>`,
+                exercises: ['በፔን ቱል በመጠቀም የሎጎ ቅርፅን በጥንቃቄ ይሳሉ።'],
+              },
+            },
+          },
+          {
+            id: 1005,
+            module_id: 102,
+            course_id: 1,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 960,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.2: Logo Design Workflows & Grid Construction',
+                summary: 'From concept sketching to golden ratio grids and vector marks.',
+                rich_content: `<h3>Constructing Memorable Brand Marks</h3>
+                <p>Learn the logo design pipeline: Mind mapping, moodboarding, thumbnail sketches, grid alignment in Illustrator, and black/white legibility tests.</p>`,
+                exercises: ['Sketch 10 logo ideas for a fictional Bahir Dar coffee exporter, then vectorize the best one.'],
+              },
+              am: {
+                title: 'ትምህርት 2.2፡ የሎጎ ዲዛይን እና የግሪድ አሰራር',
+                summary: 'ከረቂቅ ስዕል እስከ ተጠናቀቀ የድርጅት መለያ ሎጎ ማዘጋጀት።',
+                rich_content: `<h3>የሎጎ አሰራር ደረጃዎች</h3><p>ጥሩ ሎጎ ቀላል፣ በቀላሉ የሚታወስ እና በነጭና ጥቁር ቀለም ላይም በግልጽ የሚታይ መሆን አለበት።</p>`,
+                exercises: ['ለአንድ የንግድ ድርጅት የሚሆን ሎጎ ረቂቅ አውጥተው በኮምፒውተር ይስሩ።'],
+              },
+            },
+          },
+          {
+            id: 1006,
+            module_id: 102,
+            course_id: 1,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 880,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.3: Brand Identity Systems & Style Guides',
+                summary: 'Delivering full client brand packages: typography guides, color codes, and logo dos/don\'ts.',
+                rich_content: `<h3>Professional Client Deliverables</h3>
+                <p>Clients don't just buy a logo; they buy a coherent identity system. Learn how to format complete Brand Guidelines in PDF format containing primary logo, inverted logo, color breakdown (CMYK, RGB, HEX, Pantone), and typography rules.</p>`,
+                exercises: ['Compile a 4-page mini brand guidelines PDF for your vectorized logo.'],
+              },
+              am: {
+                title: 'ትምህርት 2.3፡ የብራንድ መመሪያ (Style Guide) ማዘጋጀት',
+                summary: 'ለደንበኞች የተሟላ የብራንዲንግ ፓኬጅ እና የቀለማት መመሪያ የማዘጋጀት ስልት።',
+                rich_content: `<h3>የተሟላ የብራንድ ማቅረቢያ</h3><p>ለደንበኛ ሎጎ ብቻ ሳይሆን የአጠቃቀም ደንቦቹን ያካተተ የተሟላ መመሪያ ማዘጋጀት ያስፈልጋል።</p>`,
+                exercises: ['የሰሩትን ሎጎ የቀለማት ኮዶችና የፎንት ዝርዝር የያዘ ሰነድ አዘጋጁ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 103,
+        course_id: 1,
+        display_order: 3,
+        duration_minutes: 240,
+        translations: {
+          en: { title: 'Module 3: Commercial Composition & Retouching in Photoshop', description: 'Layer masks, smart objects, photo manipulation, and high-impact social flyers.' },
+          am: { title: 'ምዕራፍ 3፡ ፎቶ ማቀናበር እና የንግድ ማስታወቂያ በፎቶሾፕ', description: 'የፎቶሾፕ ማስኪንግ፣ የፍላየር አሰራር እና ለደንበኛ የሚቀርቡ ፋይሎች።' },
+        },
+        lessons: [
+          {
+            id: 1007,
+            module_id: 103,
+            course_id: 1,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 840,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.1: Non-Destructive Editing & Precision Masking',
+                summary: 'Smart objects, adjustment layers, pen tool clipping paths, and hair extraction.',
+                rich_content: `<h3>Non-Destructive Photoshop Mastery</h3>
+                <p>Never destroy pixels. Always use adjustment layers, smart filters, and layer masks. Master Select & Mask for fine hair and product cutouts.</p>`,
+                exercises: ['Extract a subject with complex hair onto a transparent background with zero halo artifacts.'],
+              },
+              am: {
+                title: 'ትምህርት 3.1፡ ምስሎችን በጥራት መቁረጥ እና ማስኪንግ (Masking)',
+                summary: 'ምስሎችን ሳያበላሹ በከፍተኛ ጥራት የመቁረጥና ዳራ የመቀየር ጥበብ።',
+                rich_content: `<h3>የፎቶሾፕ ማስኪንግ መሰረቶች</h3><p>ምስልን ሳያበላሹ ዳራውን ለማንሳትና ለማስተካከል ማስኪንግን መጠቀም ቁልፍ ነው።</p>`,
+                exercises: ['አንድን ምስል ዳራውን በጥንቃቄ ቆርጠው በአዲስ ዳራ ላይ አስቀምጡ።'],
+              },
+            },
+          },
+          {
+            id: 1008,
+            module_id: 103,
+            course_id: 1,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 920,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.2: Commercial Photo Manipulation & Lighting Blends',
+                summary: 'Cast shadows, rim lighting, atmospheric perspective, and color grading.',
+                rich_content: `<h3>Creating Realistic Commercial Composites</h3>
+                <p>Blend multiple separate photos into one believable scene by matching ambient color temperature, horizon lines, shadow blur radius, and exposure levels.</p>`,
+                exercises: ['Compose a product bottle into an outdoor landscape with matched ground shadows and sunlight.'],
+              },
+              am: {
+                title: 'ትምህርት 3.2፡ ምስሎችን ማቀናበር እና የብርሃን ቅንብር',
+                summary: 'የተለያዩ ምስሎችን አዋህዶ እውነተኛ የሚመስል የንግድ ማስታወቂያ ማዘጋጀት።',
+                rich_content: `<h3>የምስሎች ውህደት</h3><p>የተለያዩ ምስሎችን ስናቀናብር የጥላቸው አቅጣጫ እና የብርሃናቸው መጠን መመሳሰል አለበት።</p>`,
+                exercises: ['ሁለት የተለያዩ ምስሎችን አቀናጅተው አንድ ማስታወቂያ ይፍጠሩ።'],
+              },
+            },
+          },
+          {
+            id: 1009,
+            module_id: 103,
+            course_id: 1,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 960,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.3: High-Converting Social Media Flyers & Banners',
+                summary: 'Designing for Telegram, Facebook, and Instagram feed specifications.',
+                rich_content: `<h3>Social Media Design Specs & Visual Hooks</h3>
+                <p>Social media feeds are fast-scrolling environments. Learn aspect ratios (1:1 square, 4:5 portrait, 9:16 story), thumb-stopping visual hooks, and mobile text legibility thresholds.</p>`,
+                exercises: ['Design a promotional Telegram flyer for an educational workshop in 1080x1080 resolution.'],
+              },
+              am: {
+                title: 'ትምህርት 3.3፡ ለማህበራዊ ሚዲያ የሚሆኑ ማራኪ ፖስተሮች',
+                summary: 'ለቴሌግራም፣ ፌስቡክ እና ኢንስታግራም የሚሆኑ የንግድ ማስታወቂያ ፖስተሮችን ማዘጋጀት።',
+                rich_content: `<h3>የማህበራዊ ሚዲያ ማስታወቂያዎች</h3><p>በስልክ ስክሪን ላይ በፍጥነት የሚነበቡና ትኩረት የሚስቡ ፖስተሮችን ማዘጋጀት ይማሩ።</p>`,
+                exercises: ['ለአንድ ስልጠና የሚሆን የቴሌግራም ፖስተር በ1080x1080 ሳይዝ ያዘጋጁ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 104,
+        course_id: 1,
+        display_order: 4,
+        duration_minutes: 240,
+        translations: {
+          en: { title: 'Module 4: Print Production, Packaging & Portfolio Development', description: 'CMYK color prep, bleed margins, mockups, client handover, and Upwork/Telegram freelancing.' },
+          am: { title: 'ምዕራፍ 4፡ የህትመት ዝግጅት እና የሙያ ፖርትፎሊዮ ግንባታ', description: 'የህትመት ማስተካከያ፣ ለደንበኛ ማስረከብ እና የፍሪላንስ ገበያ ስልት።' },
+        },
+        lessons: [
+          {
+            id: 1010,
+            module_id: 104,
+            course_id: 1,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 820,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.1: Pre-Press Workflows: CMYK, Bleeds & 300 DPI Exports',
+                summary: 'Avoid expensive printing errors by mastering crop marks, overprint, and ink limits.',
+                rich_content: `<h3>Preparing Files for Physical Printing Presses</h3>
+                <p>Screen RGB displays colors that physical printing presses cannot reproduce. Learn CMYK gamuts, 3mm bleed margins, converting text to outlines, and generating press-ready PDF/X-1a files.</p>`,
+                exercises: ['Export a trifold brochure ready for offset printing with crop marks and correct bleed settings.'],
+              },
+              am: {
+                title: 'ትምህርት 4.1፡ ለህትመት ፋይሎችን የማዘጋጀት ጥበብ (Pre-Press)',
+                summary: 'የህትመት ቀለማት (CMYK)፣ የጥራት መጠን (300 DPI) እና የህዳግ መስመሮች።',
+                rich_content: `<h3>የህትመት ደንቦች</h3><p>ለህትመት የሚዘጋጅ ዲዛይን የቀለም ስርአቱ CMYK መሆን እና ቢያንስ 300 DPI ጥራት ሊኖረው ይገባል።</p>`,
+                exercises: ['አንድን ዲዛይን ለህትመት ተስማሚ በሆነ ፒዲኤፍ (PDF) ፎርማት አዘጋጅተው ያውጡ።'],
+              },
+            },
+          },
+          {
+            id: 1011,
+            module_id: 104,
+            course_id: 1,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 780,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.2: Realistic 3D Mockups & Client Presentation',
+                summary: 'Presenting flat 2D designs on 3D billboards, packaging boxes, and business cards.',
+                rich_content: `<h3>Selling Your Work Through Context</h3>
+                <p>Clients struggle to imagine how a flat logo looks on an embroidered uniform or a glass storefront. Learn how to use smart-object PSD mockups to present your designs in realistic photographic contexts.</p>`,
+                exercises: ['Place your brand identity logo onto a stationery mockup and an outdoor billboard mockup.'],
+              },
+              am: {
+                title: 'ትምህርት 4.2፡ ስራዎችን በሞክአፕ (Mockup) የማሳመር ጥበብ',
+                summary: 'የሰሩትን ዲዛይን በህይወት እንዳለ እቃ አድርጎ ለደንበኛ የማቅረቢያ ዘዴ።',
+                rich_content: `<h3>የስራ ማቅረቢያ ሞክአፕ</h3><p>ዲዛይንዎን በቢልቦርድ፣ በቲሸርት ወይም በካርድ ላይ አስቀምጦ ማሳየት ለደንበኛ ተቀባይነትን ይጨምራል።</p>`,
+                exercises: ['የሰሩትን ሎጎ በቢዝነስ ካርድ ሞክአፕ ላይ አስቀምጠው አዘጋጁ።'],
+              },
+            },
+          },
+          {
+            id: 1012,
+            module_id: 104,
+            course_id: 1,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 960,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.3: Building a Commercial Portfolio & Freelance Acquisition',
+                summary: 'Structuring case studies on Behance, pricing your services, and winning clients.',
+                rich_content: `<h3>Launching Your Commercial Career</h3>
+                <p>A portfolio with three in-depth case studies is worth more than twenty isolated pictures. Learn how to write problem/solution project breakdowns, set Ethiopian Birr and USD hourly rates, and pitch local businesses in Bahir Dar and international clients on Upwork.</p>`,
+                exercises: ['Publish a comprehensive design case study outlining your problem, sketches, iterations, and final mockup.'],
+              },
+              am: {
+                title: 'ትምህርት 4.3፡ የስራ ፖርትፎሊዮ መገንባት እና ፍሪላንስ መጀመር',
+                summary: 'ስራዎችዎን በአግባቡ አደራጅቶ ማቅረብ እና በብር እንዲሁም በዶላር ገቢ ማግኘት።',
+                rich_content: `<h3>የፍሪላንስ ስራ ጅማሮ</h3><p>ጥሩ ፖርትፎሊዮ ማዘጋጀት በአገር ውስጥና በውጭ አገር የዲዛይን ስራዎችን በቀላሉ ለማግኘት ያስችላል።</p>`,
+                exercises: ['ሶስት ምርጥ ስራዎችዎን የያዘ የዲዛይን ፖርትፎሊዮ ሰነድ አዘጋጁ።'],
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
+
+  // 2. VIDEO EDITING
+  {
+    id: 2,
+    slug: 'video-editing',
+    category: 'Media Production',
+    level: 'all_levels',
+    duration_weeks: 6,
+    total_hours: 40,
+    banner_image: '/assets/courses/video-editing.jpg',
+    thumbnail_image: '/assets/courses/video-editing.jpg',
+    is_published: 1,
+    is_featured: 1,
+    display_order: 2,
+    instructor_name: 'Anchor Solution Media Faculty',
+    partner_name: 'Tis Abay College',
+    price: 2200,
+    regular_price: 3000,
+    difficulty: 'All Levels (Estimate: 6 weeks / 40 hrs)',
+    translations: {
+      en: {
+        title: 'Video Editing',
+        tagline: 'Professional storytelling with Adobe Premiere Pro, After Effects, and CapCut',
+        description: 'Practical course covering non-linear editing, narrative rhythm, color grading, sound design, motion graphics, and export optimization for YouTube, TikTok, commercial ads, and broadcast television.',
+        objectives: [
+          'Edit narrative long-form and short-form video content smoothly using Premiere Pro & CapCut',
+          'Clean dialogue audio, apply EQ, duck background music, and craft immersive sound effects',
+          'Read Lumetri scopes and execute primary and secondary cinematic color grading',
+          'Create motion titles, transitions, keyframed speed ramps, and multi-platform exports',
+        ],
+        target_audience: 'Content creators, videographers, aspiring video editors, and social media managers.',
+        prerequisites: 'Basic computer navigation skills. Passion for video storytelling.',
+      },
+      am: {
+        title: 'ቪዲዮ ኤዲቲንግ',
+        tagline: 'ተወዳጅና ገበያ የሚስቡ ቪዲዮዎችን በፕሪሚየር ፕሮ እና አፍተር ኢፌክትስ ያዘጋጁ',
+        description: 'በአዶቤ ፕሪሚየር ፕሮ፣ አፍተር ኢፌክትስ እና ካፕከት በመጠቀም የተሟላ የቪዲዮ አርትዖት ስልጠና። የቀለም ማስተካከያ (Color Grading)፣ የድምፅ ጥራት ማሻሻል፣ የመሸጋገሪያ ምስሎች እና ለቲክቶክ፣ ዩቲዩብ እና የንግድ ማስታወቂያዎች የሚሆኑ ቪዲዮዎችን ማዘጋጀት።',
+        objectives: [
+          'አጫጭርና ረጅም ቪዲዮዎችን በሙያዊ መንገድ ማቀናበር',
+          'የቪዲዮ ቀለም (Color Grading) እና ድምጽ ጥራት ማስተካከል',
+          'ተንቀሳቃሽ ፅሁፎችን (Motion Graphics) እና ልዩ እይታዎችን ማከል',
+          'ለተለያዩ የማህበራዊ ሚዲያ መድረኮች ደረጃውን የጠበቀ ኤክስፖርት ማዘጋጀት',
+        ],
+        target_audience: 'የቪዲዮ አዘጋጆች፣ ዩቲዩበሮች እና የፈጠራ ስራ ወዳጆች።',
+        prerequisites: 'መሰረታዊ የኮምፒውተር አጠቃቀም።',
+      },
+    },
+    modules: [
+      {
+        id: 201,
+        course_id: 2,
+        display_order: 1,
+        duration_minutes: 200,
+        translations: {
+          en: { title: 'Module 1: Non-Linear Editing Fundamentals & Workspace Setup', description: 'Project ingestion, timeline architecture, cuts, pacing, and keyboard shortcuts.' },
+          am: { title: 'ምዕራፍ 1፡ የቪዲዮ አርትዖት መሰረቶች እና የስራ ገጽ ማበጀት', description: 'ፋይሎችን ማስገባት፣ ቅደም ተከተል ማበጀት እና ተፈጥሯዊ የመቁረጥ ቴክኒኮች።' },
+        },
+        lessons: [
+          {
+            id: 2001,
+            module_id: 201,
+            course_id: 2,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 650,
+            is_free_preview: 1,
+            translations: {
+              en: {
+                title: 'Lesson 1.1: Project Ingestion, Codecs & Sequence Architecture',
+                summary: 'Organizing media bins, understanding frame rates (24fps vs 60fps), and codecs.',
+                rich_content: `<h3>Setting Up for Editing Velocity</h3><p>Video editing begins with organization. Learn folder naming conventions, importing footage, setting sequence resolutions (1080p, 4K, 9:16 vertical), and matching frame rates.</p>`,
+                exercises: ['Organize raw demo footage into bins: A-Roll, B-Roll, Audio, SFX, Graphics.'],
+              },
+              am: {
+                title: 'ትምህርት 1.1፡ ፋይሎችን ማደራጀት እና የፕሮጀክት ዝግጅት',
+                summary: 'የቪዲዮ ፋይሎችን በስርዓት መክፈል፣ የፍሬም መጠን (FPS) እና የፕሮጀክት አከፋፈት።',
+                rich_content: `<h3>የቪዲዮ ፋይሎች አያያዝ</h3><p>ጥሩ ኤዲተር ፋይሎቹን በቢን (Bins) በስርዓት ከፋፍሎ ስራውን ይጀምራል።</p>`,
+                exercises: ['የልምምድ ቪዲዮ ፋይሎችን በፎልደር ከፋፍለው ወደ ፕሪሚየር ፕሮ ያስገቡ።'],
+              },
+            },
+          },
+          {
+            id: 2002,
+            module_id: 201,
+            course_id: 2,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 720,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 1.2: Rough Cuts, Three-Point Editing & Keyboard Accelerators',
+                summary: 'Navigating source monitors, ripple edits, slip tool, and timeline hotkeys.',
+                rich_content: `<h3>Editing with Speed</h3><p>Mastering J-K-L playback controls, Q and W ripple trimming, and three-point editing shortcuts (I for In, O for Out, period for Insert) eliminates 70% of editing friction.</p>`,
+                exercises: ['Assemble a 60-second rough cut using solely keyboard navigation.'],
+              },
+              am: {
+                title: 'ትምህርት 1.2፡ የኪቦርድ አቋራጮች እና ፈጣን የቪዲዮ መቁረጥ',
+                summary: 'በኪቦርድ አቋራጭ ቁልፎች (Shortcuts) ስራን በከፍተኛ ፍጥነት ማከናወን።',
+                rich_content: `<h3>የኪቦርድ አቋራጮች</h3><p>ማውዝን ከመጠቀም ይልቅ በኪቦርድ መቁረጥና ማስተካከል ስራዎን በእጥፍ ያፈጥነዋል።</p>`,
+                exercises: ['የ60 ሰከንድ ቪዲዮ በኪቦርድ ብቻ ቆርጠው አቀናብሩ።'],
+              },
+            },
+          },
+          {
+            id: 2003,
+            module_id: 201,
+            course_id: 2,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 790,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 1.3: Narrative Pacing: J-Cuts, L-Cuts & Match Cuts',
+                summary: 'Creating conversational flow and invisible cuts that preserve immersion.',
+                rich_content: `<h3>The Invisible Art of the Cut</h3><p>Hard cuts on dialogue feel jarring. Learn how J-cuts (audio leads video) and L-cuts (video leads audio) make conversations feel natural and cinematic.</p>`,
+                exercises: ['Edit a dialogue scene between two speakers utilizing at least four J/L cut transitions.'],
+              },
+              am: {
+                title: 'ትምህርት 1.3፡ የቪዲዮ ፍሰት እና የመቁረጥ ጥበብ (J-Cut እና L-Cut)',
+                summary: 'የመቁረጥ አይነቶች እና የተመልካችን ስሜት የሚገራ የጊዜ አያያዝ ቴክኒኮች።',
+                rich_content: `<h3>ተፈጥሯዊ የውይይት ቅንብር</h3><p>በንግግር ወቅት ድምፅ ከምስሉ ቀድሞ እንዲሰማ በማድረግ (J-Cut) ቪዲዮውን ተፈጥሯዊ ማድረግ ይማሩ።</p>`,
+                exercises: ['በሁለት ሰዎች መካከል ያለን ውይይት በJ-Cut አቀናብረው ያጠናቅቁ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 202,
+        course_id: 2,
+        display_order: 2,
+        duration_minutes: 220,
+        translations: {
+          en: { title: 'Module 2: Audio Engineering & Sound Design for Video', description: 'Dialogue cleanup, noise reduction, equalization, music ducking, and Foley SFX.' },
+          am: { title: 'ምዕራፍ 2፡ የድምፅ ጥራት ማሻሻል እና የሳውንድ ዲዛይን', description: 'የድምፅ ጫጫታ ማስወገድ፣ የሙዚቃ ዳራ ማስተካከል እና የድምፅ ውበት።' },
+        },
+        lessons: [
+          {
+            id: 2004,
+            module_id: 202,
+            course_id: 2,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 680,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.1: Noise Reduction & Vocal Clarity in Essential Sound',
+                summary: 'Eliminating background hiss, room hum, and vocal clipping distortion.',
+                rich_content: `<h3>Sound is 50% of the Video Experience</h3><p>Viewers will tolerate mediocre video, but they will instantly abandon poor audio. Master Adobe Essential Sound panel dialogue enhancements, denoise, and de-reverb.</p>`,
+                exercises: ['Clean up noisy outdoor phone audio using Denoise and Parametric Equalizer.'],
+              },
+              am: {
+                title: 'ትምህርት 2.1፡ የድምፅ ጫጫታን ማጥራት (Noise Reduction)',
+                summary: 'የአካባቢን ጫጫታ ማስወገድ እና የንግግር ድምፅን ጥርት ማድረግ።',
+                rich_content: `<h3>የድምፅ ጥራት ሚና</h3><p>ቪዲዮው ያማረ ቢሆንም ድምፁ የማይሰማ ከሆነ ተመልካች አይከታተለውም።</p>`,
+                exercises: ['የተበላሸ የድምፅ ፋይልን ጫጫታውን አጥሩ።'],
+              },
+            },
+          },
+          {
+            id: 2005,
+            module_id: 202,
+            course_id: 2,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 740,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.2: Audio Level Standards, Equalization & Auto-Ducking',
+                summary: 'Broadcast audio ceilings (-6dB peaks), vocal warmth, and background music auto-ducking.',
+                rich_content: `<h3>Balancing Voiceover and Background Music</h3><p>Learn key audio target levels (-6dB to -12dB dialogue, -18dB to -24dB background music). Use automated ducking so music automatically lowers whenever dialogue is present.</p>`,
+                exercises: ['Configure auto-ducking between a voiceover track and a background music track.'],
+              },
+              am: {
+                title: 'ትምህርት 2.2፡ የድምፅ ልክ (Audio Levels) እና ዳራ ሙዚቃ ቅንብር',
+                summary: 'ንግግር ሲኖር ሙዚቃው በራሱ ዝቅ እንዲል የማድረግ ዘዴ (Auto-Ducking)።',
+                rich_content: `<h3>የድምፅ ሚዛን</h3><p>የንግግሩና የሙዚቃው ድምፅ እርስ በእርስ ሳይሸፋፈኑ እንዲሰሙ ማድረግ።</p>`,
+                exercises: ['ንግግር ሲጀመር የጀርባው ሙዚቃ ዝቅ እንዲል አድርገው ያቀናብሩ።'],
+              },
+            },
+          },
+          {
+            id: 2006,
+            module_id: 202,
+            course_id: 2,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 810,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.3: Foley Sound Design & Impact SFX Timing',
+                summary: 'Using whooshes, risers, paper rustles, and impacts to amplify visual energy.',
+                rich_content: `<h3>Adding Cinematic Impact with Sound Effects</h3><p>Foley art breathes tactile life into visuals. Learn when to place subtle swooshes on camera movements and bass drops on key visual reveals.</p>`,
+                exercises: ['Layer at least six custom SFX under a fast-paced 15-second product commercial.'],
+              },
+              am: {
+                title: 'ትምህርት 2.3፡ የድምፅ ውጤቶች (Sound Effects / SFX) አጠቃቀም',
+                summary: 'የመሸጋገሪያ ድምፆችን እና ልዩ የድምፅ ውጤቶችን በቪዲዮ ላይ ማከል ልምምድ።',
+                rich_content: `<h3>የድምፅ ውጤቶች</h3><p>ትክክለኛ የድምፅ ውጤቶች ቪዲዮውን የበለጠ ሳቢና ማራኪ ያደርጉታል።</p>`,
+                exercises: ['በ15 ሰከንድ ማስታወቂያ ላይ ተስማሚ የሆኑ የድምፅ ውጤቶችን ያክሉ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 203,
+        course_id: 2,
+        display_order: 3,
+        duration_minutes: 240,
+        translations: {
+          en: { title: 'Module 3: Color Correction & Cinematic Grading', description: 'Reading scopes, white balance correction, skin tone protection, and creative stylized LUTs.' },
+          am: { title: 'ምዕራፍ 3፡ የቪዲዮ ቀለም ማስተካከያ እና ሲኒማቲክ ግሬዲንግ', description: 'የቀለም ቶን፣ የቪዲዮ ብርሃን ማስተካከል እና ሲኒማቲክ እይታ መስጠት።' },
+        },
+        lessons: [
+          {
+            id: 2007,
+            module_id: 203,
+            course_id: 2,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 750,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.1: Lumetri Scopes & Objective Color Analysis',
+                summary: 'Waveforms, parade RGB, and vectorscopes: Why your eyes lie and scopes tell the truth.',
+                rich_content: `<h3>Never Grade by Eye Alone</h3><p>Ambient room light and computer screens distort color perception. Learn how Waveform Luma tells you true black (0 IRE) and peak white (100 IRE), while the Vectorscope ensures natural skin tone line alignment.</p>`,
+                exercises: ['Correct an underexposed shot using Lumetri Waveform to establish solid blacks and highlights.'],
+              },
+              am: {
+                title: 'ትምህርት 3.1፡ የቪዲዮ ቀለም መለኪያ (Lumetri Scopes) አጠቃቀም',
+                summary: 'የቪዲዮን ትክክለኛ የብርሃንና የቀለም መጠን በመሳሪያዎች መለካት።',
+                rich_content: `<h3>የቀለም መለኪያ ሳይንስ</h3><p>የኮምፒውተር ስክሪን ስለሚያታልል የቀለም መለኪያዎችን (Scopes) በመጠቀም ትክክለኛውን ቀለም መምረጥ።</p>`,
+                exercises: ['የተበላሸ የብርሃን መጠን ያለውን ቪዲዮ በWaveform አስተካክሉ።'],
+              },
+            },
+          },
+          {
+            id: 2008,
+            module_id: 203,
+            course_id: 2,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 830,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.2: Primary Color Correction vs. Creative Stylization',
+                summary: 'Neutralizing color casts before applying creative film looks and cinematic palettes.',
+                rich_content: `<h3>Step 1: Correction. Step 2: Grading</h3><p>Correction fixes errors (tint, temperature, mismatch between cameras). Grading applies mood (warm sunset, cold thriller). Keep these two steps on separate adjustment layers.</p>`,
+                exercises: ['Match two shots filmed on different cameras with different white balance settings.'],
+              },
+              am: {
+                title: 'ትምህርት 3.2፡ የቀለም ማስተካከያ (Color Correction) እና ስታይል',
+                summary: 'የካሜራ የቀለም ግድፈቶችን ማስተካከል እና ሲኒማቲክ ስሜት መስጠት።',
+                rich_content: `<h3>የቀለም ደረጃዎች</h3><p>መጀመሪያ የተበላሸውን ቀለም ማስተካከል፣ ከዚያም ቪዲዮው የሚፈለገውን ሲኒማቲክ እይታ እንዲይዝ ማድረግ።</p>`,
+                exercises: ['የተለያዩ ካሜራዎች ያነሷቸውን ሁለት ቪዲዮዎች ቀለማቸውን አመሳስሉ።'],
+              },
+            },
+          },
+          {
+            id: 2009,
+            module_id: 203,
+            course_id: 2,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 870,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.3: Secondary Grading, HSL Curves & Skin Tone Masking',
+                summary: 'Isolating specific colors (sky blue, foliage, skin) without distorting the rest of the image.',
+                rich_content: `<h3>Targeted Color Manipulation</h3><p>Using HSL Secondary qualifiers and curve tools to isolate skin tones, saturate product branding colors, and darken overcast skies.</p>`,
+                exercises: ['Use HSL qualifier to change the color of a subject\'s shirt without affecting their skin tone.'],
+              },
+              am: {
+                title: 'ትምህርት 3.3፡ የተመረጡ ቀለማትን ማስተካከል (Secondary Color Grading)',
+                summary: 'የሰውን የቆዳ ቀለም ሳይነኩ የተወሰኑ ቀለማትን ብቻ የመቀየር ጥበብ።',
+                rich_content: `<h3>የተመረጡ ቀለማት አያያዝ</h3><p>አጠቃላይ ምስሉ ሳይዛባ የአንድን ልብስ ወይም ዳራ ቀለም ብቻ መለወጥ።</p>`,
+                exercises: ['የሰውን የቆዳ ቀለም ሳይቀይሩ የልብሱን ቀለም ብቻ ለውጡ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 204,
+        course_id: 2,
+        display_order: 4,
+        duration_minutes: 240,
+        translations: {
+          en: { title: 'Module 4: Motion Graphics, Titles & Multi-Platform Delivery', description: 'Kinetic typography, lower thirds, speed ramping, and optimized exports for YouTube & TikTok.' },
+          am: { title: 'ምዕራፍ 4፡ ተንቀሳቃሽ ፅሁፎች እና ኤክስፖርት ማዘጋጀት', description: 'ተንቀሳቃሽ ፅሁፎች፣ የቪዲዮ ፍጥነት ማስተካከል እና ለሶሻል ሚዲያ ማዘጋጀት።' },
+        },
+        lessons: [
+          {
+            id: 2010,
+            module_id: 204,
+            course_id: 2,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 760,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.1: Lower Thirds & Kinetic Text in Essential Graphics',
+                summary: 'Designing animated name cards, title sequences, and social media captions.',
+                rich_content: `<h3>Designing Clean On-Screen Graphics</h3><p>Create professional lower thirds and kinetic text overlays using responsive design time properties so graphic templates automatically adapt to any duration.</p>`,
+                exercises: ['Build an animated bilingual lower third title for an interviewee.'],
+              },
+              am: {
+                title: 'ትምህርት 4.1፡ ተንቀሳቃሽ ፅሁፎች (Lower Thirds & Text Graphics)',
+                summary: 'የባለሙያ ስም መግለጫ እና ማራኪ ተንቀሳቃሽ ፅሁፎችን በቪዲዮ ላይ ማከል',
+                rich_content: `<h3>ተንቀሳቃሽ ፅሁፎች</h3><p>የተናጋሪውን ስምና ማዕረግ የሚያሳዩ ተንቀሳቃሽ ፅሁፎችን ማዘጋጀት።</p>`,
+                exercises: ['ለአንድ ተናጋሪ የሚሆን ተንቀሳቃሽ የስም መግለጫ ፅሁፍ ያዘጋጁ።'],
+              },
+            },
+          },
+          {
+            id: 2011,
+            module_id: 204,
+            course_id: 2,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 820,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.2: Speed Ramping, Keyframe Easing & Smooth Transitions',
+                summary: 'Time remapping, optical flow frame interpolation, and speed ramps synced to musical beats.',
+                rich_content: `<h3>Dynamic Visual Energy</h3><p>B-roll comes alive through time remapping. Learn how to ease speed keyframes smoothly from 600% fast motion down to 50% slow motion using Optical Flow to prevent stutter.</p>`,
+                exercises: ['Create a 10-second speed-ramped montage clip synced to musical drum hits.'],
+              },
+              am: {
+                title: 'ትምህርት 4.2፡ የቪዲዮ ፍጥነት ማስተካከል (Speed Ramping) እና ሽግግሮች',
+                summary: 'ቪዲዮን ከፈጣን ወደ ዝግታ (Slow Motion) በተፈጥሯዊ መንገድ የመቀየር ጥበብ።',
+                rich_content: `<h3>የፍጥነት ቅንብር</h3><p>ቪዲዮን በሙዚቃው ምት መሰረት ፍጥነቱን በማስተካከል ዘመናዊ መልክ መስጠት።</p>`,
+                exercises: ['የቪዲዮ ፍጥነትን ከሙዚቃ ምት ጋር አስተካክለው ይስሩ።'],
+              },
+            },
+          },
+          {
+            id: 2012,
+            module_id: 204,
+            course_id: 2,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 890,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.3: Export Presets for YouTube, TikTok & Television Broadcast',
+                summary: 'Bitrates (VBR vs CBR), H.264/H.265 compression, and audio master rendering.',
+                rich_content: `<h3>Delivering Flawless Final Files</h3><p>Learn export profiles: 9:16 vertical 1080x1920 for TikTok/Reels, high-bitrate 4K 2160p for YouTube, and ProRes 422 for master television delivery.</p>`,
+                exercises: ['Export two versions of your finished commercial: one for YouTube 16:9 and one for TikTok 9:16.'],
+              },
+              am: {
+                title: 'ትምህርት 4.3፡ ለተለያዩ መድረኮች (YouTube, TikTok) ቪዲዮ ኤክስፖርት ማዘጋጀት',
+                summary: 'ጥራቱን የጠበቀና ፋይሉ አነስተኛ የሆነ ቪዲዮ ኤክስፖርት የማድረግ ዘዴዎች።',
+                rich_content: `<h3>የኤክስፖርት ዝግጅት</h3><p>ለዩቲዩብ፣ ለቲክቶክ እና ለቴሌቪዥን የሚሆኑ የተለያዩ የቪዲዮ አይነቶችን ማውጣት።</p>`,
+                exercises: ['የሰሩትን ቪዲዮ ለዩቲዩብ እና ለቲክቶክ በተለያዩ ሳይዞች ኤክስፖርት ያድርጉ።'],
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
+
+  // 3. PHOTOGRAPHY
+  {
+    id: 3,
+    slug: 'photography',
+    category: 'Visual Arts',
+    level: 'beginner',
+    duration_weeks: 4,
+    total_hours: 24,
+    banner_image: '/assets/courses/photography.jpg',
+    thumbnail_image: '/assets/courses/photography.jpg',
+    is_published: 1,
+    is_featured: 1,
+    display_order: 3,
+    instructor_name: 'Anchor Solution Photography Studio',
+    partner_name: 'Tis Abay College',
+    price: 1500,
+    regular_price: 2000,
+    difficulty: 'Beginner Friendly (Estimate: 4 weeks / 24 hrs)',
+    translations: {
+      en: {
+        title: 'Photography',
+        tagline: 'Camera mastery, lighting techniques, framing, and studio production',
+        description: 'Master manual camera settings (ISO, Shutter Speed, Aperture), creative lighting, composition rules, portraiture, product photography, and Lightroom post-processing.',
+        objectives: [
+          'Operate DSLR and mirrorless cameras fully in manual mode with zero reliance on auto',
+          'Understand natural and studio 3-point lighting setups, reflectors, and diffusers',
+          'Compose striking portraits, street candids, and commercial product photos',
+          'Retouch, correct exposure, and color-grade RAW captures in Adobe Lightroom',
+        ],
+        target_audience: 'Aspiring professional photographers, visual artists, journalists, and enthusiasts.',
+        prerequisites: 'Enthusiasm for visual storytelling. Access to a DSLR, mirrorless, or pro-mode smartphone.',
+      },
+      am: {
+        title: 'ፎቶግራፊ',
+        tagline: 'የካሜራ አጠቃቀም፣ የብርሃን ቅንብር እና የስቱዲዮ ፎቶግራፊ ሙያ',
+        description: 'የካሜራ መቆጣጠሪያዎችን (Aperture, Shutter Speed, ISO) ጠንቅቆ በመረዳት የባለሙያ ፎቶግራፊን ይማሩ። የተፈጥሮና የስቱዲዮ ብርሃን አጠቃቀም፣ የቁም ምስል (Portrait)፣ የንግድ እቃዎች ፎቶግራፍ እና በAdobe Lightroom ማሳመር።',
+        objectives: [
+          'DSLR እና Mirrorless ካሜራዎችን በማኑዋል ሞድ መቆጣጠር',
+          'የስቱዲዮ እና የተፈጥሮ ብርሃን ቅንብርን በአግባቡ መጠቀም',
+          'ጥራት ያላቸው የቁም ምስሎችንና የንግድ እቃዎችን ፎቶ ማንሳት',
+          'በLightroom ፎቶዎችን ማስተካከልና ማሳመር',
+        ],
+        target_audience: 'የፎቶግራፍ ፍላጎት ያላቸው እና በሙያው መሰማራት የሚሹ ሁሉ።',
+        prerequisites: 'ካሜራ ወይም ጥሩ ስማርትፎን ማግኘት።',
+      },
+    },
+    modules: [
+      {
+        id: 301,
+        course_id: 3,
+        display_order: 1,
+        duration_minutes: 180,
+        translations: {
+          en: { title: 'Module 1: Camera Hardware & The Exposure Triangle', description: 'Manual controls: Aperture, Shutter Speed, and ISO balance.' },
+          am: { title: 'ምዕራፍ 1፡ የካሜራ አካላት እና የብርሃን መቆጣጠሪያዎች', description: 'አፓርቸር፣ ሻተር ስፒድ እና አይኤስኦን በተግባር መረዳት።' },
+        },
+        lessons: [
+          {
+            id: 3001,
+            module_id: 301,
+            course_id: 3,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 600,
+            is_free_preview: 1,
+            translations: {
+              en: {
+                title: 'Lesson 1.1: Camera Types, Sensors & Manual Mode Foundations',
+                summary: 'DSLR vs Mirrorless, Full Frame vs Crop, and transitioning away from Auto mode.',
+                rich_content: `<h3>Stepping into Manual Control</h3><p>Auto mode makes machines guess your artistic intent. Learn sensor size differences (Full Frame vs APS-C), lens mounts, and setting your mode dial to Manual (M).</p>`,
+                exercises: ['Inspect your camera body or smartphone pro settings and identify your sensor crop factor.'],
+              },
+              am: {
+                title: 'ትምህርት 1.1፡ የካሜራ አይነቶች እና ማኑዋል ሞድ መግቢያ',
+                summary: 'ካሜራዎችን በማኑዋል ሞድ የመጠቀም መሰረታዊ ደረጃዎች።',
+                rich_content: `<h3>የካሜራ አይነቶች</h3><p>አውቶሞድ ሳይጠቀሙ በራስዎ ውሳኔ የካሜራውን መቆጣጠሪያዎች መቆጣጠር መማር።</p>`,
+                exercises: ['ካሜራዎን ወይም ስልክዎን ወደ ማኑዋል ሞድ ቀይረው ይሞክሩ።'],
+              },
+            },
+          },
+          {
+            id: 3002,
+            module_id: 301,
+            course_id: 3,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 700,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 1.2: Aperture (f-stop) & Depth of Field Control',
+                summary: 'Controlling light volume and isolating subjects with creamy bokeh.',
+                rich_content: `<h3>Aperture: The Iris of the Lens</h3><p>Aperture controls two things: light exposure and depth of field. Wide apertures (f/1.4, f/1.8, f/2.8) yield creamy background blur, while narrow apertures (f/8, f/11) keep landscapes sharp from front to back.</p>`,
+                exercises: ['Photograph the same subject at f/1.8 and f/11 and observe the background separation.'],
+              },
+              am: {
+                title: 'ትምህርት 1.2፡ አፓርቸር (Aperture) እና የዳራ ብዥታ (Bokeh)',
+                summary: 'አፓርቸርን በመጠቀም የዳራ ብዥታ መፍጠር እና ብርሃን መቆጣጠር።',
+                rich_content: `<h3>አፓርቸር</h3><p>አነስተኛ የf ቁጥር (f/1.8) በመጠቀም የዳራውን ክፍል ብዥ ማድረግ ይቻላል።</p>`,
+                exercises: ['አንድን እቃ የዳራ ብዥታ ባለውና በሌለው መንገድ አንስተው ያወዳድሩ።'],
+              },
+            },
+          },
+          {
+            id: 3003,
+            module_id: 301,
+            course_id: 3,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 740,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 1.3: Shutter Speed & ISO Sensitivity',
+                summary: 'Freezing rapid sports action, intentional motion blur, and sensor grain management.',
+                rich_content: `<h3>Freezing Time and Managing Digital Grain</h3><p>Shutter speed controls motion (1/1000s freezes drops of water; 1/2s blurs moving traffic). ISO increases electrical sensor sensitivity, but introduces noise above ISO 3200.</p>`,
+                exercises: ['Capture moving water at 1/1000s (frozen) and 1/30s (silky blur with steady hands or tripod).'],
+              },
+              am: {
+                title: 'ትምህርት 1.3፡ ሻተር ስፒድ (Shutter Speed) እና አይኤስኦ (ISO)',
+                summary: 'ተንቀሳቃሽ ነገሮችን ማንሳት እና የጨለማ ብርሃን መቆጣጠር።',
+                rich_content: `<h3>ሻተር ስፒድ እና አይኤስኦ</h3><p>ፈጣን ሻተር ስፒድ ተንቀሳቃሽ ነገሮችን አስቁሞ ለማንሳት ይረዳል።</p>`,
+                exercises: ['የሚንቀሳቀስ መኪናን ወይም ውሃን በፍጥነት እና በዝግታ አንስተው ይሞክሩ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 302,
+        course_id: 3,
+        display_order: 2,
+        duration_minutes: 200,
+        translations: {
+          en: { title: 'Module 2: Lenses, Focal Lengths & Framing Composition', description: 'Wide vs telephoto distortion, rule of thirds, leading lines, and perspective.' },
+          am: { title: 'ምዕራፍ 2፡ የሌንስ አይነቶች እና የማዕዘን ቅንብር', description: 'የሌንስ ምርጫ፣ የማዕዘን አቀማመጥ እና የፎቶ ውበት።' },
+        },
+        lessons: [
+          {
+            id: 3004,
+            module_id: 302,
+            course_id: 3,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 680,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.1: Focal Lengths: Wide Angle, Standard & Telephoto',
+                summary: 'Perspective compression, facial flattering, and lens choice for different genres.',
+                rich_content: `<h3>Focal Length Shapes Reality</h3><p>Wide lenses (16-24mm) exaggerate depth and expand rooms. Standard lenses (35-50mm) mimic natural human eyesight. Telephoto lenses (85-200mm) compress backgrounds and flatter portraits.</p>`,
+                exercises: ['Take portraits of the same person at 24mm, 50mm, and 85mm to compare facial proportions.'],
+              },
+              am: {
+                title: 'ትምህርት 2.1፡ የሌንስ አይነቶች እና የርቀት መለኪያ (Focal Length)',
+                summary: 'የተለያዩ ሌንሶችን መምረጥ እና ያላቸውን ተፅዕኖ መረዳት።',
+                rich_content: `<h3>የሌንስ አይነቶች</h3><p>የተለያዩ ሌንሶች ለተለያዩ ስራዎች (ለቁም ምስል፣ ለተፈጥሮ እይታ) ያገለግላሉ።</p>`,
+                exercises: ['በተለያየ ርቀት ፎቶ በማንሳት የፊት ቅርጽ እንዴት እንደሚለወጥ ይመልከቱ።'],
+              },
+            },
+          },
+          {
+            id: 3005,
+            module_id: 302,
+            course_id: 3,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 720,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.2: Classical Composition: Leading Lines & Natural Framing',
+                summary: 'Guiding viewer attention using architecture, roadways, windows, and doorways.',
+                rich_content: `<h3>Guiding the Viewer's Eye</h3><p>Leading lines draw the eye straight into the subject. Natural frames (doorways, overhanging tree branches) add three-dimensional depth to an otherwise flat image.</p>`,
+                exercises: ['Compose three photos featuring architectural leading lines converging on a focal subject.'],
+              },
+              am: {
+                title: 'ትምህርት 2.2፡ የማዕዘን ቅንብር እና መሪ መስመሮች (Leading Lines)',
+                summary: 'መንገዶችን፣ ህንፃዎችን እና በሮችን ተጠቅሞ ማራኪ እይታ መፍጠር።',
+                rich_content: `<h3>የምስል ቅንብር</h3><p>በተፈጥሮ ያሉ መስመሮችን በመጠቀም የተመልካችን አይን ወደ ዋናው ምስል መምራት።</p>`,
+                exercises: ['መንገዶችን ወይም መስመሮችን ተጠቅመው ሶስት ፎቶዎችን አንሱ።'],
+              },
+            },
+          },
+          {
+            id: 3006,
+            module_id: 302,
+            course_id: 3,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 750,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.3: Visual Balance, Negative Space & Creative Angles',
+                summary: 'Using low and high perspective angles to alter subject authority and storytelling tone.',
+                rich_content: `<h3>Perspective as Narrative</h3><p>Eye-level photography is common and easily forgotten. Shooting from knee-level lends monumental presence to subjects; high angles communicate vulnerability.</p>`,
+                exercises: ['Photograph the same subject from extreme low angle, eye level, and overhead vantage points.'],
+              },
+              am: {
+                title: 'ትምህርት 2.3፡ ልዩ እይታዎች እና ከፍታዎች (Angles)',
+                summary: 'ከዝቅታ ወይም ከከፍታ ፎቶዎችን በማንሳት ልዩ ስሜት መፍጠር።',
+                rich_content: `<h3>የማንሻ አንግል</h3><p>ከዝቅታ የተነሳ ፎቶ ለባለቤቱ ግርማ ሞገስና ከበሬታ ይሰጣል።</p>`,
+                exercises: ['አንድን ሰው ከዝቅታ እና ከከፍታ አንስተው ልዩነቱን ይመልከቱ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 303,
+        course_id: 3,
+        display_order: 3,
+        duration_minutes: 220,
+        translations: {
+          en: { title: 'Module 3: Natural & Studio Lighting Mastery', description: 'Hard vs soft light, golden hour, reflectors, diffusers, and 3-point studio flash setups.' },
+          am: { title: 'ምዕራፍ 3፡ የተፈጥሮ እና የስቱዲዮ ብርሃን አጠቃቀም', description: 'የፀሐይ ብርሃን፣ አንፀባራቂዎች እና የስቱዲዮ መብራቶች አቀማመጥ።' },
+        },
+        lessons: [
+          {
+            id: 3007,
+            module_id: 303,
+            course_id: 3,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 690,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.1: Quality of Light: Hard vs. Soft Light & Directionality',
+                summary: 'Understanding light source size relative to subject distance and shadow falloff.',
+                rich_content: `<h3>The Physics of Flattering Light</h3><p>Large light sources (clouds, softboxes, large windows) produce soft shadows. Tiny light sources (bare bulbs, direct midday sun) create harsh specular highlights and deep black shadows.</p>`,
+                exercises: ['Shoot two portraits: one in harsh direct sunlight and one under an open window or shaded awning.'],
+              },
+              am: {
+                title: 'ትምህርት 3.1፡ የብርሃን ጥራት (Hard vs Soft Light)',
+                summary: 'የብርሃን ጥንካሬንና ጥላዎችን የመቆጣጠር ዘዴዎች።',
+                rich_content: `<h3>የብርሃን ባህሪ</h3><p>ትልቅና የተበተነ ብርሃን የሰውን ፊት ያሳምራል፣ ጥላዎችንም ያለሰልሳል።</p>`,
+                exercises: ['በፀሐይ ቀጥተኛ ብርሃን እና በጥላ ስር ፎቶ አንስተው ያወዳድሩ።'],
+              },
+            },
+          },
+          {
+            id: 3008,
+            module_id: 303,
+            course_id: 3,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 740,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.2: Outdoor Production: Golden Hour, Backlight & Reflectors',
+                summary: 'Harnessing low-angle sunlight, rim highlights, and 5-in-1 collapsible reflectors.',
+                rich_content: `<h3>Mastering the Golden Hour in Bahir Dar</h3><p>The hour after sunrise and before sunset yields warm, horizontal light. Learn how to backlight your subject and bounce golden fill light back onto their face using a silver/white reflector.</p>`,
+                exercises: ['Execute an outdoor golden hour portrait session utilizing backlighting and a bounce reflector.'],
+              },
+              am: {
+                title: 'ትምህርት 3.2፡ የተፈጥሮ ብርሃን እና አንፀባራቂ (Reflector) አጠቃቀም',
+                summary: 'ፀሐይ ስትጠልቅና ስትወጣ ያሉ ወርቃማ ሰዓታትን ተጠቅሞ ፎቶ ማንሳት።',
+                rich_content: `<h3>የፀሐይ ብርሃን አጠቃቀም</h3><p>ፀሐይ ስትጠልቅ የሚፈጠረው ለስላሳ ብርሃን ምርጥ የፎቶ ወቅት ነው።</p>`,
+                exercises: ['ፀሐይ ስትጠልቅ አንፀባራቂ (Reflector) ተጠቅመው የቁም ፎቶ ያንሱ።'],
+              },
+            },
+          },
+          {
+            id: 3009,
+            module_id: 303,
+            course_id: 3,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 830,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.3: Studio Lighting: 3-Point Setup (Key, Fill, Rim)',
+                summary: 'Strobe triggers, modifier umbrellas, softboxes, and ratio balancing.',
+                rich_content: `<h3>The Classic Studio Lighting Formula</h3><p>Learn studio flash positioning: Key light at 45 degrees, Fill light at lower power to lift dark shadows, and Rim/Hair light to carve subject edges off dark backdrops.</p>`,
+                exercises: ['Setup a 3-point studio strobe configuration and capture a professional headshot.'],
+              },
+              am: {
+                title: 'ትምህርት 3.3፡ የስቱዲዮ መብራቶች (3-Point Lighting) አቀማመጥ',
+                summary: 'ዋና መብራት (Key)፣ ማሟያ (Fill) እና የጀርባ መብራት (Rim Light)።',
+                rich_content: `<h3>የስቱዲዮ መብራት አቀማመጥ</h3><p>ሶስቱን የስቱዲዮ መብራቶች በየማዕዘናቸው በማስቀመጥ የባለሙያ ፎቶ ማንሳት።</p>`,
+                exercises: ['በስቱዲዮ ውስጥ ሶስቱን መብራቶች አቀናጅተው የቁም ፎቶ አንሱ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 304,
+        course_id: 3,
+        display_order: 4,
+        duration_minutes: 240,
+        translations: {
+          en: { title: 'Module 4: Commercial Portraiture & Lightroom Post-Production', description: 'Posing direction, product staging, RAW processing, and color grading in Adobe Lightroom.' },
+          am: { title: 'ምዕራፍ 4፡ የቁም ምስል ፎቶግራፍ እና በLightroom ማሳመር', description: 'አቀማመጥ ማስተካከል፣ RAW ፋይሎች እና በAdobe Lightroom ማስተካከል።' },
+        },
+        lessons: [
+          {
+            id: 3010,
+            module_id: 304,
+            course_id: 3,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 730,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.1: Model Posing & Commercial Portrait Direction',
+                summary: 'Body angles, chin positioning, hands placement, and relaxing non-professional subjects.',
+                rich_content: `<h3>Directing People with Confidence</h3><p>Great portraits depend on subject comfort. Learn posing instructions: pushing the chin forward and down to define the jawline, angling shoulders 45 degrees to slim the torso, and capturing genuine micro-expressions.</p>`,
+                exercises: ['Direct a subject through a series of four contrasting poses from business formal to relaxed lifestyle.'],
+              },
+              am: {
+                title: 'ትምህርት 4.1፡ አቀማመጥ (Posing) እና የሰዎች አያያዝ',
+                summary: 'ሰዎችን በማረጋጋትና ተፈጥሯዊ አቀማመጥ በማስተካከል ምርጥ ፎቶ ማንሳት።',
+                rich_content: `<h3>የሰዎች አቀማመጥ</h3><p>ተነሺው ዘና እንዲል ማድረግ እና የትከሻና የፊት አቅጣጫውን ማስተካከል።</p>`,
+                exercises: ['አንድን ሰው በተለያዩ አራት አቀማመጦች አቁመው ፎቶ አንሱ።'],
+              },
+            },
+          },
+          {
+            id: 3011,
+            module_id: 304,
+            course_id: 3,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 790,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.2: Commercial Product Photography Staging',
+                summary: 'Shooting food, beverages, jewelry, and retail products on tabletop sets.',
+                rich_content: `<h3>Clean Commercial Still Life</h3><p>Master seamless cyclorama backdrops, polarizing filters to control reflections, and acrylic risers for floating commercial product looks.</p>`,
+                exercises: ['Photograph a packaged retail product on a clean white sweep backdrop with controlled specular highlights.'],
+              },
+              am: {
+                title: 'ትምህርት 4.2፡ የንግድ እቃዎች ፎቶግራፍ (Product Photography)',
+                summary: 'ምርቶችን፣ ጌጣጌጦችን እና ምግቦችን ለገበያ በሚስብ መልኩ ማንሳት።',
+                rich_content: `<h3>የእቃዎች ፎቶግራፍ</h3><p>ለሽያጭ የሚቀርቡ እቃዎችን ንፁህ በሆነ ዳራ ላይ በከፍተኛ ጥራት ማንሳት።</p>`,
+                exercises: ['አንድን የንግድ እቃ በንጹህ ዳራ ላይ አስቀምጠው አንሱ።'],
+              },
+            },
+          },
+          {
+            id: 3012,
+            module_id: 304,
+            course_id: 3,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 880,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.3: RAW File Development & Color Grading in Adobe Lightroom',
+                summary: 'Highlight recovery, shadow details, tone curves, color grading wheels, and batch exports.',
+                rich_content: `<h3>From Camera RAW to Final Artwork</h3><p>RAW captures contain uncompressed dynamic range. Learn how to recover blown-out sky highlights, lift shadows without noise, apply selective subject masking, and batch export high-res deliverables.</p>`,
+                exercises: ['Edit a set of five RAW portraits in Adobe Lightroom to maintain cohesive color grading.'],
+              },
+              am: {
+                title: 'ትምህርት 4.3፡ በAdobe Lightroom ፎቶዎችን ማሳመር እና ኤክስፖርት',
+                summary: 'የRAW ፎቶዎችን ማስተካከል፣ ቀለማቸውን ማሳመር እና ጥራታቸውን ጠብቆ ማውጣት።',
+                rich_content: `<h3>የLightroom አጠቃቀም</h3><p>በLightroom የፎቶውን ብርሃን፣ ቀለም እና ጥራት በከፍተኛ ደረጃ ማሻሻል ይቻላል።</p>`,
+                exercises: ['አምስት ፎቶዎችን በLightroom አቀናብረው ኤክስፖርት ያድርጉ።'],
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
+
+  // 4. DIGITAL MARKETING
+  {
+    id: 4,
+    slug: 'digital-marketing',
+    category: 'Business & Growth',
+    level: 'intermediate',
+    duration_weeks: 5,
+    total_hours: 30,
+    banner_image: '/assets/courses/digital-marketing.jpg',
+    thumbnail_image: '/assets/courses/digital-marketing.jpg',
+    is_published: 1,
+    is_featured: 1,
+    display_order: 4,
+    instructor_name: 'Anchor Solution Marketing Faculty',
+    partner_name: 'Tis Abay College',
+    price: 1600,
+    regular_price: 2200,
+    difficulty: 'Intermediate (Estimate: 5 weeks / 30 hrs)',
+    translations: {
+      en: {
+        title: 'Digital Marketing',
+        tagline: 'Data-driven marketing, social media algorithms, SEO, and paid campaigns',
+        description: 'Action-oriented curriculum for growing brands online. Master Telegram channel management, Facebook/TikTok ad campaigns, content marketing funnels, copy strategy, and local business customer acquisition.',
+        objectives: [
+          'Build customer conversion funnels that transform strangers into paying clients',
+          'Launch, target, and optimize paid ad campaigns on Meta and TikTok with positive ROI',
+          'Manage and scale commercial Telegram channels using content calendars and bots',
+          'Write high-converting advertising copy using proven sales psychology frameworks',
+        ],
+        target_audience: 'Entrepreneurs, business owners, freelance marketers, and sales professionals.',
+        prerequisites: 'Familiarity with everyday social media platforms. Basic computer skills.',
+      },
+      am: {
+        title: 'ዲጂታል ማርኬቲንግ',
+        tagline: 'የኦንላይን ንግድን ማሳደጊያ፣ የቴሌግራም፣ ፌስቡክ እና ቲክቶክ የማስተዋወቅ ጥበብ',
+        description: 'ንግድዎን ወይም የደንበኞችዎን አገልግሎት በዲጂታል መንገድ ለማስተዋወቅ የተዘጋጀ ተግባራዊ ስልጠና። የቴሌግራም ቻናሎችን ማሳደግ፣ የፌስቡክ እና ቲክቶክ ማስታወቂያዎች (Paid Ads)፣ የሽያጭ ስልት እና የደንበኞች መረጃ ትንተና።',
+        objectives: [
+          'ውጤታማ የማህበራዊ ሚዲያ ማስታወቂያዎችን ማቀናበር',
+          'የቴሌግራም፣ ፌስቡክ እና ቲክቶክ ዘመቻዎችን መምራት',
+          'ደንበኛን የሚስብ የማስታወቂያ ፅሁፍ (Copywriting) መፃፍ',
+          'የሽያጭና የገበያ ውጤቶችን በዳታ መተንተን',
+        ],
+        target_audience: 'የንግድ ባለቤቶች፣ የገበያ አስተዋዋቂዎች እና ፍሪላንሰሮች።',
+        prerequisites: 'የማህበራዊ ሚዲያ መሰረታዊ ግንዛቤ።',
+      },
+    },
+    modules: [
+      {
+        id: 401,
+        course_id: 4,
+        display_order: 1,
+        duration_minutes: 180,
+        translations: {
+          en: { title: 'Module 1: Market Research, Customer Personas & Marketing Funnels', description: 'Customer demographics, pain points, awareness stages, and customer journey maps.' },
+          am: { title: 'ምዕራፍ 1፡ የገበያ ጥናት እና የደንበኛ ጉዞ ማዕቀፍ', description: 'የገበያ ፍላጎት፣ የደንበኛ ባህሪ እና የሽያጭ መስመር ግንባታ።' },
+        },
+        lessons: [
+          {
+            id: 4001,
+            module_id: 401,
+            course_id: 4,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 780,
+            is_free_preview: 1,
+            translations: {
+              en: {
+                title: 'Lesson 1.1: Building Ideal Buyer Personas for the Ethiopian Market',
+                summary: 'Defining target demographics, disposable income, media habits, and buying triggers.',
+                rich_content: `<h3>Know Your Buyer Before You Spend a Single Birr</h3><p>Advertising without a customer persona is like shouting into a crowd. Learn how to map age, location (e.g. Bahir Dar, Addis Ababa), purchasing power, and pain points into actionable avatars.</p>`,
+                exercises: ['Draft two detailed customer personas for a local vocational training institute.'],
+              },
+              am: {
+                title: 'ትምህርት 1.1፡ የደንበኞችን ባህሪና ፍላጎት መለየት (Buyer Persona)',
+                summary: 'ደንበኛዎ ምን እንደሚፈልግ፣ እድሜውን እና የመግዛት አቅሙን መተንተን።',
+                rich_content: `<h3>ትክክለኛ ደንበኛን መለየት</h3><p>ማስታወቂያ ከማውጣት በፊት ደንበኛችን ማን እንደሆነና ምን እንደሚፈልግ ማወቅ ያስፈልጋል።</p>`,
+                exercises: ['ለአንድ የንግድ ድርጅት የሚሆኑ ሁለት የደንበኛ መገለጫዎችን (Personas) አዘጋጁ።'],
+              },
+            },
+          },
+          {
+            id: 4002,
+            module_id: 401,
+            course_id: 4,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 720,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 1.2: The Digital Sales Funnel: TOFU, MOFU & BOFU',
+                summary: 'Guiding strangers from Top-of-Funnel curiosity to Bottom-of-Funnel paying customers.',
+                rich_content: `<h3>Funnel Architecture</h3><p>Top-of-Funnel (TOFU) educates and entertains. Middle-of-Funnel (MOFU) builds credibility and addresses objections. Bottom-of-Funnel (BOFU) offers frictionless purchase incentives.</p>`,
+                exercises: ['Map out a 3-stage marketing funnel for an electronics repair business.'],
+              },
+              am: {
+                title: 'ትምህርት 1.2፡ የሽያጭ መስመር (Sales Funnel) ግንባታ',
+                summary: 'አዳዲስ ሰዎችን ወደ ታማኝ ደንበኛ የመቀየር ደረጃዎች።',
+                rich_content: `<h3>የደንበኛ ጉዞ ደረጃዎች</h3><p>ደንበኛ ድርጅትዎን ከማወቁ ጀምሮ እስከሚገዛ ድረስ የሚያልፍባቸውን ደረጃዎች ማወቅ።</p>`,
+                exercises: ['ለአንድ የጥገና ሱቅ የሚሆን የ3-ደረጃ ሽያጭ መስመር እቅድ ያውጡ።'],
+              },
+            },
+          },
+          {
+            id: 4003,
+            module_id: 401,
+            course_id: 4,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 750,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 1.3: Competitive Intelligence & Unique Value Proposition',
+                summary: 'Analyzing competitor ad libraries, pricing structures, and crafting unbeatable hooks.',
+                rich_content: `<h3>Finding Your Competitive Moat</h3><p>Learn how to use Facebook Ad Library and Telegram search to audit competitor messaging, discover customer grievances, and position your brand with an irrefutable value guarantee.</p>`,
+                exercises: ['Audit three direct regional competitors and identify their primary weakness.'],
+              },
+              am: {
+                title: 'ትምህርት 1.3፡ የተፎካካሪዎች ጥናት እና የተለየ ጠቀሜታ (UVP)',
+                summary: 'የሌሎችን ማስታወቂያዎች በመፈተሽ የተሻለ አገልግሎት ማቅረብ።',
+                rich_content: `<h3>ተወዳዳሪነትን ማሳደግ</h3><p>ተፎካካሪዎ የማይሰጠውን ልዩ ጠቀሜታ ለደንበኛ በማቅረብ ገበያውን መምራት።</p>`,
+                exercises: ['በአካባቢዎ ያሉ ሶስት ተፎካካሪዎችን ድክመትና ጥንካሬ ይገምግሙ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 402,
+        course_id: 4,
+        display_order: 2,
+        duration_minutes: 200,
+        translations: {
+          en: { title: 'Module 2: Social Media Marketing & Telegram Community Architecture', description: 'Telegram channels, bots, content schedules, algorithms, and organic viral growth.' },
+          am: { title: 'ምዕራፍ 2፡ የማህበራዊ ሚዲያ እና የቴሌግራም ቻናል ስልት', description: 'የቴሌግራም እድገት፣ ቦቶች እና ማራኪ የማህበራዊ ሚዲያ ይዘት።' },
+        },
+        lessons: [
+          {
+            id: 4004,
+            module_id: 402,
+            course_id: 4,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 790,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.1: Telegram Channel Architecture & Growth Strategies',
+                summary: 'Why Telegram is Ethiopia\'s primary commerce platform, pinned offers, and member growth.',
+                rich_content: `<h3>Telegram as an Enterprise Sales Engine</h3><p>Telegram boasts unmatched open rates in Ethiopia. Learn channel creation, persuasive bio links, pinned launch announcements, broadcast schedules, and cross-promotion networks.</p>`,
+                exercises: ['Design a 7-day Telegram broadcast schedule mixing educational tips, proof of work, and offers.'],
+              },
+              am: {
+                title: 'ትምህርት 2.1፡ የቴሌግራም ቻናል ግንባታ እና የማሳደጊያ ስልቶች',
+                summary: 'በኢትዮጵያ ውስጥ ግንባር ቀደም የሆነውን ቴሌግራም ለንግድ ማዋል ዘዴዎች።',
+                rich_content: `<h3>የቴሌግራም ንግድ</h3><p>ቴሌግራም በኢትዮጵያ ውስጥ ከፍተኛ ተጠቃሚ ስላለው ቻናልን በአግባቡ ማሳደግ ትልቅ ገቢ ያስገኛል።</p>`,
+                exercises: ['ለአንድ ሳምንት የሚሆን የቴሌግራም ፖስቶች ይዘት እቅድ ያዘጋጁ።'],
+              },
+            },
+          },
+          {
+            id: 4005,
+            module_id: 402,
+            course_id: 4,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 730,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.2: Telegram Bots, Lead Qualification & Automated Replies',
+                summary: 'Using automated bots to answer FAQs, collect phone numbers, and route leads.',
+                rich_content: `<h3>Automating Sales Inquiries 24/7</h3><p>Lost responses equal lost sales. Set up interactive buttons, automated greeting menus, and contact capture forms using Telegram bots without writing complex code.</p>`,
+                exercises: ['Connect a Telegram bot with a 3-button welcome menu routing to Courses, Location, and Phone Call.'],
+              },
+              am: {
+                title: 'ትምህርት 2.2፡ የቴሌግራም ቦት (Bot) እና አውቶሜሽን',
+                summary: 'ደንበኞች ጥያቄ ሲልኩ በራስ-ሰር ምላሽ የሚሰጡ ቦቶችን ማዘጋጀት።',
+                rich_content: `<h3>የቦቶች ጥቅም</h3><p>ቦቶች የደንበኞችን ስልክና ፍላጎት 24 ሰዓት ያለ እረፍት እንዲመዘገብ ያደርጋሉ።</p>`,
+                exercises: ['አውቶማቲክ ምላሽ የሚሰጥ የቴሌግራም ቦት አዘጋጁ።'],
+              },
+            },
+          },
+          {
+            id: 4006,
+            module_id: 402,
+            course_id: 4,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 820,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.3: TikTok & Facebook Organic Algorithms',
+                summary: 'Mastering the 3-second watch hook, average percentage viewed, and viral formats.',
+                rich_content: `<h3>Cracking the Organic Recommendation Algorithm</h3><p>Algorithms reward retention time. Learn how to script the first 3 seconds with pattern interrupts, pose controversial questions, and retain audiences through storytelling arcs.</p>`,
+                exercises: ['Script a 30-second educational TikTok video demonstrating a quick tech shortcut.'],
+              },
+              am: {
+                title: 'ትምህርት 2.3፡ የቲክቶክ እና ፌስቡክ አልጎሪዝም ሚስጥሮች',
+                summary: 'ቪዲዮዎች በብዙ ሰዎች ዘንድ እንዲታዩ የማድረግ ጥበብ።',
+                rich_content: `<h3>ተደራሽነትን ማሳደግ</h3><p>በመጀመሪያዎቹ 3 ሰከንዶች የተመልካችን ትኩረት የሚስብ ቪዲዮ ማቅረብ ተደራሽነትን በእጅጉ ያሳድጋል።</p>`,
+                exercises: ['የ30 ሰከንድ አጭር ትምህርታዊ የቲክቶክ ቪዲዮ ረቂቅ ፅሁፍ አዘጋጁ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 403,
+        course_id: 4,
+        display_order: 3,
+        duration_minutes: 220,
+        translations: {
+          en: { title: 'Module 3: Paid Advertising & Campaign Optimization', description: 'Meta Ads Manager, targeting parameters, pixel events, budget management, and A/B testing.' },
+          am: { title: 'ምዕራፍ 3፡ የሚከፈልባቸው ማስታወቂያዎች እና የዘመቻ አመራር', description: 'የፌስቡክና ቲክቶክ ማስታወቂያዎችን በአነስተኛ ወጪ ውጤታማ ማድረግ።' },
+        },
+        lessons: [
+          {
+            id: 4007,
+            module_id: 403,
+            course_id: 4,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 770,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.1: Meta Ads Manager Hierarchy: Campaigns, Ad Sets & Creatives',
+                summary: 'Campaign objectives (Traffic vs Leads vs Messages), budget setup, and ad sets.',
+                rich_content: `<h3>Professional Campaign Structure</h3><p>Avoid the "Boost Post" button trap. Use Ads Manager to set deliberate objectives (e.g. WhatsApp / Telegram click-to-message), allocate daily budgets, and set geographic radiuses.</p>`,
+                exercises: ['Build a mock campaign in Meta Ads Manager targeting Bahir Dar residents interested in IT.'],
+              },
+              am: {
+                title: 'ትምህርት 3.1፡ የፌስቡክ ማስታወቂያ (Meta Ads Manager) መዋቅር',
+                summary: 'የማስታወቂያ ዘመቻን በባለሙያ መንገድ የማዋቀር ዘዴ።',
+                rich_content: `<h3>ማስታወቂያዎችን በአግባቡ ማስተዳደር</h3><p>የተወሰነ በጀት መድበው የሚፈለገውን ከተማ ብቻ ለይተው ማስታወቂያ ማድረስ።</p>`,
+                exercises: ['በባህር ዳር ከተማ ውስጥ ለሚገኙ ወጣቶች የሚደርስ የማስታወቂያ እቅድ አዘጋጁ።'],
+              },
+            },
+          },
+          {
+            id: 4008,
+            module_id: 403,
+            course_id: 4,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 810,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.2: Precise Local Audience Targeting & Lookalikes',
+                summary: 'Filtering by city radiuses, device types, interests, and excluded demographics.',
+                rich_content: `<h3>Hyper-Local Targeting</h3><p>Target within 15 km of your physical shop. Filter by Android/iPhone models, college attendance, and exclude irrelevant non-buyers to cut wasted ad spend.</p>`,
+                exercises: ['Configure an audience targeting students and professionals living within 10 km of Kebele 04, Bahir Dar.'],
+              },
+              am: {
+                title: 'ትምህርት 3.2፡ ትክክለኛ ተመልካቾችን መምረጥ (Audience Targeting)',
+                summary: 'ማስታወቂያው ለሚፈልጉት ሰዎች ብቻ እንዲታይ የማድረግ ቴክኒክ።',
+                rich_content: `<h3>ተመልካችን ለይቶ ማወቅ</h3><p>ማስታወቂያዎ ለሚገዙት ሰዎች ብቻ እንዲደርስ በማድረግ ወጪን መቆጠብ።</p>`,
+                exercises: ['በቀበሌ 04 ዙሪያ ላሉ ተማሪዎች ብቻ የሚደርስ ታርጌት ያዘጋጁ።'],
+              },
+            },
+          },
+          {
+            id: 4009,
+            module_id: 403,
+            course_id: 4,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 850,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.3: A/B Testing & Return on Ad Spend (ROAS) Optimization',
+                summary: 'Testing multiple headlines and video hooks to discover low-cost conversion winners.',
+                rich_content: `<h3>Scientific Ad Optimization</h3><p>Never rely on a single creative. Run three variations simultaneously. Kill underperformers after 48 hours, scale the winner, and calculate cost per acquisition (CPA).</p>`,
+                exercises: ['Calculate cost per lead given a $50 ad spend generating 25 phone inquiries.'],
+              },
+              am: {
+                title: 'ትምህርት 3.3፡ ማስታወቂያዎችን ማወዳደር (A/B Testing) እና ትርፋማነት',
+                summary: 'በርካታ ማስታወቂያዎችን በማወዳደር አነስተኛ ወጪ የሚጠይቀውን መምረጥ።',
+                rich_content: `<h3>የማስታወቂያ ውጤት መለካት</h3><p>የትኛው ማስታወቂያ የተሻለ ደንበኛ እንደሚያመጣ በዳታ መለካት።</p>`,
+                exercises: ['ሁለት የተለያዩ የማስታወቂያ ፅሁፎችን በማወዳደር ውጤቱን ይገምግሙ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 404,
+        course_id: 4,
+        display_order: 4,
+        duration_minutes: 240,
+        translations: {
+          en: { title: 'Module 4: Copywriting, Conversion Rate Optimization & Analytics', description: 'Persuasive sales copywriting, call-to-actions, conversion pages, and metrics dashboards.' },
+          am: { title: 'ምዕራፍ 4፡ የማስታወቂያ ፅሁፍ እና የውጤት ትንተና', description: 'ደንበኛን የሚስብ ፅሁፍ፣ የጥሪ ቁልፎች እና የሪፖርት ዝግጅት።' },
+        },
+        lessons: [
+          {
+            id: 4010,
+            module_id: 404,
+            course_id: 4,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 790,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.1: High-Converting Copywriting: The PAS and AIDA Frameworks',
+                summary: 'Attention, Interest, Desire, Action & Problem-Agitate-Solve copywriting structures.',
+                rich_content: `<h3>Writing Words That Sell</h3><p>Copywriting is salesmanship in print. Master the PAS formula: Identify the Problem, Agitate the frustration of inaction, and present your course/service as the painless Solution.</p>`,
+                exercises: ['Write a 150-word promotional post for a computer maintenance course using the PAS framework.'],
+              },
+              am: {
+                title: 'ትምህርት 4.1፡ የሽያጭ ፅሁፍ ጥበብ (Copywriting: PAS & AIDA)',
+                summary: 'ደንበኞች እንዲገዙ የሚያነሳሳ የማስታወቂያ ፅሁፍ መጻፍ።',
+                rich_content: `<h3>ደንበኛን የሚስብ ፅሁፍ</h3><p>የደንበኛውን ችግር በመጥቀስ መፍትሄውን በማስታወቂያዎ ውስጥ ማቅረብ።</p>`,
+                exercises: ['ለስልክ ጥገና ኮርስ የሚሆን የ150 ቃላት ማስታወቂያ ፅሁፍ ያዘጋጁ።'],
+              },
+            },
+          },
+          {
+            id: 4011,
+            module_id: 404,
+            course_id: 4,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 740,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.2: Conversion Landing Pages & Frictionless Lead Capture',
+                summary: 'Designing high-converting pages, clear CTAs, trust signals, and direct call buttons.',
+                rich_content: `<h3>Removing Purchase Friction</h3><p>Every extra click loses 20% of buyers. Learn how to place phone numbers prominently, embed direct Telegram links, and use social proof reviews to drive registrations.</p>`,
+                exercises: ['Wireframe a mobile landing page prioritizing phone and Telegram CTA buttons.'],
+              },
+              am: {
+                title: 'ትምህርት 4.2፡ የሽያጭ ገጾች እና የቀጥታ ጥሪ ቁልፎች (Call-to-Action)',
+                summary: 'ደንበኞች በቀላሉ ደውለው እንዲመዘገቡ የሚረዱ የገጽ አቀማመጦች።',
+                rich_content: `<h3>ቀላል የምዝገባ ሂደት</h3><p>ደንበኛውን ሳያደናግሩ በቀጥታ ስልክ እንዲደውል ወይም በቴሌግራም እንዲያናግር ማድረግ።</p>`,
+                exercises: ['ቀጥተኛ የስልክ መደወያ ቁልፍ ያለው የሞባይል ገጽ ረቂቅ ይስሩ።'],
+              },
+            },
+          },
+          {
+            id: 4012,
+            module_id: 404,
+            course_id: 4,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 820,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.3: Analytics, Reporting & Landing Client Retainers',
+                summary: 'Calculating ROI, presenting monthly reports, and pitching commercial businesses.',
+                rich_content: `<h3>Becoming an In-Demand Growth Partner</h3><p>Clients do not pay for ads; they pay for customers. Learn how to present concise weekly performance dashboards showing leads generated, cost per inquiry, and estimated sales revenue.</p>`,
+                exercises: ['Draft a 1-page monthly digital performance report for an automotive or education client.'],
+              },
+              am: {
+                title: 'ትምህርት 4.3፡ የውጤት ሪፖርት ማቅረብ እና ከደንበኞች ጋር በቋሚነት መስራት',
+                summary: 'ለድርጅቶች ወርሃዊ የዲጂታል ገበያ ሪፖርት አዘጋጅቶ በቋሚነት ገቢ ማግኘት።',
+                rich_content: `<h3>የሪፖርት አቀራረብ</h3><p>ማስታወቂያው ያመጣውን ውጤትና የደንበኞች ቁጥር በግልጽ የሚያሳይ ሪፖርት ማዘጋጀት።</p>`,
+                exercises: ['የአንድ ወር የማስታወቂያ ውጤት የሚያሳይ የ1 ገጽ ሪፖርት ያዘጋጁ።'],
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
+
+  // 5. MOBILE & COMPUTER MAINTENANCE
+  {
+    id: 5,
+    slug: 'mobile-computer-maintenance',
+    category: 'Hardware & IT',
+    level: 'beginner',
+    duration_weeks: 8,
+    total_hours: 48,
+    banner_image: '/assets/courses/mobile-maintenance.jpg',
+    thumbnail_image: '/assets/courses/mobile-maintenance.jpg',
+    is_published: 1,
+    is_featured: 1,
+    display_order: 5,
+    instructor_name: 'Anchor Solution Hardware Laboratory',
+    partner_name: 'Tis Abay College',
+    price: 2800,
+    regular_price: 3500,
+    difficulty: 'Beginner to Practical Technician (Estimate: 8 weeks / 48 hrs)',
+    translations: {
+      en: {
+        title: 'Mobile & Computer Maintenance',
+        tagline: 'Hardware troubleshooting, screen replacements, motherboard diagnostics, and OS repairs',
+        description: 'Hands-on technical training taught with real hardware tools in Bahir Dar. Covers smartphone diagnostics, screen/battery replacement, motherboard micro-soldering basics, desktop/laptop assembly, formatting, and virus recovery.',
+        objectives: [
+          'Diagnose Android and iPhone hardware and software failures using multimeters and diagnostic software',
+          'Safely disassemble laptops and desktops, replace thermal paste, and upgrade RAM/NVMe storage',
+          'Execute precision screen, charging port, and battery swaps with professional thermal equipment',
+          'Flash firmware, resolve bootloops, remove malware, and set up fresh operating systems',
+        ],
+        target_audience: 'Aspiring technicians, engineering students, hardware shop entrepreneurs, and IT specialists.',
+        prerequisites: 'No prior electronics experience needed. High curiosity for hands-on hardware disassembly.',
+      },
+      am: {
+        title: 'የስልክ እና የኮምፒውተር ጥገና',
+        tagline: 'የሃርድዌርና የሶፍትዌር ብልሽቶችን በተግባር የመለየትና የመጠገን ሙያ',
+        description: 'በተግባር መሳሪያዎች የታገዘ የቴክኒክ ስልጠና። የስማርትፎን (አንድሮይድ እና አይፎን) ስክሪን፣ ባትሪና የቻርጅ ፖርት መቀየር፣ የኮምፒውተር ሃርድዌር መገጣጠም፣ ዊንዶውስ መጫን፣ የሶፍትዌር ብልሽቶችን መፍታት እና የቦርድ ቼኪንግ።',
+        objectives: [
+          'የስማርትፎን እና የላፕቶፕ ብልሽቶችን በፍጥነት መለየት',
+          'ስክሪን፣ ባትሪ እና የተለያዩ ክፍሎችን በጥንቃቄ መቀየር',
+          'የኦፕሬቲንግ ሲስተም (Windows/OS) መጫንና ሶፍትዌር ማደስ',
+          'የራስዎን የጥገና ሱቅ ወይም አገልግሎት ለመጀመር የሚያስችል ብቃት',
+        ],
+        target_audience: 'የጥገና ስራ መጀመር የሚፈልጉ ወጣቶች፣ ቴክኒሻኖች እና የቴክኖሎጂ ፍላጎት ያላቸው ሁሉ።',
+        prerequisites: 'ምንም አይነት ቅድመ የኤሌክትሮኒክስ ልምድ አይጠይቅም።',
+      },
+    },
+    modules: [
+      {
+        id: 501,
+        course_id: 5,
+        display_order: 1,
+        duration_minutes: 240,
+        translations: {
+          en: { title: 'Module 1: Electronics Fundamentals & Safety Workstation Setup', description: 'ESD safety, multimeter continuity testing, soldering station operation, and shop safety.' },
+          am: { title: 'ምዕራፍ 1፡ የኤሌክትሮኒክስ መሰረቶች እና የደህንነት ጥንቃቄዎች', description: 'የደህንነት ጥንቃቄ፣ መልቲሜትር አጠቃቀም እና የጥገና እቃዎች አያያዝ።' },
+        },
+        lessons: [
+          {
+            id: 5001,
+            module_id: 501,
+            course_id: 5,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 920,
+            is_free_preview: 1,
+            translations: {
+              en: {
+                title: 'Lesson 1.1: Workstation Safety & Electrostatic Discharge (ESD) Protection',
+                summary: 'Protecting sensitive integrated circuits from invisible static electricity shocks.',
+                rich_content: `<h3>Safety First: Avoiding Costly Component Frying</h3><p>Static shocks imperceptible to human skin (less than 100V) can instantly destroy sensitive motherboard chips. Learn anti-static wristbands, grounding mats, magnetic screw mats, and fume extraction.</p>`,
+                exercises: ['Configure an ESD-compliant hardware repair bench with grounding mats and wristband.'],
+              },
+              am: {
+                title: 'ትምህርት 1.1፡ የጥገና ደህንነት እና የኤሌክትሮስታቲክ (ESD) ጥንቃቄዎች',
+                summary: 'በስልክና ኮምፒውተር ቦርድ ላይ ጉዳት እንዳይደርስ የስታቲክ ኤሌክትሪክ መከላከያ መጠቀም።',
+                rich_content: `<h3>የቦርድ ደህንነት</h3><p>የማይታይ የሰውነት ኤሌክትሪክ ስስ የሆኑትን የቦርድ ክፍሎች እንዳያቃጥል ጥንቃቄ ማድረግ።</p>`,
+                exercises: ['የጥገና ጠረጴዛዎን የኤሌክትሪክ አደጋ መከላከያ ባለው መንገድ ያዘጋጁ።'],
+              },
+            },
+          },
+          {
+            id: 5002,
+            module_id: 501,
+            course_id: 5,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 880,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 1.2: Multimeter Diagnostics: Voltage, Resistance & Continuity',
+                summary: 'Testing fuses, capacitors, short circuits to ground, and battery health.',
+                rich_content: `<h3>The Multimeter: The Technician\'s Stethoscope</h3><p>Master continuity beeps to locate short circuits on power rails. Measure DC voltage to verify battery cells and charging port output voltages (5V, 9V, 20V USB-PD).</p>`,
+                exercises: ['Probe an unpowered board and identify whether any major capacitors are shorted to ground.'],
+              },
+              am: {
+                title: 'ትምህርት 1.2፡ መልቲሜትር (Multimeter) አጠቃቀም እና ቼኪንግ',
+                summary: 'የባትሪ ቮልቴጅ መለካት፣ የተቃጠሉ ፊውዞችን እና ሾርት መፈለግ።',
+                rich_content: `<h3>መልቲሜትር</h3><p>በመልቲሜትር በመታገዝ የተበላሹ ክፍሎችንና የኤሌክትሪክ ፍሰቱን ማረጋገጥ።</p>`,
+                exercises: ['የስልክ ባትሪን ቮልቴጅ በመልቲሜትር ለክተው ይሞክሩ።'],
+              },
+            },
+          },
+          {
+            id: 5003,
+            module_id: 501,
+            course_id: 5,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 850,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 1.3: Soldering Station Operation: Soldering & Desoldering',
+                summary: 'Soldering irons, hot air guns, flux chemistry, and bridge cleanup.',
+                rich_content: `<h3>Precision Soldering Fundamentals</h3><p>Flux is essential for oxidation prevention and solder flow. Learn temperature ranges (300°C–380°C), wick usage, desoldering pump mechanics, and tinning iron tips.</p>`,
+                exercises: ['Solder and desolder five through-hole and SMD components cleanly onto a practice PCB.'],
+              },
+              am: {
+                title: 'ትምህርት 1.3፡ የብየዳ (Soldering) ማሽን አጠቃቀም',
+                summary: 'የካውያና የሙቀት ማሽን አጠቃቀም፣ ፍላክስ እና ቆርቆሮ ማቅለጥ።',
+                rich_content: `<h3>የብየዳ መሰረቶች</h3><p>በጥንቃቄ ክፍሎችን መበየድና የተቃጠሉትን ያለምንም ጉዳት ማንሳት።</p>`,
+                exercises: ['በልምምድ ቦርድ ላይ ክፍሎችን ነቅለው መልሰው ይበይዱ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 502,
+        course_id: 5,
+        display_order: 2,
+        duration_minutes: 260,
+        translations: {
+          en: { title: 'Module 2: Smartphone Hardware Diagnostics & Teardown', description: 'Thermal screen separation, battery replacements, camera modules, and charging ports.' },
+          am: { title: 'ምዕራፍ 2፡ የስማርትፎን ክፍሎች እና የስክሪን/ባትሪ ቅያሬ', description: 'መሳሪያዎችን መክፈት፣ የስክሪን እና የባትሪ ቅያሬ በጥንቃቄ ማከናወን።' },
+        },
+        lessons: [
+          {
+            id: 5004,
+            module_id: 502,
+            course_id: 5,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 910,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.1: Smartphone Teardown: Heat Beds & Safe Opening',
+                summary: 'Softening waterproof adhesive, suction cups, and avoiding torn ribbon cables.',
+                rich_content: `<h3>Safe Phone Disassembly</h3><p>Modern phones are sealed with industrial adhesive. Learn heat plate temperature settings (75°C–80°C for 5 minutes), alcohol release techniques, and pry picks.</p>`,
+                exercises: ['Open an adhesive-sealed Android smartphone without scratching the rear housing.'],
+              },
+              am: {
+                title: 'ትምህርት 2.1፡ ስልኮችን በሙቀት ማሽን በጥንቃቄ መክፈት',
+                summary: 'ሙጫ ያላቸውን ስልኮች ስክሪናቸውን ሳይሰብሩ የመክፈት ጥበብ።',
+                rich_content: `<h3>ስልኮችን የመክፈት ቴክኒክ</h3><p>ስልኩን በሙቀት ማሽን በማሞቅ ሙጫውን ማላላት እና ውስጣዊ ኬብሎችን ሳይቆርጡ መክፈት።</p>`,
+                exercises: ['የልምምድ ስልክን በሙቀት ማሽን በማሞቅ በጥንቃቄ ይክፈቱ።'],
+              },
+            },
+          },
+          {
+            id: 5005,
+            module_id: 502,
+            course_id: 5,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 940,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.2: AMOLED & LCD Screen Assembly Replacement',
+                summary: 'Digitizer testing, frame cleaning, adhesive application, and true tone transfer.',
+                rich_content: `<h3>Screen Swaps Done Right</h3><p>Always bench-test new replacement screens before applying glue. Clean old frame adhesive with isopropyl alcohol (IPA), apply B-7000 or pre-cut tape, and clamp evenly.</p>`,
+                exercises: ['Bench test a replacement screen, verify touch responsiveness across all grid corners, and install.'],
+              },
+              am: {
+                title: 'ትምህርት 2.2፡ የተሰበረ ስክሪን መቀየር (Screen Replacement)',
+                summary: 'አዲስ ስክሪን መፈተሽ፣ ሙጫ መቀባት እና በንፅህና መግጠም ልምምድ።',
+                rich_content: `<h3>ስክሪን ቅያሬ</h3><p>አዲሱን ስክሪን ከመለጠፍ በፊት ተች መስራቱን ማረጋገጥ እና በጥንቃቄ መግጠም።</p>`,
+                exercises: ['አዲስ ስክሪን ሰርቶ ማሳየቱን ፈትሸው በስልኩ ፍሬም ላይ ግጠሙ።'],
+              },
+            },
+          },
+          {
+            id: 5006,
+            module_id: 502,
+            course_id: 5,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 880,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.3: Battery Safety & Charging Sub-Board Diagnostics',
+                summary: 'Swollen Li-Ion battery hazards, pull tabs, and soldering USB-C charging ports.',
+                rich_content: `<h3>Power & Charging Troubles</h3><p>Punctured lithium batteries explode into thermal fires. Learn safe adhesive strip extraction, replacing bloated packs, and testing microphone and USB-C sub-boards.</p>`,
+                exercises: ['Remove an adhesive-backed lithium battery safely without bending the cell.'],
+              },
+              am: {
+                title: 'ትምህርት 2.3፡ የባትሪና የቻርጅ ፖርት (Charging Port) ጥገና',
+                summary: 'ያበጡ ባትሪዎችን በጥንቃቄ ማንሳት እና የማይሞሉ ስልኮችን መጠገን።',
+                rich_content: `<h3>የኃይልና የቻርጅ ብልሽቶች</h3><p>ባትሪ እንዳይፈነዳ ጥንቃቄ ማድረግ እና የቻርጅ ፖርቱን ቅያሬ ማከናወን።</p>`,
+                exercises: ['የተበላሸ የቻርጅ ፖርት ክፍልን ነቅለው አዲሱን ይግጠሙ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 503,
+        course_id: 5,
+        display_order: 3,
+        duration_minutes: 260,
+        translations: {
+          en: { title: 'Module 3: Computer Hardware Architecture & Troubleshooting', description: 'Motherboard components, POST diagnostics, thermal paste, and RAM/NVMe SSD upgrades.' },
+          am: { title: 'ምዕራፍ 3፡ የኮምፒውተር ክፍሎች እና የብልሽት መለያ ዘዴዎች', description: 'የኮምፒውተር ክፍሎች፣ ችግር መፈለግና ዊንዶውስ መጫን።' },
+        },
+        lessons: [
+          {
+            id: 5007,
+            module_id: 503,
+            course_id: 5,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 860,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.1: Desktop & Laptop Teardown and Modular Architecture',
+                summary: 'Motherboard form factors, CPU sockets, heat pipes, fans, and power rails.',
+                rich_content: `<h3>Understanding the PC Ecosystem</h3><p>Learn component interconnects: CPU, GPU, Chipset, DDR4/DDR5 RAM, and M.2 PCIe lanes. Disassemble a modern laptop noting screw lengths to avoid chassis puncture.</p>`,
+                exercises: ['Completely disassemble a laptop to motherboard level and reassemble with zero spare screws left.'],
+              },
+              am: {
+                title: 'ትምህርት 3.1፡ ላፕቶፕና ዴስክቶፕ ኮምፒውተሮችን መበታተንና መግጠም',
+                summary: 'የኮምፒውተር ክፍሎች አቀማመጥ እና ጥንቃቄዎች።',
+                rich_content: `<h3>የኮምፒውተር አካላት</h3><p>እያንዳንዱን የላፕቶፕ ክፍል በስርዓት መበታተን እና መልሶ መገጣጠም።</p>`,
+                exercises: ['አንድን ላፕቶፕ ሙሉ ለሙሉ ፈትተው መልሰው ያለምንም ግድፈት ይግጠሙ።'],
+              },
+            },
+          },
+          {
+            id: 5008,
+            module_id: 503,
+            course_id: 5,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 900,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.2: Power-On Self-Test (POST) Failures & Beep Codes',
+                summary: 'Diagnosing no-power, no-display, fan spin loops, and memory seat issues.',
+                rich_content: `<h3>The Diagnostic Flowchart</h3><p>When a PC turns on with a black screen: 1. Listen for motherboard beep codes. 2. Inspect RAM contacts. 3. Clear CMOS battery. 4. Probe 12V CPU power rail.</p>`,
+                exercises: ['Diagnose and fix a simulated "No Display / Black Screen" laptop fault.'],
+              },
+              am: {
+                title: 'ትምህርት 3.2፡ ኮምፒውተር እምቢ ሲል (No Display / Black Screen) መፍትሄ መፈለግ',
+                summary: 'ስክሪን የማይበራ ወይም ኃይል የማይወስድ ኮምፒውተር ብልሽት መለየት።',
+                rich_content: `<h3>የብልሽት መለያ ዘዴ</h3><p>ራም ማፅዳት፣ ባዮስ (CMOS) ሪሴት ማድረግ እና የቦርድ ኃይል ፍሰትን መፈተሽ።</p>`,
+                exercises: ['ስክሪኑ የማይበራ ኮምፒውተር ችግሩን አግኝተው አስተካክሉ።'],
+              },
+            },
+          },
+          {
+            id: 5009,
+            module_id: 503,
+            course_id: 5,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 830,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.3: Overheating Diagnostics & Thermal Paste Application',
+                summary: 'Thermal throttling, heatsink dust clogs, and high-performance paste techniques.',
+                rich_content: `<h3>Solving Sudden PC Shutdowns</h3><p>Laptops shutting down under heavy load suffer from dried thermal paste and clogged fan exhausts. Clean copper heat pipes and apply pea-sized non-conductive thermal compound.</p>`,
+                exercises: ['Disassemble a thermal heatsink, clean old paste with IPA, and apply fresh thermal compound.'],
+              },
+              am: {
+                title: 'ትምህርት 3.3፡ የኮምፒውተር ሙቀት መቀነሻ (Thermal Paste) እና ፅዳት',
+                summary: 'ኮምፒውተር ሲግል ራሱ የሚጠፋበትን ችግር በቴርማል ፔስት መፍታት።',
+                rich_content: `<h3>የሙቀት መቆጣጠሪያ</h3><p>የማቀዝቀዣ ፋኑን ማፅዳት እና በፕሮሰሰሩ ላይ አዲስ ቴርማል ፔስት መቀባት።</p>`,
+                exercises: ['የላፕቶፑን ማቀዝቀዣ አፅድተው አዲስ ቴርማል ፔስት ቀቡ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 504,
+        course_id: 5,
+        display_order: 4,
+        duration_minutes: 240,
+        translations: {
+          en: { title: 'Module 4: Operating System Deployment, Firmware & Software Recovery', description: 'Bootable media creation, UEFI/BIOS setup, smartphone firmware flashing, and data backup.' },
+          am: { title: 'ምዕራፍ 4፡ ኦፕሬቲንግ ሲስተም መጫን እና ሶፍትዌር ማደስ', description: 'ዊንዶውስ መጫን፣ ስልኮችን ሶፍትዌር መጫን (Flashing) እና መረጃ ማዳን።' },
+        },
+        lessons: [
+          {
+            id: 5010,
+            module_id: 504,
+            course_id: 5,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 790,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.1: Clean Windows 11 Deployment & Driver Installation',
+                summary: 'Creating Rufus bootable USBs, GPT/UEFI partition styles, and chipset drivers.',
+                rich_content: `<h3>Flawless OS Installation</h3><p>Learn how to format hard drives safely, partition drives, bypass hardware TPM requirements legally for learning labs, and install official vendor drivers without bloatware.</p>`,
+                exercises: ['Create a bootable Windows 11 USB installer and perform a fresh installation on a test PC.'],
+              },
+              am: {
+                title: 'ትምህርት 4.1፡ ዊንዶውስ 11 መጫን እና ድራይቨሮች (Drivers)',
+                summary: 'በፍላሽ ዊንዶውስ ማዘጋጀት፣ ፎርማት ማድረግ እና ድራይቨሮችን መጫን።',
+                rich_content: `<h3>ዊንዶውስ መጫን</h3><p>ኮምፒውተርን ፎርማት በማድረግ አዲስና ፈጣን ዊንዶውስ መጫን።</p>`,
+                exercises: ['በፍላሽ ላይ ዊንዶውስ አዘጋጅተው በኮምፒውተር ላይ ጫኑ።'],
+              },
+            },
+          },
+          {
+            id: 5011,
+            module_id: 504,
+            course_id: 5,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 880,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.2: Smartphone Firmware Flashing & Bootloop Recovery',
+                summary: 'Odin for Samsung, Fastboot for Xiaomi/Pixel, stock ROMs, and unbricking phones.',
+                rich_content: `<h3>Reviving Bricked Phones</h3><p>When phones get stuck on the logo screen (bootloop), corrupted firmware is the culprit. Learn how to locate verified official stock ROMs, put devices into Download mode, and flash firmware safely.</p>`,
+                exercises: ['Flash stock firmware onto an Android test device to resolve a simulated bootloop.'],
+              },
+              am: {
+                title: 'ትምህርት 4.2፡ የስልክ ሶፍትዌር መጫን (Flashing) እና ቦትሉፕ መፍታት',
+                summary: 'ሎጎ ላይ የቀሩና የታገዱ ስልኮችን አዲስ ሶፍትዌር በመጫን ማዳን።',
+                rich_content: `<h3>የስልክ ሶፍትዌር ጥገና</h3><p>ስልኮች ሎጎ ላይ ሲቆሙ አዲስ ፍርምዌር (Firmware) በመጫን ማስተካከል።</p>`,
+                exercises: ['ሎጎ ላይ የቀረን ስልክ በኮምፒውተር አማካኝነት ፍላሽ አድርገው አስነሱ።'],
+              },
+            },
+          },
+          {
+            id: 5012,
+            module_id: 504,
+            course_id: 5,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 820,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.3: Data Recovery Best Practices & Technician Shop Operations',
+                summary: 'Recovering deleted partitions, client privacy ethics, repair ticketing, and pricing.',
+                rich_content: `<h3>Building a Trusted Repair Business</h3><p>Learn data rescue workflows for failing hard drives. Understand strict client privacy ethics (never browsing client photos) and setting up repair intake tickets with guaranteed turnaround times.</p>`,
+                exercises: ['Recover deleted files from a corrupted flash drive using file carver recovery tools.'],
+              },
+              am: {
+                title: 'ትምህርት 4.3፡ የጠፉ መረጃዎችን ማዳን (Data Recovery) እና የሱቅ አመራር',
+                summary: 'የጠፉ ፋይሎችን መመለስ፣ የደንበኞች ሚስጥር አጠባበቅ እና የጥገና ሱቅ መክፈት።',
+                rich_content: `<h3>የቴክኒሻን ሙያዊ ስነ-ምግባር</h3><p>የደንበኞችን ሚስጥር መጠበቅ እና የራስዎን የጥገና ሱቅ በስኬት መምራት።</p>`,
+                exercises: ['ከፍላሽ ላይ የጠፉ ፎቶዎችንና ሰነዶችን በሶፍትዌር መልሱ።'],
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
+
+  // 6. BASIC COMPUTER SKILLS
+  {
+    id: 6,
+    slug: 'basic-computer-skills',
+    category: 'Foundations',
+    level: 'beginner',
+    duration_weeks: 4,
+    total_hours: 20,
+    banner_image: '/assets/courses/basic-computer.jpg',
+    thumbnail_image: '/assets/courses/basic-computer.jpg',
+    is_published: 1,
+    is_featured: 1,
+    display_order: 6,
+    instructor_name: 'Anchor Solution Foundations Faculty',
+    partner_name: 'Tis Abay College',
+    price: 999,
+    regular_price: 1500,
+    difficulty: 'Absolute Beginner (Estimate: 4 weeks / 20 hrs)',
+    translations: {
+      en: {
+        title: 'Basic Computer Skills',
+        tagline: 'Essential digital literacy: Microsoft Office, typing, web navigation, and cybersecurity basics',
+        description: 'The foundational course for students, office administrators, and career changers. Learn fast touch typing, Microsoft Word formatting, Excel formulas, PowerPoint presentations, email etiquette, and safe internet browsing.',
+        objectives: [
+          'Operate Windows 11 with ease: master folder structures, file extensions, and shortcut navigation',
+          'Draft professional letters, CVs, and reports in Microsoft Word with clean styling',
+          'Calculate budgets, sales, and student marks in Microsoft Excel using formulas and charts',
+          'Design compelling presentation slides in PowerPoint and communicate safely over email and cloud drives',
+        ],
+        target_audience: 'Office workers, students, job seekers, and anyone taking their first steps into computer literacy.',
+        prerequisites: 'No previous computer experience required. Starts from absolute basics.',
+      },
+      am: {
+        title: 'መሰረታዊ የኮምፒውተር እውቀት',
+        tagline: 'የቢሮ ስራዎች፣ የኤክሴል፣ ወርድ፣ ፓወርፖይንት እና የኢንተርኔት አጠቃቀም',
+        description: 'ለተማሪዎችና ለቢሮ ሰራተኞች የሚሆን መሰረታዊ የዲጂታል እውቀት። ፈጣን የኪቦርድ ፅሁፍ (Typing)፣ ማይክሮሶፍት ወርድ (Word)፣ ኤክሴል (Excel)፣ ፓወርፖይንት (PowerPoint)፣ የኢሜይል ልውውጥ እና ደህንነቱ የተጠበቀ የኢንተርኔት አጠቃቀም።',
+        objectives: [
+          'የኮምፒውተር ኦፕሬቲንግ ሲስተም እና የፋይል አያያዝን መረዳት',
+          'በMicrosoft Word ደብዳቤዎችንና ሰነዶችን በሙያዊ መንገድ ማዘጋጀት',
+          'በMicrosoft Excel ቀመሮችን (Formulas) ተጠቅሞ ሂሳብ መስራት',
+          'በMicrosoft PowerPoint ገላጭ ገለፃዎችን (Slides) ማዘጋጀት',
+        ],
+        target_audience: 'የኮምፒውተር እውቀታቸውን ማሳደግ የሚፈልጉ ጀማሪዎች፣ ሰራተኞች እና ተማሪዎች።',
+        prerequisites: 'ምንም ቅድመ እውቀት አያስፈልግም።',
+      },
+    },
+    modules: [
+      {
+        id: 601,
+        course_id: 6,
+        display_order: 1,
+        duration_minutes: 150,
+        translations: {
+          en: { title: 'Module 1: Computer Hardware, Windows 11 & Touch Typing', description: 'Computer hardware parts, desktop navigation, file explorer, and typing fundamentals.' },
+          am: { title: 'ምዕራፍ 1፡ የኮምፒውተር አካላት፣ ዊንዶውስ እና ፈጣን ፅሁፍ', description: 'የኮምፒውተር መሰረቶች፣ የዊንዶውስ አጠቃቀም እና ፅሁፍ።' },
+        },
+        lessons: [
+          {
+            id: 6001,
+            module_id: 601,
+            course_id: 6,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 540,
+            is_free_preview: 1,
+            translations: {
+              en: {
+                title: 'Lesson 1.1: Physical Computer Hardware & Safe Operations',
+                summary: 'Monitor, system unit, keyboard, mouse, USB ports, and clean startup/shutdown.',
+                rich_content: `<h3>Meet Your Computer</h3><p>Learn the difference between hardware (tangible physical parts) and software (programs). Practice proper posture, mouse double-clicking, right-click context menus, and graceful shutdowns.</p>`,
+                exercises: ['Identify all physical ports on your computer and practice right-click navigation.'],
+              },
+              am: {
+                title: 'ትምህርት 1.1፡ የኮምፒውተር አካላት እና ደህንነቱ የተጠበቀ አጠቃቀም',
+                summary: 'ስክሪን፣ ሲፒዩ፣ ኪቦርድ እና ማውዝን በአግባቡ መያዝና መጠቀም።',
+                rich_content: `<h3>የኮምፒውተር መሰረታዊ ክፍሎች</h3><p>ኮምፒውተርን በአግባቡ ማስነሳት፣ ማጥፋት እና ማውዝን በትክክል መጠቀም።</p>`,
+                exercises: ['የኮምፒውተር ክፍሎችን በመለየት ራይት ክሊክ (Right Click) ተለማመዱ።'],
+              },
+            },
+          },
+          {
+            id: 6002,
+            module_id: 601,
+            course_id: 6,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 600,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 1.2: Mastering Windows 11 & Folder Architecture',
+                summary: 'Navigating File Explorer, creating organized folders, copying/moving files, and search.',
+                rich_content: `<h3>Organizing Your Digital Filing Cabinet</h3><p>Lost files cause endless headaches. Learn the C: drive root, user Documents folder, creating nested folders, renaming files, and understanding extensions (.docx, .pdf, .jpg).</p>`,
+                exercises: ['Create a structured folder tree on your Desktop for Courses > Term 1 > Assignments.'],
+              },
+              am: {
+                title: 'ትምህርት 1.2፡ የዊንዶውስ 11 አጠቃቀም እና የፋይል አያያዝ',
+                summary: 'ፎልደሮችን መፍጠር፣ ፋይሎችን ኮፒ ማድረግ እና በስርዓት ማስቀመጥ።',
+                rich_content: `<h3>የፋይሎች አቀማመጥ</h3><p>ፋይሎች እንዳይጠፉ በየስማቸው ፎልደር ከፍቶ በስርዓት ማስቀመጥ።</p>`,
+                exercises: ['በዴስክቶፕ ላይ የትምህርት ፎልደሮችን በስርዓት ከፍተው ያደራጁ።'],
+              },
+            },
+          },
+          {
+            id: 6003,
+            module_id: 601,
+            course_id: 6,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 660,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 1.3: Touch Typing Mastery: Home Row & Speed Drills',
+                summary: 'Positioning eight fingers on ASDF and JKL;, spacebar thumbs, and reaching 30+ WPM.',
+                rich_content: `<h3>Typing Without Looking Down</h3><p>Hunting and pecking with two index fingers slows office work by 80%. Master Home Row anchor keys (bumps on F and J) and daily typing drills.</p>`,
+                exercises: ['Complete a 10-minute typing speed test aiming for at least 25 words per minute.'],
+              },
+              am: {
+                title: 'ትምህርት 1.3፡ ፈጣን የኪቦርድ ፅሁፍ (Touch Typing)',
+                summary: 'ኪቦርዱን ሳያዩ በሁሉም ጣቶች በፍጥነት የመጻፍ ልምምድ።',
+                rich_content: `<h3>የኪቦርድ አጠቃቀም</h3><p>በሁለቱም እጆች ሁሉንም ጣቶች ተጠቅሞ በፍጥነትና በትክክል የመጻፍ ጥበብ።</p>`,
+                exercises: ['በ10 ደቂቃ ውስጥ ቢያንስ 25 ቃላትን በደቂቃ የመጻፍ ፈተና ይውሰዱ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 602,
+        course_id: 6,
+        display_order: 2,
+        duration_minutes: 180,
+        translations: {
+          en: { title: 'Module 2: Microsoft Word for Business & Academia', description: 'Document formatting, margins, tables, header/footers, business letters, and resumes.' },
+          am: { title: 'ምዕራፍ 2፡ ማይክሮሶፍት ወርድ (Microsoft Word) ለቢሮ ስራዎች', description: 'የደብዳቤ ዝግጅት፣ የሰነዶች አቀራረብ እና የCV አሰራር።' },
+        },
+        lessons: [
+          {
+            id: 6004,
+            module_id: 602,
+            course_id: 6,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 620,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.1: Text Formatting, Paragraph Spacing & Page Setup',
+                summary: 'Font selection, bold/italic, alignment, line spacing (1.15 vs 1.5), and 1-inch margins.',
+                rich_content: `<h3>Professional Document Formatting</h3><p>Transform raw text into polished documents. Learn heading styles, paragraph indentation, page orientation (portrait vs landscape), and paper sizes (A4 vs Letter).</p>`,
+                exercises: ['Format an unformatted 2-page essay into a clean document with headings and proper line spacing.'],
+              },
+              am: {
+                title: 'ትምህርት 2.1፡ የፅሁፍ አቀማመጥ እና የገጽ ማስተካከያ በWord',
+                summary: 'የፎንት መጠን፣ የፅሁፍ አሰላለፍ እና የገጽ ህዳጎችን ማስተካከል።',
+                rich_content: `<h3>የወርድ ሰነድ አቀማመጥ</h3><p>ሰነዱ ንፁህና የሚስብ እንዲሆን የፅሁፍ ክፍተቶችንና ርዕሶችን ማስተካከል።</p>`,
+                exercises: ['አንድን ደብዳቤ በA4 ሳይዝ አሰላለፉን አስተካክለው ይጻፉ።'],
+              },
+            },
+          },
+          {
+            id: 6005,
+            module_id: 602,
+            course_id: 6,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 680,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.2: Inserting Tables, Bulleted Lists & Page Numbers',
+                summary: 'Multi-column tables, cell borders, header rows, and Roman/Arabic page numbering.',
+                rich_content: `<h3>Structuring Complex Office Documents</h3><p>Tables bring clean order to schedules and invoices. Learn table styling, inserting rows/columns, automatic bulleted lists, and header/footer page numbers.</p>`,
+                exercises: ['Create a 5-column office inventory table with styled header rows and borders.'],
+              },
+              am: {
+                title: 'ትምህርት 2.2፡ ሰንጠረዦች (Tables) እና የገጽ ቁጥሮች',
+                summary: 'ሰንጠረዦችን መፍጠር፣ መደዳዎችን ማከል እና የገጽ ቁጥር ማስገባት።',
+                rich_content: `<h3>ሰንጠረዥ ማዘጋጀት</h3><p>መረጃዎችን በሰንጠረዥ አደራጅቶ ማቅረብ ሰነዱ በቀላሉ እንዲነበብ ያደርጋል።</p>`,
+                exercises: ['የ5 ኮለምን ሰንጠረዥ በወርድ ላይ አዘጋጅተው መረጃዎችን አስገቡ።'],
+              },
+            },
+          },
+          {
+            id: 6006,
+            module_id: 602,
+            course_id: 6,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 740,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.3: Drafting Formal Business Letters & Modern Resumes (CV)',
+                summary: 'Standard business letter layout, resume sections, and exporting to PDF.',
+                rich_content: `<h3>Writing That Opens Doors</h3><p>Learn standard Ethiopian and international business letter format (sender address, date, recipient, subject line, formal closing) and build an ATS-friendly CV.</p>`,
+                exercises: ['Draft your personal professional CV in Microsoft Word and export a crisp PDF version.'],
+              },
+              am: {
+                title: 'ትምህርት 2.3፡ የቢሮ ደብዳቤዎች እና የሲቪ (CV / Resume) ዝግጅት',
+                summary: 'ህጋዊ የቢሮ ደብዳቤዎችን እና ለስራ የሚያበቃ ሲቪ በሙያዊ መንገድ ማዘጋጀት።',
+                rich_content: `<h3>የስራ ማመልከቻ እና ሲቪ</h3><p>ደረጃውን የጠበቀ የቢሮ ደብዳቤ እና የስራ ልምድ መግለጫ (CV) ማዘጋጀት።</p>`,
+                exercises: ['የራስዎን ሲቪ (CV) በወርድ አዘጋጅተው በPDF ሴቭ ያድርጉ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 603,
+        course_id: 6,
+        display_order: 3,
+        duration_minutes: 180,
+        translations: {
+          en: { title: 'Module 3: Microsoft Excel Essentials & Data Calculations', description: 'Cells, rows, columns, basic formulas (SUM, AVERAGE), formatting, and charts.' },
+          am: { title: 'ምዕራፍ 3፡ ማይክሮሶፍት ኤክሴል (Microsoft Excel) እና የሂሳብ ቀመሮች', description: 'የኤክሴል ሰንጠረዦችና ቀመሮች፣ ሂሳብ መስራት እና ቻርቶች።' },
+        },
+        lessons: [
+          {
+            id: 6007,
+            module_id: 603,
+            course_id: 6,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 640,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.1: Excel Grid Architecture, Cell Referencing & AutoFill',
+                summary: 'Understanding A1 cell coordinates, data types (numbers, text, dates), and the AutoFill handle.',
+                rich_content: `<h3>Welcome to the Power of Spreadsheets</h3><p>Learn rows (1, 2, 3), columns (A, B, C), and cell intersections. Drag the AutoFill handle to automatically populate months, days, and numerical sequences in seconds.</p>`,
+                exercises: ['Build a 12-month budget table using AutoFill and currency formatting.'],
+              },
+              am: {
+                title: 'ትምህርት 3.1፡ የኤክሴል መሰረቶች እና ሰንጠረዥ አያያዝ',
+                summary: 'የሴል (Cell) አድራሻዎች፣ ቁጥሮች እና ራስ-ሰር መሙያ (AutoFill)።',
+                rich_content: `<h3>የኤክሴል አጠቃቀም</h3><p>መረጃዎችን በሰንጠረዥ ማስገባትና በAutoFill አማካኝነት ስራን ማፍጠን።</p>`,
+                exercises: ['የ12 ወራት የገቢና ወጪ ሰንጠረዥ በኤክሴል አዘጋጁ።'],
+              },
+            },
+          },
+          {
+            id: 6008,
+            module_id: 603,
+            course_id: 6,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 720,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.2: Essential Mathematical Formulas: SUM, AVERAGE, MIN, MAX',
+                summary: 'Writing formulas starting with equals (=), ranges (A1:A10), and avoiding manual calculations.',
+                rich_content: `<h3>Let the Computer Do the Math</h3><p>Never add up numbers with a handheld calculator while using Excel. Master =SUM(B2:B20), =AVERAGE(C2:C20), =MIN, and =MAX to compute dynamic totals instantly.</p>`,
+                exercises: ['Calculate total sales, average sale, and top sales performer for a store inventory sheet.'],
+              },
+              am: {
+                title: 'ትምህርት 3.2፡ የኤክሴል ቀመሮች (Formulas: SUM, AVERAGE, MIN, MAX)',
+                summary: 'የመደመር፣ የአማካይ እና የከፍተኛ ቁጥሮች ቀመሮችን ተጠቅሞ ሂሳብ መስራት።',
+                rich_content: `<h3>ሂሳብን በቀመር ማከናወን</h3><p>በኤክሴል ቀመሮችን በመጠቀም በሺዎች የሚቆጠሩ ሂሳቦችን በቅጽበት ማጠቃለል።</p>`,
+                exercises: ['የተማሪዎችን ውጤት ድምርና አማካይ በ=SUM እና =AVERAGE አስሉ።'],
+              },
+            },
+          },
+          {
+            id: 6009,
+            module_id: 603,
+            course_id: 6,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 690,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.3: Creating Clear Bar & Pie Charts to Visualize Data',
+                summary: 'Selecting data ranges, generating 2D charts, chart titles, and printing setup.',
+                rich_content: `<h3>Turning Data into Visual Stories</h3><p>Decision-makers prefer graphs over raw numbers. Learn how to highlight a data table and generate clear Column and Pie charts with legends and data labels.</p>`,
+                exercises: ['Generate a pie chart displaying household or business expense percentage breakdowns.'],
+              },
+              am: {
+                title: 'ትምህርት 3.3፡ መረጃዎችን በቻርት (Charts & Graphs) ማሳየት',
+                summary: 'የሰንጠረዥ መረጃዎችን ወደ ፓይ ቻርትና ባር ቻርት መቀየር።',
+                rich_content: `<h3>የመረጃ ምስላዊ መግለጫ</h3><p>የሂሳብ መረጃዎችን በስዕላዊ ቻርት ማሳየት ለሪፖርት ከፍተኛ ጠቀሜታ አለው።</p>`,
+                exercises: ['የወጪዎችን ድርሻ የሚያሳይ የፓይ ቻርት (Pie Chart) አዘጋጁ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 604,
+        course_id: 6,
+        display_order: 4,
+        duration_minutes: 180,
+        translations: {
+          en: { title: 'Module 4: Microsoft PowerPoint & Safe Internet Communication', description: 'Slide decks, presentation transitions, professional email etiquette, and cloud storage.' },
+          am: { title: 'ምዕራፍ 4፡ ማይክሮሶፍት ፓወርፖይንት እና ደህንነቱ የተጠበቀ ኢንተርኔት', description: 'የስላይድ ዝግጅት፣ የኢሜይል አጠቃቀም እና የኢንተርኔት ደህንነት።' },
+        },
+        lessons: [
+          {
+            id: 6010,
+            module_id: 604,
+            course_id: 6,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 610,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.1: Slide Deck Design: Clean Layouts & Presentation Rules',
+                summary: 'The 6x6 rule, bullet points vs visuals, slide transitions, and Speaker view.',
+                rich_content: `<h3>Presenting with Clarity in PowerPoint</h3><p>Avoid cluttered slides with tiny paragraphs. Follow the 6x6 rule (maximum 6 bullet points, maximum 6 words per line), pair key points with clear images, and deliver presentations smoothly.</p>`,
+                exercises: ['Create a 5-slide introductory presentation about a business idea in Bahir Dar.'],
+              },
+              am: {
+                title: 'ትምህርት 4.1፡ የፓወርፖይንት (PowerPoint) ስላይዶች ዝግጅት',
+                summary: 'የዝግጅት ገጾችን (Slides) ማዘጋጀት፣ ምስሎችን ማከል እና ማሳየት።',
+                rich_content: `<h3>የስላይድ ዝግጅት</h3><p>ስላይዶች ብዙ ፅሁፍ ሳይበዛባቸው ዋና ዋና ነጥቦችን በምስል አስደግፎ ማቅረብ።</p>`,
+                exercises: ['ስለ አንድ የንግድ ሀሳብ የሚያስረዳ የ5 ስላይድ ገለፃ አዘጋጁ።'],
+              },
+            },
+          },
+          {
+            id: 6011,
+            module_id: 604,
+            course_id: 6,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 640,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.2: Professional Email Etiquette & Attachments (Gmail)',
+                summary: 'Subject lines, professional salutations, Cc vs Bcc, and attaching documents securely.',
+                rich_content: `<h3>Professional Digital Communication</h3><p>Learn email communication: writing descriptive subject lines, formal greetings, concise requests, attaching PDFs (not raw unedited files), and difference between Cc and Bcc.</p>`,
+                exercises: ['Draft a formal job inquiry email with proper subject line, greeting, and mock CV attachment.'],
+              },
+              am: {
+                title: 'ትምህርት 4.2፡ የኢሜይል (Email / Gmail) አጠቃቀም ደንቦች',
+                summary: 'ደብዳቤ መጻፍ፣ ሰነዶችን ማያያዝ (Attachment) እና የኢሜይል ስነ-ምግባር።',
+                rich_content: `<h3>የኢሜይል ልውውጥ</h3><p>ለስራና ለትምህርት የሚሆን ኢሜይል በስርዓት መጻፍና ሰነዶችን አያይዞ መላክ።</p>`,
+                exercises: ['የስራ ማመልከቻ ሰነድ አያይዘው መደበኛ የኢሜይል መልዕክት ይጻፉ።'],
+              },
+            },
+          },
+          {
+            id: 6012,
+            module_id: 604,
+            course_id: 6,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 700,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.3: Cybersecurity Basics, Phishing Scams & Google Drive Cloud Backup',
+                summary: 'Strong passwords, spotting fake scam links, safe downloads, and cloud file sharing.',
+                rich_content: `<h3>Staying Safe Online</h3><p>Protect yourself from identity theft and ransomware. Learn how to recognize phishing email scams, avoid clicking suspicious links, use 2-factor authentication, and backup important files to Google Drive.</p>`,
+                exercises: ['Upload a document to Google Drive, generate a read-only share link, and audit a phishing email example.'],
+              },
+              am: {
+                title: 'ትምህርት 4.3፡ የኢንተርኔት ደህንነት (Cybersecurity) እና የጉግል ድራይቭ ባክአፕ',
+                summary: 'አጭበርባሪዎችን መለየት፣ ጠንካራ የይለፍ ቃል እና ፋይሎችን በGoogle Drive ማስቀመጥ።',
+                rich_content: `<h3>የዲጂታል ደህንነት</h3><p>አስፈላጊ ሰነዶች እንዳይጠፉ በክላውድ (Google Drive) ማስቀመጥ እና አደገኛ ሊንኮችን አለመንካት።</p>`,
+                exercises: ['አንድን ሰነድ በGoogle Drive ላይ አስቀምጠው የሊንክ ማጋሪያ ይፍጠሩ።'],
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
+
+  // 7. ARTIFICIAL INTELLIGENCE (AI)
+  {
+    id: 7,
+    slug: 'artificial-intelligence',
+    category: 'Emerging Tech',
+    level: 'intermediate',
+    duration_weeks: 6,
+    total_hours: 35,
+    banner_image: '/assets/courses/ai-course.jpg',
+    thumbnail_image: '/assets/courses/ai-course.jpg',
+    is_published: 1,
+    is_featured: 1,
+    display_order: 7,
+    instructor_name: 'Anchor Solution AI & Automation Faculty',
+    partner_name: 'Tis Abay College',
+    price: 1999,
+    regular_price: 2800,
+    difficulty: 'Intermediate (Estimate: 6 weeks / 35 hrs)',
+    translations: {
+      en: {
+        title: 'Artificial Intelligence (AI)',
+        tagline: 'Prompt engineering, workflow automation, generative tools, and productivity transformation',
+        description: 'Modern practical AI course focused on real workplace applications. Learn generative tools for text, graphics, and code; automate repetitive office tasks; design structured prompts; and leverage AI ethics and models responsibly.',
+        objectives: [
+          'Master structured prompt engineering techniques: role assignment, context priming, and few-shot examples',
+          'Accelerate daily office productivity: draft proposals, summarize long PDFs, and automate data spreadsheets',
+          'Generate commercial imagery and multimedia visual assets with generative AI models',
+          'Understand AI ethical boundaries, copyright considerations, and data privacy safeguards',
+        ],
+        target_audience: 'Professionals, freelancers, creators, educators, and students seeking a massive productivity advantage.',
+        prerequisites: 'Basic computer familiarity and curiosity about emerging technology.',
+      },
+      am: {
+        title: 'ሰው ሰራሽ አስተውሎት',
+        tagline: 'የኤ አይ (AI) መሳሪያዎች አጠቃቀም፣ የፈጣን ትዕዛዝ ጥበብ እና የስራ ቅልጥፍና',
+        description: 'ዘመናዊ የሰው ሰራሽ አስተውሎት (Artificial Intelligence) ቴክኖሎጂዎችን ለስራና ለትምህርት እንዴት መጠቀም እንደሚቻል የሚያስተምር ኮርስ። የፅሁፍ፣ የምስልና የኮድ ማመንጫዎችን መቆጣጠር፣ የስራ ሰዓትን በAI ማሳጠር እና ምርታማነትን ማሳደግ።',
+        objectives: [
+          'የPrompt Engineering ጥበብን ጠንቅቆ መረዳት',
+          'ለዲዛይን፣ ለፅሁፍ እና ለቢሮ ስራ የAI መሳሪያዎችን መጠቀም',
+          'ተደጋጋሚ የስራ ሂደቶችን በቴክኖሎጂ ማቀላጠፍ',
+          'የAI ቴክኖሎጂን በኃላፊነትና በስነ-ምግባር መተግበር',
+        ],
+        target_audience: 'ተማሪዎች፣ ባለሙያዎች፣ ፍሪላንሰሮች እና አዳዲስ ቴክኖሎጂዎችን መማር የሚሹ ሁሉ።',
+        prerequisites: 'መሰረታዊ የኮምፒውተር እውቀት።',
+      },
+    },
+    modules: [
+      {
+        id: 701,
+        course_id: 7,
+        display_order: 1,
+        duration_minutes: 180,
+        translations: {
+          en: { title: 'Module 1: Foundations of Modern AI & Large Language Models', description: 'Generative AI concepts, tokens, neural networks, context windows, and model capabilities.' },
+          am: { title: 'ምዕራፍ 1፡ የሰው ሰራሽ አስተውሎት መሰረቶች እና የሞዴሎች አሰራር', description: 'የAI አሰራር፣ የሞዴሎች አቅም እና መሰረታዊ መመሪያዎች።' },
+        },
+        lessons: [
+          {
+            id: 7001,
+            module_id: 701,
+            course_id: 7,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 810,
+            is_free_preview: 1,
+            translations: {
+              en: {
+                title: 'Lesson 1.1: Demystifying AI: From Narrow AI to Generative Models',
+                summary: 'What AI can and cannot do: separating marketing hype from actual workplace utility.',
+                rich_content: `<h3>Understanding the AI Landscape</h3><p>Artificial Intelligence is not sentient magic; it is pattern prediction trained on vast datasets. Learn the difference between Traditional AI (classification) and Generative AI (generating text, code, images, and audio).</p>`,
+                exercises: ['Compare three different generative AI models and note their unique output differences.'],
+              },
+              am: {
+                title: 'ትምህርት 1.1፡ የሰው ሰራሽ አስተውሎት (AI) መግቢያ እና አይነቶች',
+                summary: 'ሰው ሰራሽ አስተውሎት እንዴት እንደሚሰራ እና ለምን እንደሚጠቅም መረዳት።',
+                rich_content: `<h3>የAI ቴክኖሎጂ መሰረቶች</h3><p>ሰው ሰራሽ አስተውሎት መረጃዎችን በማጥናት ለሰው ልጅ ስራዎችን የሚያቀላጥፍ ቴክኖሎጂ ነው።</p>`,
+                exercises: ['ሶስት የተለያዩ የAI መሳሪያዎችን ሞክረው ልዩነታቸውን ያወዳድሩ።'],
+              },
+            },
+          },
+          {
+            id: 7002,
+            module_id: 701,
+            course_id: 7,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 760,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 1.2: How Large Language Models Work: Tokens & Context Windows',
+                summary: 'Next-token prediction, temperature settings, and why AI output changes.',
+                rich_content: `<h3>Under the Hood of LLMs</h3><p>LLMs break text into chunks called tokens (~4 characters). Learn how temperature affects creativity versus deterministic precision, and how context window memory limits work.</p>`,
+                exercises: ['Experiment with low temperature (precise factual answers) vs high temperature (creative storytelling).'],
+              },
+              am: {
+                title: 'ትምህርት 1.2፡ የቋንቋ ሞዴሎች (LLMs) አሰራር እና ቶከን (Tokens)',
+                summary: 'ኮምፒውተር ቃላትን እንዴት እንደሚረዳና ቀጣዩን ቃል እንደሚገምት ማወቅ።',
+                rich_content: `<h3>የቋንቋ ሞዴሎች ሚስጥር</h3><p>የAI ቋንቋ ሞዴሎች ቃላትን ወደ ቶከን በመቀየር አመክንዮአዊ ምላሽ ይሰጣሉ።</p>`,
+                exercises: ['ለAI አንድ ጥያቄ በተለያየ የአነጋገር ዘይቤ ጠይቀው ምላሹን ይመልከቱ።'],
+              },
+            },
+          },
+          {
+            id: 7003,
+            module_id: 701,
+            course_id: 7,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 790,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 1.3: Hallucinations, Verification & Responsible AI Use',
+                summary: 'Why models invent false citations, fact-checking workflows, and privacy rules.',
+                rich_content: `<h3>Never Trust Blindly: Verification Habits</h3><p>AI models can confidently generate completely fabricated facts ("hallucinations"). Learn fact-checking techniques, grounding prompts in your own source text, and never sharing sensitive client passwords with public models.</p>`,
+                exercises: ['Prompt an AI to answer a niche historical question and independently fact-check its output against two sources.'],
+              },
+              am: {
+                title: 'ትምህርት 1.3፡ የሃሰት መረጃዎችን መለየት (Hallucination) እና ጥንቃቄ',
+                summary: 'AI አንዳንዴ የተሳሳተ መረጃ ስለሚሰጥ እውነታውን የማጣራት ዘዴዎች።',
+                rich_content: `<h3>መረጃን የማረጋገጥ አስፈላጊነት</h3><p>የAI መልሶችን ሁልጊዜ ከትክክለኛ ምንጮች ጋር አገናዝቦ ማረጋገጥ ያስፈልጋል።</p>`,
+                exercises: ['AI የሰጠዎትን አንድ መረጃ ከታማኝ ምንጭ ጋር አመሳክረው ያረጋግጡ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 702,
+        course_id: 7,
+        display_order: 2,
+        duration_minutes: 200,
+        translations: {
+          en: { title: 'Module 2: Advanced Prompt Engineering Mastery', description: 'Persona framing, few-shot prompting, chain-of-thought, constraints, and structured output formats.' },
+          am: { title: 'ምዕራፍ 2፡ የትዕዛዝ አሰጣጥ ጥበብ (Prompt Engineering)', description: 'ትክክለኛ ጥያቄዎችንና መመሪያዎችን የመስጠት ዘዴዎች።' },
+        },
+        lessons: [
+          {
+            id: 7004,
+            module_id: 702,
+            course_id: 7,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 780,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.1: The Anatomy of a High-Performance Prompt',
+                summary: 'Role, Objective, Context, Constraints, and Target Output Format (ROCCO framework).',
+                rich_content: `<h3>Beyond Vague One-Liners</h3><p>Vague prompts produce generic fluff. Master the 5-element prompt formula: 1. Role ("Act as an experienced legal consultant"), 2. Context, 3. Specific Task, 4. Constraints ("Under 200 words, no jargon"), 5. Output Format (Markdown table).</p>`,
+                exercises: ['Write a 5-part prompt that extracts key financial takeaways from raw meeting notes.'],
+              },
+              am: {
+                title: 'ትምህርት 2.1፡ ትክክለኛ የትዕዛዝ አሰጣጥ ቀመር (The ROCCO Framework)',
+                summary: 'ጥራት ያለው ውጤት ለማግኘት ለAI ዝርዝር መመሪያ የመስጠት ጥበብ።',
+                rich_content: `<h3>ጥሩ ትዕዛዝ መስጠት</h3><p>ለAI ሚናውን፣ አላማውን እና የፅሁፉን መጠን በግልጽ በመንገር ምርጥ ውጤት ማግኘት።</p>`,
+                exercises: ['ለAI አጭርና ግልጽ የሆነ የ5-ክፍል መመሪያ ጽፈው ይሞክሩ።'],
+              },
+            },
+          },
+          {
+            id: 7005,
+            module_id: 702,
+            course_id: 7,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 830,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.2: Few-Shot Prompting & Providing Ideal Examples',
+                summary: 'Training the model inline by providing 2-3 input/output demonstration pairs.',
+                rich_content: `<h3>Show, Don\'t Just Tell</h3><p>Few-shot prompting provides example input/output pairs in the prompt. This forces the model to match your exact tone, bullet style, and technical structure without deviation.</p>`,
+                exercises: ['Construct a few-shot prompt that converts informal customer feedback into categorized bug tickets.'],
+              },
+              am: {
+                title: 'ትምህርት 2.2፡ ምሳሌዎችን በመስጠት ማስተማር (Few-Shot Prompting)',
+                summary: 'ለAI ሁለት ወይም ሶስት ምሳሌዎችን በማሳየት በተመሳሳይ ስታይል እንዲሰራ ማድረግ።',
+                rich_content: `<h3>በምሳሌ ማስተማር</h3><p>ምሳሌዎችን በመስጠት AI የሚፈልጉትን አይነት ፅሁፍ ያለምንም ስህተት እንዲያዘጋጅ ማድረግ።</p>`,
+                exercises: ['ሁለት ምሳሌዎችን ያካተተ መመሪያ ለAI ሰጥተው ውጤቱን ይፈትሹ።'],
+              },
+            },
+          },
+          {
+            id: 7006,
+            module_id: 702,
+            course_id: 7,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 870,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 2.3: Chain-of-Thought Reasoning & Complex Problem Decomposition',
+                summary: 'Instructing models to think step-by-step before producing final conclusions.',
+                rich_content: `<h3>Unlocking Deep Reasoning</h3><p>Adding "Think step by step and explain your reasoning before giving the final answer" drastically cuts mathematical and logical errors by forcing the model to generate intermediate reasoning tokens.</p>`,
+                exercises: ['Use chain-of-thought prompting to evaluate a business pricing trade-off with step-by-step calculations.'],
+              },
+              am: {
+                title: 'ትምህርት 2.3፡ ደረጃ በደረጃ የማሰብ ዘዴ (Chain-of-Thought)',
+                summary: 'ውስብስብ ጥያቄዎችን በደረጃ ከፋፍሎ እንዲያስብና ትክክለኛ መልስ እንዲሰጥ ማድረግ።',
+                rich_content: `<h3>የደረጃ በደረጃ ትንተና</h3><p>AI ከመደምደሙ በፊት እያንዳንዱን ደረጃ እንዲያብራራ በማድረግ ስህተቶችን ማስቀረት።</p>`,
+                exercises: ['ውስብስብ የሂሳብ ወይም የንግድ ጥያቄን ደረጃ በደረጃ እንዲፈታ መመሪያ ይስጡ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 703,
+        course_id: 7,
+        display_order: 3,
+        duration_minutes: 220,
+        translations: {
+          en: { title: 'Module 3: AI for Workplace Productivity & Business Automation', description: 'Proposal drafting, automated document summarization, spreadsheet modeling, and research synthesis.' },
+          am: { title: 'ምዕራፍ 3፡ AI ለቢሮ ስራዎች እና ምርታማነት ማሳደጊያ', description: 'የሪፖርት ዝግጅት፣ ረጅም ሰነዶችን ማጠቃለል እና የቢሮ ስራን ማፍጠን።' },
+        },
+        lessons: [
+          {
+            id: 7007,
+            module_id: 703,
+            course_id: 7,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 790,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.1: Executive Document Summarization & Research Synthesis',
+                summary: 'Extracting key takeaways, action items, and risks from 50-page reports.',
+                rich_content: `<h3>Digest Massive Reports in Seconds</h3><p>Learn how to feed lengthy PDFs and contracts into AI assistants to produce 1-page executive briefs, extract key dates, identify hidden penalty clauses, and formulate interview questions.</p>`,
+                exercises: ['Synthesize a lengthy public policy or tech report into a 5-bullet executive memo.'],
+              },
+              am: {
+                title: 'ትምህርት 3.1፡ ረጅም ሰነዶችን በሰከንዶች ውስጥ ማጠቃለል',
+                summary: 'ረዣዥም ሪፖርቶችንና ፒዲኤፍ ፋይሎችን ወደ አጭር ዋና ዋና ነጥቦች መቀየር።',
+                rich_content: `<h3>የሰነድ ማጠቃለያ</h3><p>በደርዘን የሚቆጠሩ ገጾችን ባሉ ሰነዶች ውስጥ ያሉትን ቁልፍ መረጃዎች በፍጥነት ማውጣት።</p>`,
+                exercises: ['አንድን ረጅም ሰነድ ወደ 5 ዋና ዋና ነጥቦች እንዲያጠቃልል ያድርጉ።'],
+              },
+            },
+          },
+          {
+            id: 7008,
+            module_id: 703,
+            course_id: 7,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 820,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.2: Writing Complex Excel Formulas & Python Scripts with AI',
+                summary: 'Generating nested VLOOKUP, INDEX/MATCH, and automated CSV data cleaners.',
+                rich_content: `<h3>Your Personal Data Analyst</h3><p>You don\'t need to memorize advanced syntax. Learn how to describe your spreadsheet data structure in plain English and have AI write exact working formulas and Python automation scripts.</p>`,
+                exercises: ['Have AI generate a nested formula calculating progressive tiered commission rates.'],
+              },
+              am: {
+                title: 'ትምህርት 3.2፡ የኤክሴል ቀመሮችንና ስክሪፕቶችን በAI ማመንጨት',
+                summary: 'ውስብስብ የሆኑ የኤክሴል ቀመሮችን በAI በማስጻፍ ስራን ማቀላጠፍ።',
+                rich_content: `<h3>የቀመር እገዛ</h3><p>ምን መስራት እንደሚፈልጉ በቃላት በመንገር ትክክለኛውን የኤክሴል ቀመር ማግኘት።</p>`,
+                exercises: ['ለኤክሴል የሚሆን ውስብስብ የኮሚሽን ማስያ ቀመር በAI አሰርተው ይሞክሩ።'],
+              },
+            },
+          },
+          {
+            id: 7009,
+            module_id: 703,
+            course_id: 7,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 860,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 3.3: Automated Meeting Minutes & Business Proposal Drafting',
+                summary: 'Transforming rough voice transcripts into professional client-ready proposals.',
+                rich_content: `<h3>From Messy Transcripts to Flawless Proposals</h3><p>Learn how to feed audio transcripts or quick meeting bullet points into structured business proposals with deliverables, timelines, pricing tables, and next steps.</p>`,
+                exercises: ['Transform bullet points from a mock client meeting into a 2-page project proposal.'],
+              },
+              am: {
+                title: 'ትምህርት 3.3፡ የፕሮጀክት ፕሮፖዛል እና የስብሰባ ቃለ-ጉባኤ ማዘጋጀት',
+                summary: 'የስብሰባ ማስታወሻዎችን ወደ ሙሉ የንግድ ፕሮፖዛል የመቀየር ዘዴ።',
+                rich_content: `<h3>የፕሮፖዛል ዝግጅት</h3><p>በስብሰባ የተነሱ ሀሳቦችን በሙያዊ መንገድ የተዋቀረ ፕሮፖዛል አድርጎ ማዘጋጀት።</p>`,
+                exercises: ['የተሰበሰቡ ሀሳቦችን ወደ የተሟላ የፕሮጀክት ፕሮፖዛል ቀይረው ይፃፉ።'],
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 704,
+        course_id: 7,
+        display_order: 4,
+        duration_minutes: 240,
+        translations: {
+          en: { title: 'Module 4: Generative Visuals, Audio & The Future of Creative Work', description: 'Text-to-image prompts, style directives, voice cloning ethics, and personal AI toolkits.' },
+          am: { title: 'ምዕራፍ 4፡ የፈጠራ ምስሎች ማመንጨት እና የቀጣዩ ዘመን አሰራር', description: 'ምስሎችን በፅሁፍ ማመንጨት፣ የድምፅ መሳሪያዎች እና የግል AI መሳሪያዎች።' },
+        },
+        lessons: [
+          {
+            id: 7010,
+            module_id: 704,
+            course_id: 7,
+            display_order: 1,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 790,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.1: Text-to-Image Generation: Prompts, Styles & Aspect Ratios',
+                summary: 'Lighting keywords, camera lens parameters, composition descriptors, and negative prompts.',
+                rich_content: `<h3>Visualizing Concepts Instantly</h3><p>Master image generation syntax: specifying lighting ("cinematic golden hour, volumetric rays"), camera parameters ("85mm portrait, f/1.8, shallow depth of field"), and art movements for commercial concepts.</p>`,
+                exercises: ['Generate three commercial product concepts using explicit lighting and camera descriptors.'],
+              },
+              am: {
+                title: 'ትምህርት 4.1፡ ምስሎችን በፅሁፍ ማመንጨት (Text-to-Image)',
+                summary: 'በፅሁፍ መመሪያ በመስጠት ጥራት ያላቸውን ምስሎች በAI መፍጠር።',
+                rich_content: `<h3>የምስል ፈጠራ በAI</h3><p>የብርሃን፣ የካሜራ እና የቀለም መመሪያዎችን በመስጠት ያማሩ ምስሎችን ማመንጨት።</p>`,
+                exercises: ['የብርሃንና የካሜራ አይነትን በፅሁፍ በመግለጽ የንግድ እቃ ምስል በAI ይፍጠሩ።'],
+              },
+            },
+          },
+          {
+            id: 7011,
+            module_id: 704,
+            course_id: 7,
+            display_order: 2,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 830,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.2: AI Audio, Automatic Subtitling & Video Translation',
+                summary: 'Automated video transcripts, multi-language voiceovers, and subtitle timing.',
+                rich_content: `<h3>Global Video Localization</h3><p>Produce localized multilingual content in hours instead of weeks. Learn how speech-to-text models generate accurate SRT subtitle files and voice cloning tools localize instructional videos.</p>`,
+                exercises: ['Generate timed subtitles for a 1-minute video clip using AI transcription.'],
+              },
+              am: {
+                title: 'ትምህርት 4.2፡ አውቶማቲክ የቪዲዮ ንዑስ ፅሁፍ (Subtitles) እና የድምፅ ትርጉም',
+                summary: 'ቪዲዮዎችን በራስ-ሰር ፅሁፍ ማውጣትና ወደ ተለያዩ ቋንቋዎች መተርጎም።',
+                rich_content: `<h3>የቪዲዮ ትርጉም በAI</h3><p>ንግግርን ወደ ፅሁፍ በመቀየር ለቪዲዮዎች ፈጣን ሰብታይትል ማዘጋጀት።</p>`,
+                exercises: ['ለአንድ ደቂቃ ቪዲዮ በAI አማካኝነት የፅሁፍ ሰብታይትል (Subtitles) አውጡ።'],
+              },
+            },
+          },
+          {
+            id: 7012,
+            module_id: 704,
+            course_id: 7,
+            display_order: 3,
+            video_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+            video_duration_seconds: 910,
+            is_free_preview: 0,
+            translations: {
+              en: {
+                title: 'Lesson 4.3: Building Your Personal AI Operating Stack & Continuous Learning',
+                summary: 'Selecting your daily AI tool belt, custom instructions, and staying ahead of technological shifts.',
+                rich_content: `<h3>Thriving in the Age of AI</h3><p>AI will not replace humans; humans who master AI will replace humans who do not. Build your personal productivity stack with custom instructions, pinned templates, and continuous weekly experiment routines.</p>`,
+                exercises: ['Assemble a 1-page personal "AI Operating System" cheat sheet listing your top 5 daily prompts and tools.'],
+              },
+              am: {
+                title: 'ትምህርት 4.3፡ የግል AI የስራ መሳሪያዎችን ማደራጀት እና ቀጣይነት ያለው እድገት',
+                summary: 'ለስራዎ የሚያስፈልጉ ምርጥ የAI መሳሪያዎችን መርጦ በየቀኑ መጠቀም።',
+                rich_content: `<h3>በAI ዘመን ስኬታማ መሆን</h3><p>የAI መሳሪያዎችን ጠንቅቀው የሚያውቁ ባለሙያዎች በስራ ገበያው ውስጥ ከፍተኛ ተፈላጊነት አላቸው።</p>`,
+                exercises: ['ለዕለት ተዕለት ስራዎ የሚሆኑ 5 ምርጥ የAI ትዕዛዞችን አዘጋጅተው ያስቀምጡ።'],
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
+];
