@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { api } from '../services/api.js';
-import { Search, Download, FileText, FileCode, Archive } from 'lucide-react';
+import { Search, Download, FileText } from 'lucide-react';
 
 export function ResourcesPage({ navigate }) {
   const { t, language } = useLanguage();
@@ -63,11 +63,11 @@ export function ResourcesPage({ navigate }) {
                 value={selectedType}
                 onChange={(e) => setSelectedType(e.target.value)}
                 className="form-select"
-                aria-label="Filter by format"
+                aria-label={language === 'am' ? 'በፋይል አይነት አጣራ' : 'Filter by format'}
               >
                 <option value="all">{t.resourcesPage.filterAll}</option>
-                <option value="pdf">PDF Documents</option>
-                <option value="zip">ZIP Resource Packs</option>
+                <option value="pdf">{t.resourcesPage.filterPdf}</option>
+                <option value="zip">{t.resourcesPage.filterZip}</option>
               </select>
             </div>
           </div>
@@ -76,7 +76,7 @@ export function ResourcesPage({ navigate }) {
         {/* Resources List */}
         {loading ? (
           <div style={{ textAlign: 'center', padding: '4rem', color: 'var(--text-muted)' }}>
-            Loading downloadable materials...
+            {t.common.loadingMaterials}
           </div>
         ) : resources.length === 0 ? (
           <div style={{ textAlign: 'center', padding: '4rem', backgroundColor: 'var(--bg-surface)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)' }}>
@@ -115,7 +115,7 @@ export function ResourcesPage({ navigate }) {
                     onClick={() => navigate(`/courses/${item.courseSlug}/lessons/${item.lessonId}`)}
                     className="btn btn-secondary btn-sm"
                   >
-                    View Lesson
+                    {t.actions.reviewLesson || 'View Lesson'}
                   </button>
                   <button
                     onClick={() => handleDownload(item)}

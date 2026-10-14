@@ -140,7 +140,7 @@ export function CheckoutPage({ slug, navigate }) {
   if (loadingCourse) {
     return (
       <div className="container" style={{ padding: '6rem 0', textAlign: 'center', color: 'var(--text-muted)' }}>
-        Loading checkout details...
+        {t.common.loadingCheckout}
       </div>
     );
   }
@@ -148,10 +148,10 @@ export function CheckoutPage({ slug, navigate }) {
   if (errorCourse || !course) {
     return (
       <div className="container" style={{ padding: '6rem 0', textAlign: 'center' }}>
-        <h2>Course Not Found</h2>
-        <p style={{ color: 'var(--text-secondary)', margin: '1rem 0' }}>{errorCourse}</p>
+        <h2>{t.common.courseNotFound}</h2>
+        <p style={{ color: 'var(--text-secondary)', margin: '1rem 0' }}>{errorCourse || t.common.courseNotFoundDesc}</p>
         <button onClick={() => navigate('/courses')} className="btn btn-primary">
-          Back to Courses
+          {t.common.backToCourses}
         </button>
       </div>
     );
@@ -168,7 +168,7 @@ export function CheckoutPage({ slug, navigate }) {
             style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', padding: '0.25rem 0' }}
           >
             <ArrowLeft size={16} />
-            <span>{language === 'am' ? 'ወደ ኮርስ ዝርዝር ተመለስ' : 'Back to Course Details'}</span>
+            <span>{language === 'am' ? 'ወደ ስልጠናው ዝርዝር ተመለስ' : 'Back to Course Details'}</span>
           </button>
         </div>
 
@@ -319,15 +319,19 @@ export function CheckoutPage({ slug, navigate }) {
                 </h3>
                 <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '1.25rem' }}>
                   {language === 'am'
-                    ? 'ክፍያዎን ለማረጋገጫ ከማስገባትዎ በፊት እባክዎ ወደ መለያዎ ይግቡ ወይም በሙከራ የተማሪ መለያ ይሞክሩ።'
+                    ? 'ክፍያዎን ለማረጋገጫ ከማስገባትዎ በፊት የስልጠና መዳረሻው ከመለያዎ ጋር እንዲያያዝ እባክዎ ወደ መለያዎ ይግቡ።'
                     : 'To link your payment reference with your profile and grant curriculum access upon approval, please sign in.'}
                 </p>
                 <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                   <button onClick={handleQuickLoginAsStudent} disabled={submitting} className="btn btn-primary">
-                    <span>{submitting ? 'Signing in...' : 'Sign In as Student (Demo Account)'}</span>
+                    <span>
+                      {submitting
+                        ? (language === 'am' ? 'በመግባት ላይ...' : 'Signing in...')
+                        : (language === 'am' ? 'በተማሪ መለያ ግባ' : 'Sign In as Student')}
+                    </span>
                   </button>
                   <button onClick={() => navigate('/login')} className="btn btn-secondary">
-                    <span>Sign In With Other Account</span>
+                    <span>{language === 'am' ? 'በሌላ መለያ ግባ' : 'Sign In With Existing Account'}</span>
                   </button>
                 </div>
               </div>
@@ -381,8 +385,10 @@ export function CheckoutPage({ slug, navigate }) {
                     >
                       <Building2 size={22} style={{ color: 'var(--text-muted)' }} />
                       <div>
-                        <div style={{ fontWeight: 700, fontSize: '0.95rem' }}>CBE Bank</div>
-                        <span className="badge badge-neutral" style={{ fontSize: '0.65rem' }}>Coming Soon</span>
+                        <div style={{ fontWeight: 700, fontSize: '0.95rem' }}>CBE Bank Deposit</div>
+                        <span className="badge badge-neutral" style={{ fontSize: '0.65rem' }}>
+                          {language === 'am' ? 'በአካል በቢሮ' : 'Campus Desk'}
+                        </span>
                       </div>
                     </button>
                   </div>
@@ -392,12 +398,16 @@ export function CheckoutPage({ slug, navigate }) {
                   <div className="alert alert-info" style={{ marginBottom: '1.25rem' }}>
                     <Info size={18} style={{ flexShrink: 0 }} />
                     <div>
-                      <div style={{ fontWeight: 700 }}>Commercial Bank of Ethiopia (CBE) - Coming Soon</div>
-                      <div style={{ fontSize: '0.85rem', marginTop: '2px' }}>
-                        Bank transfer is in final setup. Please use Telebirr for instant verified registration.
+                      <div style={{ fontWeight: 700 }}>
+                        {language === 'am' ? 'የኢትዮጵያ ንግድ ባንክ (CBE) ክፍያ' : 'Commercial Bank of Ethiopia (CBE) Bank Deposit'}
+                      </div>
+                      <div style={{ fontSize: '0.85rem', marginTop: '4px', lineHeight: '1.5' }}>
+                        {language === 'am'
+                          ? 'የባንክ ክፍያ ደረሰኝ (Deposit Slip) በመያዝ በባሕር ዳር ቢሯችን (ቀበሌ 04፣ መስራት ያስከብራል ህንፃ፣ 4ኛ ፎቅ) በአካል መመዝገብ ይችላሉ። ፈጣን የኦንላይን ምዝገባ ለማድረግ ቴሌብርን ይጠቀሙ።'
+                          : 'To pay via bank deposit, bring your CBE bank deposit slip to our Bahir Dar campus desk (Kebele 04, Mesrat Yaskeberal Building, 4th Floor) for in-person activation, or use Telebirr for instant online verification.'}
                       </div>
                       <button onClick={() => setSelectedGateway('telebirr')} className="btn btn-primary btn-sm" style={{ marginTop: '0.75rem' }}>
-                        Switch to Telebirr
+                        {language === 'am' ? 'ወደ ቴሌብር ክፍያ ቀይር' : 'Pay Online with Telebirr'}
                       </button>
                     </div>
                   </div>
@@ -490,11 +500,11 @@ export function CheckoutPage({ slug, navigate }) {
                     <div style={{ backgroundColor: 'var(--bg-surface)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)', padding: '1rem', marginBottom: '1.25rem', fontSize: '0.85rem' }}>
                       <div style={{ fontWeight: 700, marginBottom: '0.5rem' }}>{t.payment.howToPay}:</div>
                       <ol style={{ paddingLeft: '1.25rem', margin: 0, display: 'flex', flexDirection: 'column', gap: '0.35rem', color: 'var(--text-secondary)' }}>
-                        <li>Open Telebirr on your mobile phone or dial *127#.</li>
-                        <li>Transfer <strong>{formatPrice(course.price)}</strong> to <strong>{selectedPhone}</strong> (<em>Tizta</em>).</li>
-                        <li>Copy the transaction reference or receipt number from the SMS.</li>
-                        <li>Enter the transaction reference below and submit for verification.</li>
-                        <li>Receive course access after administrator verification.</li>
+                        <li>{t.payment.step1}</li>
+                        <li>{t.payment.step2} (<strong>{formatPrice(course.price)}</strong> / <strong>{selectedPhone}</strong> — <em>Tizta</em>)</li>
+                        <li>{t.payment.step3}</li>
+                        <li>{t.payment.step4}</li>
+                        <li>{t.payment.step5}</li>
                       </ol>
                     </div>
 

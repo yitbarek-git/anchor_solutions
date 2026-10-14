@@ -263,27 +263,31 @@ export function TelebirrPaymentModal({
               }}
             >
               <div>
-                <span style={{ color: 'var(--text-muted)' }}>Transaction Reference: </span>
+                <span style={{ color: 'var(--text-muted)' }}>{language === 'am' ? 'የግብይት መለያ (Reference):' : 'Transaction Reference:'} </span>
                 <strong style={{ color: 'var(--color-gold)', fontFamily: 'monospace', letterSpacing: '0.5px' }}>
                   {courseStatus.pendingPayment?.transaction_reference || successInfo?.transaction_reference}
                 </strong>
               </div>
               <div>
-                <span style={{ color: 'var(--text-muted)' }}>Recipient Number: </span>
+                <span style={{ color: 'var(--text-muted)' }}>{language === 'am' ? 'የተላከበት ስልክ:' : 'Recipient Number:'} </span>
                 <strong>{courseStatus.pendingPayment?.recipient_phone || selectedPhone}</strong>
               </div>
               <div>
-                <span style={{ color: 'var(--text-muted)' }}>Account Name: </span>
+                <span style={{ color: 'var(--text-muted)' }}>{language === 'am' ? 'የሂሳብ ስም:' : 'Account Name:'} </span>
                 <strong>Tizta</strong>
               </div>
               <div>
-                <span style={{ color: 'var(--text-muted)' }}>Submitted: </span>
+                <span style={{ color: 'var(--text-muted)' }}>{language === 'am' ? 'የቀረበበት ሰዓት:' : 'Submitted:'} </span>
                 <span>{new Date(courseStatus.pendingPayment?.created_at || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
               </div>
             </div>
 
             <div style={{ marginTop: '0.85rem', fontSize: '0.82rem', color: 'var(--text-muted)' }}>
-              Need urgent activation? Call our Bahir Dar campus desk directly: <strong>0902 18 44 40</strong> or <strong>0952 58 77 50</strong>.
+              {language === 'am' ? (
+                <>አስቸኳይ ማረጋገጫ ይፈልጋሉ? ወደ ባሕር ዳር ማዕከሉ በቀጥታ ይደውሉ፡ <strong>0902 18 44 40</strong> ወይም <strong>0952 58 77 50</strong>።</>
+              ) : (
+                <>Need urgent activation? Call our Bahir Dar campus desk directly: <strong>0902 18 44 40</strong> or <strong>0952 58 77 50</strong>.</>
+              )}
             </div>
           </div>
         )}
@@ -314,7 +318,11 @@ export function TelebirrPaymentModal({
                 disabled={loading}
                 className="btn btn-primary btn-sm"
               >
-                <span>{loading ? 'Signing in...' : 'Sign In as Student (Demo Account)'}</span>
+                <span>
+                  {loading
+                    ? (language === 'am' ? 'በመግባት ላይ...' : 'Signing in...')
+                    : (language === 'am' ? 'በተማሪ መለያ ግባ' : 'Sign In as Student')}
+                </span>
               </button>
               <button
                 onClick={() => {
@@ -323,7 +331,7 @@ export function TelebirrPaymentModal({
                 }}
                 className="btn btn-secondary btn-sm"
               >
-                <span>{t.nav?.login || 'Sign In / Register'}</span>
+                <span>{t.nav?.login || (language === 'am' ? 'ግባ / ተመዝገብ' : 'Sign In / Register')}</span>
               </button>
             </div>
           </div>
@@ -332,10 +340,10 @@ export function TelebirrPaymentModal({
         {/* If not already enrolled and no pending payment: show payment checkout form */}
         {(!courseStatus?.hasPendingPayment || successInfo) && !courseStatus?.isEnrolled && isAuthenticated && (
           <div>
-            {/* Gateway Selector Tabs: Telebirr (First & Prominent) + CBE (Coming Soon) */}
+            {/* Gateway Selector Tabs: Telebirr (Online) + CBE (In-Person Desk) */}
             <div style={{ marginBottom: '1.25rem' }}>
               <div style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '0.5rem' }}>
-                Payment Method Options
+                {language === 'am' ? 'የክፍያ አማራጮች' : 'Payment Method Options'}
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem' }}>
                 {/* 1. Telebirr - First and Primary */}
@@ -374,11 +382,11 @@ export function TelebirrPaymentModal({
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                       <strong style={{ fontSize: '0.95rem' }}>Telebirr</strong>
                       <span className="badge badge-gold" style={{ fontSize: '0.65rem', padding: '1px 6px' }}>
-                        Primary
+                        {language === 'am' ? 'ዋና' : 'Primary'}
                       </span>
                     </div>
                     <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-                      Account: <strong>Tizta</strong>
+                      {t.payment.accountName}: <strong>Tizta</strong>
                     </div>
                   </div>
                 </button>
@@ -419,18 +427,18 @@ export function TelebirrPaymentModal({
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                       <strong style={{ fontSize: '0.95rem' }}>CBE (Bank Transfer)</strong>
                       <span className="badge badge-neutral" style={{ fontSize: '0.65rem', padding: '1px 6px' }}>
-                        Coming Soon
+                        {t.payment.cbeBadge}
                       </span>
                     </div>
                     <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-                      Commercial Bank of Ethiopia
+                      {t.payment.cbeBankName || 'Commercial Bank of Ethiopia'}
                     </div>
                   </div>
                 </button>
               </div>
             </div>
 
-            {/* If CBE is selected: show Coming Soon notice and prompt to use Telebirr */}
+            {/* If CBE is selected: show In-Person campus desk notice */}
             {selectedGateway === 'cbe' && (
               <div className="alert alert-info" style={{ marginBottom: '1.25rem' }}>
                 <Info size={20} style={{ flexShrink: 0 }} />
@@ -445,7 +453,7 @@ export function TelebirrPaymentModal({
                     className="btn btn-primary btn-sm"
                     style={{ marginTop: '0.75rem' }}
                   >
-                    Switch to Telebirr Payment
+                    {language === 'am' ? 'ወደ ቴሌብር ክፍያ ቀይር' : 'Switch to Telebirr Payment'}
                   </button>
                 </div>
               </div>
@@ -467,7 +475,9 @@ export function TelebirrPaymentModal({
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       <ShieldCheck size={18} style={{ color: 'var(--color-gold)' }} />
-                      <strong style={{ fontSize: '0.92rem' }}>Verified Telebirr Recipient Account</strong>
+                      <strong style={{ fontSize: '0.92rem' }}>
+                        {language === 'am' ? 'የተረጋገጠ የቴሌብር ተቀባይ አካውንት' : 'Verified Telebirr Recipient Account'}
+                      </strong>
                     </div>
                     <span style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>
                       {t.payment.accountName}: <strong style={{ color: 'var(--color-gold)' }}>Tizta</strong>
@@ -669,7 +679,11 @@ export function TelebirrPaymentModal({
 
                   {/* Security & Verification Notice */}
                   <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', padding: '0.65rem 0.75rem', backgroundColor: 'var(--bg-subtle)', borderRadius: 'var(--radius-sm)' }}>
-                    🔒 <strong>Administrator Verification Required:</strong> Submitting will record your payment as <strong>Pending Verification</strong>. Our Bahir Dar admissions team verifies transactions against our Telebirr statements before unlocking course access. We never request your Telebirr PIN or passwords.
+                    {language === 'am' ? (
+                      <>🔒 <strong>የአስተዳዳሪ ማረጋገጫ ያስፈልጋል፡</strong> የግብይት ቁጥሩን ሲልኩ ክፍያዎ በ<strong>በማረጋገጥ ላይ (Pending Verification)</strong> ሁኔታ ይመዘገባል። የባሕር ዳር ቢሯችን ከቴሌብር ስቴትመንት ጋር ካረጋገጠ በኋላ የስልጠናውን ሙሉ መዳረሻ ይከፍታል። ሚስጥራዊ የቴሌብር ፒን (PIN) ቁጥርዎን በፍጹም አንጠይቅም።</>
+                    ) : (
+                      <>🔒 <strong>Administrator Verification Required:</strong> Submitting will record your payment as <strong>Pending Verification</strong>. Our Bahir Dar admissions team verifies transactions against our Telebirr statements before unlocking course access. We never request your Telebirr PIN or passwords.</>
+                    )}
                   </div>
 
                   {/* Submit Button */}

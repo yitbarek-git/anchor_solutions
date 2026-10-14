@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { api } from '../services/api.js';
 import { CourseCard } from '../components/CourseCard.jsx';
+import { TisAbayPartnershipSection } from '../components/TisAbayPartnershipSection.jsx';
 import { Search, Filter, RotateCcw } from 'lucide-react';
 
 export function CoursesPage({ navigate, initialSearch = '' }) {
@@ -128,14 +129,14 @@ export function CoursesPage({ navigate, initialSearch = '' }) {
         {/* Courses Result */}
         {loading ? (
           <div style={{ textAlign: 'center', padding: '4rem', color: 'var(--text-muted)' }}>
-            Loading course catalog...
+            {t.common.loadingCatalog}
           </div>
         ) : courses.length === 0 ? (
           <div style={{ textAlign: 'center', padding: '4rem 2rem', backgroundColor: 'var(--bg-surface)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)' }}>
             <Filter size={36} style={{ color: 'var(--text-muted)', marginBottom: '1rem' }} />
             <h3 style={{ marginBottom: '0.5rem' }}>{t.coursesPage.noCoursesFound}</h3>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
-              Try broadening your search term or selecting "All Domains".
+              {t.coursesPage.noCoursesSubtitle}
             </p>
             <button onClick={handleReset} className="btn btn-primary">
               {t.coursesPage.resetFilters}
@@ -149,6 +150,9 @@ export function CoursesPage({ navigate, initialSearch = '' }) {
           </div>
         )}
       </div>
+
+      {/* Tis Abay College Collaboration & Vocational Tracks */}
+      <TisAbayPartnershipSection navigate={navigate} />
     </div>
   );
 }

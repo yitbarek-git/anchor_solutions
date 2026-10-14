@@ -245,7 +245,7 @@ export function AIAssistantWidget({ navigate }) {
                   {isOnline && (
                     <span className="anchor-ai-online-badge">
                       <span className="anchor-ai-online-dot" />
-                      Live
+                      {language === 'am' ? 'ቀጥታ' : 'Live'}
                     </span>
                   )}
                 </div>
@@ -261,7 +261,7 @@ export function AIAssistantWidget({ navigate }) {
                 onClick={handleReset}
                 title={language === 'am' ? 'ውይይት አድስ' : 'Reset conversation'}
                 className="anchor-ai-control-btn"
-                aria-label="Reset conversation"
+                aria-label={language === 'am' ? 'ውይይት አድስ' : 'Reset conversation'}
               >
                 <RefreshCw size={15} />
               </button>
@@ -270,7 +270,7 @@ export function AIAssistantWidget({ navigate }) {
                 onClick={() => setIsMinimized(!isMinimized)}
                 title={isMinimized ? (language === 'am' ? 'አስፋ' : 'Expand') : (language === 'am' ? 'አሳንስ' : 'Minimize')}
                 className="anchor-ai-control-btn"
-                aria-label={isMinimized ? 'Expand' : 'Minimize'}
+                aria-label={isMinimized ? (language === 'am' ? 'አስፋ' : 'Expand') : (language === 'am' ? 'አሳንስ' : 'Minimize')}
               >
                 {isMinimized ? <Maximize2 size={15} /> : <Minimize2 size={15} />}
               </button>
@@ -279,7 +279,7 @@ export function AIAssistantWidget({ navigate }) {
                 onClick={() => setIsOpen(false)}
                 title={language === 'am' ? 'ዝጋ' : 'Close'}
                 className="anchor-ai-control-btn"
-                aria-label="Close assistant"
+                aria-label={language === 'am' ? 'ረዳትን ዝጋ' : 'Close assistant'}
               >
                 <X size={17} />
               </button>
@@ -379,7 +379,7 @@ export function AIAssistantWidget({ navigate }) {
                   className="anchor-ai-input"
                   maxLength={500}
                   disabled={loading}
-                  aria-label="Message"
+                  aria-label={language === 'am' ? 'የመልእክት ማስገቢያ' : 'Message'}
                 />
                 <button
                   type="submit"

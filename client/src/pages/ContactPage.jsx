@@ -96,9 +96,13 @@ export function ContactPage() {
                             className="phone-contact-link"
                           >
                             <span>📞 {phone.display}</span>
-                            {phone.isPrimary && (
+                            {phone.isPrimary ? (
                               <span className="badge badge-gold" style={{ fontSize: '0.7rem', padding: '0.1rem 0.4rem' }}>
                                 {language === 'am' ? 'ዋና መስመር' : 'Primary'}
+                              </span>
+                            ) : (
+                              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                                ({language === 'am' ? phone.labelAm : phone.labelEn})
                               </span>
                             )}
                           </a>

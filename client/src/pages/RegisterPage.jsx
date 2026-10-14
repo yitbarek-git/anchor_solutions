@@ -128,7 +128,7 @@ export function RegisterPage({ navigate }) {
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                   className="form-input"
-                  placeholder="At least 6 characters"
+                  placeholder={language === 'am' ? 'ቢያንስ 6 ፊደላት/ቁጥሮች' : 'At least 6 characters'}
                 />
               </div>
               <div className="form-group">
@@ -139,7 +139,7 @@ export function RegisterPage({ navigate }) {
                   value={formData.confirmPassword}
                   onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
                   className="form-input"
-                  placeholder="Repeat password"
+                  placeholder={language === 'am' ? 'የይለፍ ቃሉን በድጋሚ ያስገቡ' : 'Repeat password'}
                 />
               </div>
             </div>
@@ -151,7 +151,7 @@ export function RegisterPage({ navigate }) {
               style={{ width: '100%', marginTop: '1rem', marginBottom: '1.25rem' }}
             >
               <UserPlus size={18} />
-              <span>{loading ? 'Creating account...' : t.nav.register}</span>
+              <span>{loading ? t.auth.creatingAccount : t.nav.register}</span>
             </button>
 
             <div style={{ textAlign: 'center', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext.jsx';
+import { TisAbayPartnershipSection } from '../components/TisAbayPartnershipSection.jsx';
 import { LOCATION_DATA } from '../utils/location.js';
 import { Award, Compass, HeartHandshake, MapPin, CheckCircle2 } from 'lucide-react';
 
@@ -46,46 +47,9 @@ export function AboutPage({ navigate }) {
             </div>
           </div>
 
-          {/* Academic Partnership */}
-          <div style={{ backgroundColor: 'var(--bg-surface)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-xl)', padding: '2.5rem', marginBottom: '4rem' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2.5rem', alignItems: 'center' }}>
-              <div>
-                <span className="badge badge-gold" style={{ marginBottom: '0.75rem' }}>
-                  {language === 'am' ? 'የትምህርት አጋርነት' : 'Academic Synergy'}
-                </span>
-                <h2 style={{ fontSize: '1.85rem', marginBottom: '1rem' }}>
-                  {language === 'am' ? 'ከቲስ አባይ ኮሌጅ ጋር የተጣመረ ጥራት' : 'Partnered with Tis Abay College'}
-                </h2>
-                <p style={{ color: 'var(--text-secondary)', lineHeight: '1.65', marginBottom: '1.5rem' }}>
-                  {language === 'am'
-                    ? 'አንከር ሶሉሽን ከቲስ አባይ ኮሌጅ ጋር በቅርበት በመተባበር ደረጃቸውን የጠበቁ የስርዓተ-ትምህርት መመሪያዎችን እና ህጋዊ ሰርተፊኬቶችን ያቀርባል። ስልጠናውን ያጠናቀቁ ተማሪዎች በአገር ውስጥና በውጭ አገር የስራ ገበያ ውስጥ ተወዳዳሪ እንዲሆኑ ይደረጋል።'
-                    : 'Through our academic alliance with Tis Abay College, Anchor Solution provides verified vocational certifications, validated syllabi, and structured evaluation rubrics recognized by Ethiopian institutions and international freelance employers.'}
-                </p>
-                <button onClick={() => navigate('/courses')} className="btn btn-primary">
-                  {t.actions.viewAll}
-                </button>
-              </div>
-
-              <div style={{ backgroundColor: 'var(--bg-subtle)', borderRadius: 'var(--radius-lg)', padding: '2rem', border: '1px solid var(--border-subtle)' }}>
-                <h4 style={{ fontSize: '1.1rem', marginBottom: '1rem', fontWeight: 700 }}>
-                  {language === 'am' ? 'የስልጠና መለያዎቻችን' : 'Core Training Hallmarks'}
-                </h4>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.65rem' }}>
-                    <CheckCircle2 size={18} style={{ color: 'var(--color-gold)', flexShrink: 0, marginTop: '2px' }} />
-                    <span style={{ fontSize: '0.92rem' }}>100% Practical laboratory execution on modern equipment</span>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.65rem' }}>
-                    <CheckCircle2 size={18} style={{ color: 'var(--color-gold)', flexShrink: 0, marginTop: '2px' }} />
-                    <span style={{ fontSize: '0.92rem' }}>Bilingual instruction tailored for local and foreign freelance markets</span>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.65rem' }}>
-                    <CheckCircle2 size={18} style={{ color: 'var(--color-gold)', flexShrink: 0, marginTop: '2px' }} />
-                    <span style={{ fontSize: '0.92rem' }}>Verified certificate awarded upon practical project completion</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          {/* Academic Partnership & Vocational Programs */}
+          <div style={{ marginBottom: '4rem' }}>
+            <TisAbayPartnershipSection navigate={navigate} />
           </div>
 
           {/* Physical Presence in Bahir Dar */}
@@ -105,7 +69,7 @@ export function AboutPage({ navigate }) {
                 rel="noopener noreferrer"
                 className="btn btn-secondary"
               >
-                {language === 'am' ? 'በGoogle ካርታ ይመልከቱ' : 'View on Google Maps'}
+                {t.aboutPage.viewOnMaps}
               </a>
             </div>
           </div>

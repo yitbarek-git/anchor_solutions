@@ -37,16 +37,6 @@ export function LoginPage({ navigate }) {
     }
   };
 
-  const handleDemoFill = (role) => {
-    if (role === 'admin') {
-      setEmail('admin@anchorsolution.et');
-      setPassword('Admin@Anchor2026');
-    } else {
-      setEmail('student@anchorsolution.et');
-      setPassword('Student@Anchor2026');
-    }
-  };
-
   const handleGoogleClick = async () => {
     try {
       const res = await api.auth.google();
@@ -89,32 +79,7 @@ export function LoginPage({ navigate }) {
           {error && <Alert type="error" message={error} />}
           {googleNotice && <Alert type="info" message={googleNotice} />}
 
-          {/* Demo Credentials Quick Buttons */}
-          <div style={{ padding: '1rem', backgroundColor: 'var(--bg-subtle)', borderRadius: 'var(--radius-md)', marginBottom: '1.5rem', border: '1px solid var(--border-subtle)' }}>
-            <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '0.5rem', textTransform: 'uppercase' }}>
-              {t.auth.demoLoginNotice}
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '0.5rem' }}>
-              <button
-                type="button"
-                onClick={() => handleDemoFill('admin')}
-                className="btn btn-secondary btn-sm"
-              >
-                <Shield size={14} />
-                <span>Admin Demo</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => handleDemoFill('student')}
-                className="btn btn-secondary btn-sm"
-              >
-                <UserCheck size={14} />
-                <span>Student Demo</span>
-              </button>
-            </div>
-          </div>
-
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} style={{ marginTop: '1.25rem' }}>
             <div className="form-group">
               <label className="form-label">{t.auth.email}</label>
               <input
@@ -155,7 +120,7 @@ export function LoginPage({ navigate }) {
               style={{ width: '100%', marginTop: '0.75rem', marginBottom: '1rem' }}
             >
               <LogIn size={18} />
-              <span>{loading ? 'Signing in...' : t.nav.login}</span>
+              <span>{loading ? t.auth.signingIn : t.nav.login}</span>
             </button>
 
             {/* Google OAuth Scaffolded Button */}

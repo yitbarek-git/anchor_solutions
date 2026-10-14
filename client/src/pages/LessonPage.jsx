@@ -93,7 +93,7 @@ export function LessonPage({ lessonId, navigate }) {
 
   const handleDownload = async (resource) => {
     if (resource.isLocked) {
-      alert('This resource is reserved for enrolled students.');
+      alert(language === 'am' ? 'ይህ መርጃ ለተመዘገቡ ተማሪዎች ብቻ የተፈቀደ ነው።' : 'This resource is reserved for enrolled students.');
       return;
     }
     window.location.href = resource.downloadUrl;
@@ -102,7 +102,7 @@ export function LessonPage({ lessonId, navigate }) {
   if (loading) {
     return (
       <div className="container" style={{ padding: '6rem 0', textAlign: 'center', color: 'var(--text-muted)' }}>
-        Loading interactive lesson...
+        {t.actions.loading}
       </div>
     );
   }
@@ -110,12 +110,12 @@ export function LessonPage({ lessonId, navigate }) {
   if (error || !lesson) {
     return (
       <div className="container" style={{ padding: '6rem 0', textAlign: 'center' }}>
-        <h2>Lesson Not Found</h2>
+        <h2>{language === 'am' ? 'ትምህርቱ አልተገኘም' : 'Lesson Not Found'}</h2>
         <p style={{ color: 'var(--text-secondary)', margin: '1rem 0' }}>
-          {error || 'The requested lesson could not be loaded.'}
+          {error || (language === 'am' ? 'የትምህርቱ ይዘት ሊከፈት አልቻለም።' : 'The requested lesson could not be loaded.')}
         </p>
         <button onClick={() => navigate('/courses')} className="btn btn-primary">
-          Back to Courses
+          {t.common.backToCourses}
         </button>
       </div>
     );

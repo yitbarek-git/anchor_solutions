@@ -1,5 +1,5 @@
 import React from 'react';
-import { CourseArtwork } from '../assets/CourseIllustrations.jsx';
+import { CourseImage } from './CourseImage.jsx';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { formatPrice } from '../utils/formatters.js';
 import { Clock, BookOpen, Award } from 'lucide-react';
@@ -20,9 +20,9 @@ export function CourseCard({ course, navigate }) {
       onKeyDown={(e) => e.key === 'Enter' && handleCardClick()}
       aria-label={`View ${course.title} course details`}
     >
-      {/* Thumbnail artwork */}
+      {/* Thumbnail artwork / uploaded poster */}
       <div className="course-card-thumb">
-        <CourseArtwork slug={course.slug} />
+        <CourseImage slug={course.slug} title={course.title} />
         <span className="badge badge-gold course-card-category">
           {course.category}
         </span>

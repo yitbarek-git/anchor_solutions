@@ -401,14 +401,14 @@ export function StudentDashboardPage({ navigate }) {
                       {payment.status === 'pending' && (
                         <div style={{ fontSize: '0.82rem', color: 'var(--color-gold)', marginTop: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
                           <Clock size={14} />
-                          <span>Pending administrator verification. Course access will unlock automatically.</span>
+                          <span>{t.student.pendingNotice}</span>
                         </div>
                       )}
 
                       {payment.status === 'rejected' && (
                         <div style={{ fontSize: '0.82rem', color: 'var(--color-danger)', marginTop: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
                           <XCircle size={14} />
-                          <span>Verification declined: {payment.admin_notes || 'Could not verify transaction reference.'}</span>
+                          <span>{t.student.declinedNotice}{payment.admin_notes || (language === 'am' ? 'የክፍያ ማረጋገጫውን ማረጋገጥ አልተቻለም።' : 'Could not verify transaction reference.')}</span>
                         </div>
                       )}
                     </div>
@@ -421,17 +421,17 @@ export function StudentDashboardPage({ navigate }) {
                         <div>
                           {payment.status === 'pending' && (
                             <span className="badge badge-gold" style={{ fontSize: '0.75rem' }}>
-                              Pending Review
+                              {language === 'am' ? 'በማረጋገጥ ላይ' : 'Pending Review'}
                             </span>
                           )}
                           {payment.status === 'approved' && (
                             <span className="badge badge-success" style={{ fontSize: '0.75rem' }}>
-                              ✓ Approved
+                              ✓ {language === 'am' ? 'ተረጋግጧል' : 'Approved'}
                             </span>
                           )}
                           {payment.status === 'rejected' && (
                             <span className="badge badge-danger" style={{ fontSize: '0.75rem' }}>
-                              Declined
+                              {language === 'am' ? 'አልተረጋገጠም' : 'Declined'}
                             </span>
                           )}
                         </div>
@@ -442,7 +442,7 @@ export function StudentDashboardPage({ navigate }) {
                           onClick={() => navigate(`/courses/${payment.course_slug}`)}
                           className="btn btn-primary btn-sm"
                         >
-                          <span>Go to Course</span>
+                          <span>{t.student.goToCourse}</span>
                           <ArrowRight size={14} />
                         </button>
                       )}
@@ -452,7 +452,7 @@ export function StudentDashboardPage({ navigate }) {
                           onClick={() => navigate(`/checkout/${payment.course_slug}`)}
                           className="btn btn-secondary btn-sm"
                         >
-                          <span>Resubmit</span>
+                          <span>{t.student.resubmit}</span>
                         </button>
                       )}
                     </div>

@@ -66,7 +66,7 @@ export function Footer({ navigate }) {
 
           {/* Contact & Bahir Dar Campus Info */}
           <div>
-            <h4 className="footer-heading">{language === 'am' ? 'የካምፓስ መረጃ' : 'Campus & Admissions'}</h4>
+            <h4 className="footer-heading">{t.footer.campusInfo}</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', fontSize: '0.88rem' }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.65rem' }}>
                 <MapPin size={18} style={{ color: 'var(--color-gold)', flexShrink: 0, marginTop: '3px' }} />

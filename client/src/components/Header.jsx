@@ -56,16 +56,17 @@ export function Header({ currentPath, navigate }) {
             role="link"
             tabIndex={0}
             onKeyDown={(e) => e.key === 'Enter' && handleNav('/')}
-            aria-label="Anchor Solution Home"
+            aria-label={language === 'am' ? 'አንከር ሶሉሽንስ ዋና ገጽ' : 'Anchor Solutions Home'}
           >
             <BrandLogo />
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="nav-links" aria-label="Main Navigation">
+          <nav className="nav-links" aria-label={language === 'am' ? 'ዋና ማውጫ' : 'Main Navigation'}>
             {navItems.map((item) => (
               <button
                 key={item.path}
+                type="button"
                 onClick={() => handleNav(item.path)}
                 className={`nav-item ${currentPath === item.path ? 'active' : ''}`}
               >
@@ -74,52 +75,52 @@ export function Header({ currentPath, navigate }) {
             ))}
           </nav>
 
-          {/* Controls: Language, Theme, Auth */}
+          {/* Controls: Single Language Switcher, Theme Toggle, Auth, Hamburger Menu */}
           <div className="header-actions">
-            {/* Desktop Language Switcher (EN | አማ) */}
-            <div className="control-pill desktop-lang-pill" role="group" aria-label="Language Selector">
+            {/* Single Connected Language Segmented Control */}
+            <div
+              className="lang-segmented-control"
+              role="group"
+              aria-label={language === 'am' ? 'የቋንቋ መምረጫ' : 'Language selector'}
+            >
               <button
+                type="button"
                 onClick={() => setLanguage('en')}
-                className={`control-pill-btn ${language === 'en' ? 'active' : ''}`}
+                className={`lang-segment ${language === 'en' ? 'active' : ''}`}
                 aria-pressed={language === 'en'}
+                title="Switch to English"
               >
                 EN
               </button>
               <button
+                type="button"
                 onClick={() => setLanguage('am')}
-                className={`control-pill-btn ${language === 'am' ? 'active' : ''}`}
+                className={`lang-segment ${language === 'am' ? 'active' : ''}`}
                 aria-pressed={language === 'am'}
+                title="ወደ አማርኛ ቀይር"
               >
                 አማ
               </button>
             </div>
 
-            {/* Mobile Compact Language Toggle: One button displaying EN or አማ */}
-            <button
-              onClick={toggleLanguage}
-              className="icon-btn mobile-lang-toggle"
-              aria-label={language === 'en' ? 'Current language: English. Switch to Amharic' : 'ቋንቋ፡ አማርኛ። ወደ እንግሊዝኛ ለመቀየር ይጫኑ'}
-              title={language === 'en' ? 'Switch to አማርኛ' : 'Switch to English'}
-            >
-              <span className="lang-toggle-text">{language === 'en' ? 'EN' : 'አማ'}</span>
-            </button>
-
             {/* Theme Toggle */}
             <button
+              type="button"
               onClick={toggleTheme}
-              className="icon-btn"
+              className="icon-btn theme-toggle-btn"
               aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
               title={theme === 'dark' ? 'Light Theme' : 'Dark Theme'}
             >
               {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
             </button>
 
-            {/* Desktop Auth Actions */}
+            {/* Desktop Auth Actions (hidden on mobile/tablet) */}
             <div className="header-auth-desktop">
               {isAuthenticated ? (
                 <>
                   {isAdmin ? (
                     <button
+                      type="button"
                       onClick={() => handleNav('/admin')}
                       className={`btn btn-sm ${currentPath.startsWith('/admin') ? 'btn-primary' : 'btn-secondary'}`}
                     >
@@ -128,6 +129,7 @@ export function Header({ currentPath, navigate }) {
                     </button>
                   ) : (
                     <button
+                      type="button"
                       onClick={() => handleNav('/dashboard')}
                       className={`btn btn-sm ${currentPath === '/dashboard' ? 'btn-primary' : 'btn-secondary'}`}
                     >
@@ -136,6 +138,7 @@ export function Header({ currentPath, navigate }) {
                     </button>
                   )}
                   <button
+                    type="button"
                     onClick={() => {
                       logout();
                       handleNav('/');
@@ -150,12 +153,14 @@ export function Header({ currentPath, navigate }) {
               ) : (
                 <>
                   <button
+                    type="button"
                     onClick={() => handleNav('/login')}
                     className="btn btn-secondary btn-sm"
                   >
                     {t.nav.login}
                   </button>
                   <button
+                    type="button"
                     onClick={() => handleNav('/register')}
                     className="btn btn-primary btn-sm"
                   >
@@ -165,11 +170,12 @@ export function Header({ currentPath, navigate }) {
               )}
             </div>
 
-            {/* Mobile Menu Toggle Button */}
+            {/* Mobile Menu Hamburger Toggle Button */}
             <button
+              type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="icon-btn mobile-nav-toggle"
-              aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-label={mobileMenuOpen ? (language === 'am' ? 'ማውጫ ዝጋ' : 'Close navigation menu') : (language === 'am' ? 'ማውጫ ክፈት' : 'Open navigation menu')}
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-navigation-drawer"
             >
@@ -191,15 +197,15 @@ export function Header({ currentPath, navigate }) {
             className="mobile-drawer"
             role="dialog"
             aria-modal="true"
-            aria-label="Mobile Navigation Menu"
+            aria-label={language === 'am' ? 'የሞባይል ማውጫ' : 'Mobile Navigation Menu'}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mobile-drawer-header">
-              <span className="mobile-drawer-title">{t.nav.courses} & Navigation</span>
+              <span className="mobile-drawer-title">{t.nav.mobileNavTitle || `${t.nav.courses} & Navigation`}</span>
               <button
                 onClick={() => setMobileMenuOpen(false)}
                 className="icon-btn"
-                aria-label="Close navigation menu"
+                aria-label={language === 'am' ? 'ማውጫ ዝጋ' : 'Close navigation menu'}
               >
                 <X size={18} />
               </button>

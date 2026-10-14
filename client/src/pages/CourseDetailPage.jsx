@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { useAuth } from '../context/AuthContext.jsx';
 import { api } from '../services/api.js';
-import { CourseArtwork } from '../assets/CourseIllustrations.jsx';
+import { CourseImage } from '../components/CourseImage.jsx';
 import { Modal } from '../components/Modal.jsx';
 import { TelebirrPaymentModal } from '../components/TelebirrPaymentModal.jsx';
 import { formatPrice } from '../utils/formatters.js';
@@ -10,13 +10,11 @@ import { Clock, BookOpen, Award, CheckCircle2, PlayCircle, Lock, PhoneCall, Send
 
 export function CourseDetailPage({ slug, navigate }) {
   const { t, language } = useLanguage();
-  const { user, isAuthenticated, login } = useAuth();
+  const { user, isAuthenticated } = useAuth();
   const [course, setCourse] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [showPaymentModal, setShowPaymentModal] = useState(false);
-  const [enrolling, setEnrolling] = useState(false);
-  const [enrollSuccess, setEnrollSuccess] = useState(false);
 
   useEffect(() => {
     async function fetchCourse() {
@@ -42,38 +40,10 @@ export function CourseDetailPage({ slug, navigate }) {
     setShowPaymentModal(true);
   };
 
-  const handleDemoInstantEnroll = async () => {
-    if (!course) return;
-    setEnrolling(true);
-    try {
-      if (!isAuthenticated) {
-        // Automatically authenticate with demo student account
-        await login({ email: 'student@anchorsolution.et', password: 'Student@Anchor2026' });
-      }
-      const res = await api.student.enroll(course.id);
-      if (res.success) {
-        setEnrollSuccess(true);
-        setCourse((prev) => ({ ...prev, isEnrolled: true }));
-        setTimeout(() => {
-          setShowPaymentModal(false);
-          // Route to first lesson
-          const firstLesson = course.modules?.[0]?.lessons?.[0];
-          if (firstLesson) {
-            navigate(`/courses/${course.slug}/lessons/${firstLesson.id}`);
-          }
-        }, 1200);
-      }
-    } catch (err) {
-      alert(err.message);
-    } finally {
-      setEnrolling(false);
-    }
-  };
-
   if (loading) {
     return (
       <div className="container" style={{ padding: '6rem 0', textAlign: 'center', color: 'var(--text-muted)' }}>
-        Loading course curriculum...
+        {t.common.loadingDetails}
       </div>
     );
   }
@@ -81,12 +51,12 @@ export function CourseDetailPage({ slug, navigate }) {
   if (error || !course) {
     return (
       <div className="container" style={{ padding: '6rem 0', textAlign: 'center' }}>
-        <h2 style={{ marginBottom: '1rem' }}>Course Not Found</h2>
+        <h2 style={{ marginBottom: '1rem' }}>{t.common.courseNotFound}</h2>
         <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
-          {error || 'The requested course does not exist.'}
+          {error || t.common.courseNotFoundDesc}
         </p>
         <button onClick={() => navigate('/courses')} className="btn btn-primary">
-          Back to Courses
+          {t.common.backToCourses}
         </button>
       </div>
     );
@@ -139,8 +109,8 @@ export function CourseDetailPage({ slug, navigate }) {
             {/* Course Enrollment Card */}
             <div>
               <div className="card" style={{ boxShadow: 'var(--shadow-lg)' }}>
-                <div style={{ height: '220px', overflow: 'hidden' }}>
-                  <CourseArtwork slug={course.slug} />
+                <div style={{ minHeight: '220px', overflow: 'hidden' }}>
+                  <CourseImage slug={course.slug} title={course.title} />
                 </div>
                 <div className="card-body">
                   <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.75rem', marginBottom: '1.25rem' }}>

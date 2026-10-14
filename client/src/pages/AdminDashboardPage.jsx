@@ -351,11 +351,15 @@ export function AdminDashboardPage({ navigate }) {
               <div style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--text-primary)' }}>{stats?.totalStudents || students.length}</div>
             </div>
             <div style={{ padding: '0.85rem 1rem', backgroundColor: 'var(--bg-subtle)', borderRadius: 'var(--radius-md)' }}>
-              <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Total Modules</div>
+              <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
+                {language === 'am' ? 'አጠቃላይ ሞጁሎች' : 'Total Modules'}
+              </div>
               <div style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--text-primary)' }}>{stats?.totalModules || 28}</div>
             </div>
             <div style={{ padding: '0.85rem 1rem', backgroundColor: 'var(--bg-subtle)', borderRadius: 'var(--radius-md)' }}>
-              <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Active Enrollments</div>
+              <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
+                {language === 'am' ? 'ተጠቃሚ ተማሪዎች' : 'Active Enrollments'}
+              </div>
               <div style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--color-gold)' }}>{stats?.totalEnrollments || 2}</div>
             </div>
           </div>
@@ -382,13 +386,13 @@ export function AdminDashboardPage({ navigate }) {
                 loadPayments();
               }}
               className={`btn btn-sm ${activeTab === 'payments' ? 'btn-primary' : 'btn-secondary'}`}
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem' }}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}
             >
               <CreditCard size={16} />
-              <span>Payments & Telebirr</span>
+              <span>{language === 'am' ? 'ክፍያዎችና ቴሌብር' : 'Payments & Telebirr'}</span>
               {paymentStats?.pending > 0 && (
                 <span className="badge badge-gold" style={{ fontSize: '0.72rem', padding: '1px 6px', fontWeight: 800 }}>
-                  {paymentStats.pending} pending
+                  {paymentStats.pending} {language === 'am' ? 'በማረጋገጥ ላይ' : 'pending'}
                 </span>
               )}
             </button>
@@ -397,7 +401,7 @@ export function AdminDashboardPage({ navigate }) {
               className={`btn btn-sm ${activeTab === 'upload' ? 'btn-primary' : 'btn-secondary'}`}
             >
               <Upload size={16} />
-              <span>Media & Files</span>
+              <span>{language === 'am' ? 'ፋይሎች እና ሚዲያ' : 'Media & Files'}</span>
             </button>
           </div>
         </div>
@@ -406,15 +410,17 @@ export function AdminDashboardPage({ navigate }) {
         {activeTab === 'courses' && (
           <div className="card" style={{ padding: '1.5rem' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>Curriculum & Tracks</h3>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>
+                {language === 'am' ? 'የስልጠና መርሃ ግብሮች' : 'Curriculum & Tracks'}
+              </h3>
               <div style={{ display: 'flex', gap: '0.5rem' }}>
                 <button onClick={() => setShowModuleModal(true)} className="btn btn-secondary btn-sm">
                   <FolderPlus size={15} />
-                  <span>Add Module</span>
+                  <span>{language === 'am' ? 'ሞጁል ጨምር' : 'Add Module'}</span>
                 </button>
                 <button onClick={() => setShowLessonModal(true)} className="btn btn-secondary btn-sm">
                   <Video size={15} />
-                  <span>Add Lesson</span>
+                  <span>{language === 'am' ? 'ትምህርት ጨምር' : 'Add Lesson'}</span>
                 </button>
               </div>
             </div>
@@ -423,13 +429,13 @@ export function AdminDashboardPage({ navigate }) {
               <table className="table">
                 <thead>
                   <tr>
-                    <th>Track / Course Title</th>
-                    <th>Category</th>
-                    <th>Tuition</th>
-                    <th>Curriculum</th>
-                    <th>Enrollments</th>
-                    <th>Status</th>
-                    <th>Actions</th>
+                    <th>{language === 'am' ? 'የስልጠና ርዕስ' : 'Track / Course Title'}</th>
+                    <th>{language === 'am' ? 'ዘርፍ' : 'Category'}</th>
+                    <th>{language === 'am' ? 'ዋጋ' : 'Tuition'}</th>
+                    <th>{language === 'am' ? 'ይዘት' : 'Curriculum'}</th>
+                    <th>{language === 'am' ? 'ተመዝጋቢዎች' : 'Enrollments'}</th>
+                    <th>{language === 'am' ? 'ሁኔታ' : 'Status'}</th>
+                    <th>{language === 'am' ? 'ተግባራት' : 'Actions'}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -611,10 +617,12 @@ export function AdminDashboardPage({ navigate }) {
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.25rem' }}>
                 <div>
                   <h3 style={{ fontSize: '1.25rem', fontWeight: 700, margin: 0 }}>
-                    Telebirr Transaction Verifications
+                    {language === 'am' ? 'የቴሌብር ግብይት ማረጋገጫዎች' : 'Telebirr Transaction Verifications'}
                   </h3>
                   <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: '0.2rem 0 0' }}>
-                    Verify Telebirr transactions against recipient statements (0902 18 44 40 / 0952 58 77 50 - Tizta) to grant course access.
+                    {language === 'am'
+                      ? 'የቀረቡ የቴሌብር ክፍያዎችን ከስቴትመንቱ (0902 18 44 40 / 0952 58 77 50 - Tizta) ጋር በማመሳከር የስልጠናውን መዳረሻ ይፍቀዱ።'
+                      : 'Verify Telebirr transactions against recipient statements (0902 18 44 40 / 0952 58 77 50 - Tizta) to grant course access.'}
                   </p>
                 </div>
 
@@ -624,33 +632,45 @@ export function AdminDashboardPage({ navigate }) {
                   style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}
                 >
                   <RefreshCw size={14} className={loadingPayments ? 'spin' : ''} />
-                  <span>Refresh</span>
+                  <span>{language === 'am' ? 'አድስ' : 'Refresh'}</span>
                 </button>
               </div>
 
               {/* Filter pills & search */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1.25rem' }}>
                 <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                  {['all', 'pending', 'approved', 'rejected'].map((statusKey) => (
-                    <button
-                      key={statusKey}
-                      onClick={() => {
-                        setPaymentFilter(statusKey);
-                        loadPayments(statusKey, paymentSearch);
-                      }}
-                      className={`btn btn-sm ${paymentFilter === statusKey ? 'btn-primary' : 'btn-ghost'}`}
-                      style={{ textTransform: 'capitalize' }}
-                    >
-                      {statusKey === 'all' ? `All (${paymentStats.total})` : `${statusKey} (${paymentStats[statusKey] || 0})`}
-                    </button>
-                  ))}
+                  {['all', 'pending', 'approved', 'rejected'].map((statusKey) => {
+                    const statusLabelsAm = {
+                      all: `ሁሉም (${paymentStats.total})`,
+                      pending: `በማረጋገጥ ላይ (${paymentStats.pending || 0})`,
+                      approved: `የተፈቀደ (${paymentStats.approved || 0})`,
+                      rejected: `ውድቅ የተደረገ (${paymentStats.rejected || 0})`,
+                    };
+                    return (
+                      <button
+                        key={statusKey}
+                        onClick={() => {
+                          setPaymentFilter(statusKey);
+                          loadPayments(statusKey, paymentSearch);
+                        }}
+                        className={`btn btn-sm ${paymentFilter === statusKey ? 'btn-primary' : 'btn-ghost'}`}
+                        style={{ textTransform: 'capitalize' }}
+                      >
+                        {language === 'am'
+                          ? statusLabelsAm[statusKey]
+                          : statusKey === 'all'
+                          ? `All (${paymentStats.total})`
+                          : `${statusKey} (${paymentStats[statusKey] || 0})`}
+                      </button>
+                    );
+                  })}
                 </div>
 
                 <div style={{ display: 'flex', gap: '0.5rem', minWidth: '240px' }}>
                   <input
                     type="text"
                     className="input"
-                    placeholder="Search by ref, name, phone..."
+                    placeholder={language === 'am' ? 'በመለያ ቁጥር፣ ስም ወይም ስልክ ፈልግ...' : 'Search by ref, name, phone...'}
                     value={paymentSearch}
                     onChange={(e) => {
                       setPaymentSearch(e.target.value);
@@ -666,20 +686,20 @@ export function AdminDashboardPage({ navigate }) {
                 <table className="table">
                   <thead>
                     <tr>
-                      <th>Ref ID & Date</th>
-                      <th>Student</th>
-                      <th>Course</th>
-                      <th>Amount</th>
-                      <th>Recipient Account</th>
-                      <th>Status</th>
-                      <th>Actions</th>
+                      <th>{language === 'am' ? 'የግብይት መለያ እና ቀን' : 'Ref ID & Date'}</th>
+                      <th>{language === 'am' ? 'ተማሪ' : 'Student'}</th>
+                      <th>{language === 'am' ? 'ስልጠና' : 'Course'}</th>
+                      <th>{language === 'am' ? 'መጠን' : 'Amount'}</th>
+                      <th>{language === 'am' ? 'የተላከበት አካውንት' : 'Recipient Account'}</th>
+                      <th>{language === 'am' ? 'ሁኔታ' : 'Status'}</th>
+                      <th>{language === 'am' ? 'ተግባራት' : 'Actions'}</th>
                     </tr>
                   </thead>
                   <tbody>
                     {payments.length === 0 ? (
                       <tr>
                         <td colSpan={7} style={{ textAlign: 'center', padding: '2.5rem', color: 'var(--text-muted)' }}>
-                          No transactions found matching criteria.
+                          {language === 'am' ? 'ምንም አይነት የተመዘገበ ክፍያ አልተገኘም።' : 'No transactions found matching criteria.'}
                         </td>
                       </tr>
                     ) : (
@@ -697,7 +717,9 @@ export function AdminDashboardPage({ navigate }) {
                             <div style={{ fontWeight: 600 }}>{payment.user_name || 'Student'}</div>
                             <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>{payment.user_email}</div>
                             {payment.sender_phone && (
-                              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Sender Tel: {payment.sender_phone}</div>
+                              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                                {language === 'am' ? 'የላኪ ስልክ:' : 'Sender Tel:'} {payment.sender_phone}
+                              </div>
                             )}
                           </td>
                           <td>
@@ -717,19 +739,19 @@ export function AdminDashboardPage({ navigate }) {
                             {payment.status === 'pending' && (
                               <span className="badge badge-gold" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
                                 <Clock size={12} />
-                                <span>Pending</span>
+                                <span>{language === 'am' ? 'በማረጋገጥ ላይ' : 'Pending'}</span>
                               </span>
                             )}
                             {payment.status === 'approved' && (
                               <span className="badge badge-success" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
                                 <CheckCircle2 size={12} />
-                                <span>Approved</span>
+                                <span>{language === 'am' ? 'የተፈቀደ' : 'Approved'}</span>
                               </span>
                             )}
                             {payment.status === 'rejected' && (
                               <span className="badge badge-danger" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
                                 <XCircle size={12} />
-                                <span>Rejected</span>
+                                <span>{language === 'am' ? 'ውድቅ የተደረገ' : 'Rejected'}</span>
                               </span>
                             )}
                           </td>
@@ -741,31 +763,35 @@ export function AdminDashboardPage({ navigate }) {
                                   disabled={processingPaymentId === payment.id}
                                   className="btn btn-success btn-sm"
                                   style={{ padding: '0.3rem 0.6rem', fontSize: '0.8rem' }}
-                                  title="Approve and grant course access"
+                                  title={language === 'am' ? 'ክፍያውን አረጋግጥና መዳረሻ ስጥ' : 'Approve and grant course access'}
                                 >
                                   <CheckCircle2 size={14} />
-                                  <span>{processingPaymentId === payment.id ? 'Approving...' : 'Approve'}</span>
+                                  <span>
+                                    {processingPaymentId === payment.id
+                                      ? (language === 'am' ? 'በማረጋገጥ ላይ...' : 'Approving...')
+                                      : (language === 'am' ? 'አረጋግጥና ፍቀድ' : 'Approve')}
+                                  </span>
                                 </button>
                                 <button
                                   onClick={() => handleOpenReject(payment)}
                                   disabled={processingPaymentId === payment.id}
                                   className="btn btn-danger btn-sm"
                                   style={{ padding: '0.3rem 0.6rem', fontSize: '0.8rem' }}
-                                  title="Reject payment"
+                                  title={language === 'am' ? 'ክፍያውን ውድቅ አድርግ' : 'Reject payment'}
                                 >
                                   <XCircle size={14} />
-                                  <span>Reject</span>
+                                  <span>{language === 'am' ? 'ውድቅ አድርግ' : 'Reject'}</span>
                                 </button>
                               </div>
                             )}
                             {payment.status === 'approved' && (
                               <div style={{ fontSize: '0.8rem', color: 'var(--color-success)', fontWeight: 600 }}>
-                                ✓ Access Active
+                                ✓ {language === 'am' ? 'መዳረሻ ተፈቅዷል' : 'Access Active'}
                               </div>
                             )}
                             {payment.status === 'rejected' && (
                               <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
-                                {payment.admin_notes || 'Declined'}
+                                {payment.admin_notes || (language === 'am' ? 'ውድቅ ተደርጓል' : 'Declined')}
                               </div>
                             )}
                           </td>
@@ -784,22 +810,36 @@ export function AdminDashboardPage({ navigate }) {
       <Modal
         isOpen={!!selectedRejectPayment}
         onClose={() => setSelectedRejectPayment(null)}
-        title="Decline Telebirr Payment"
+        title={language === 'am' ? 'የቴሌብር ክፍያን ውድቅ አድርግ' : 'Decline Telebirr Payment'}
       >
         {selectedRejectPayment && (
           <div>
             <p style={{ marginBottom: '1rem', lineHeight: '1.5' }}>
-              Are you sure you want to decline Telebirr transaction <strong>{selectedRejectPayment.transaction_reference}</strong> submitted by <strong>{selectedRejectPayment.user_name}</strong> for <strong>{selectedRejectPayment.course_title_en}</strong>?
+              {language === 'am' ? (
+                <>
+                  በ<strong>{selectedRejectPayment.user_name}</strong> ለ<strong>{selectedRejectPayment.course_title_am || selectedRejectPayment.course_title_en}</strong> የቀረበውን የቴሌብር ግብይት መለያ <strong>{selectedRejectPayment.transaction_reference}</strong> ውድቅ ማድረግ ይፈልጋሉ?
+                </>
+              ) : (
+                <>
+                  Are you sure you want to decline Telebirr transaction <strong>{selectedRejectPayment.transaction_reference}</strong> submitted by <strong>{selectedRejectPayment.user_name}</strong> for <strong>{selectedRejectPayment.course_title_en}</strong>?
+                </>
+              )}
             </p>
 
             <div className="form-group" style={{ marginBottom: '1.25rem' }}>
-              <label className="form-label">Reason / Administrator Note for Student</label>
+              <label className="form-label">
+                {language === 'am' ? 'የውድቅ ምክንያት / ለአስተማሪ ወይም ለተማሪ የሚሰጥ ማስታወሻ' : 'Reason / Administrator Note for Student'}
+              </label>
               <textarea
                 rows={3}
                 className="form-textarea"
                 value={rejectReason}
                 onChange={(e) => setRejectReason(e.target.value)}
-                placeholder="Explain why the transaction could not be verified (e.g. invalid reference, incorrect amount)..."
+                placeholder={
+                  language === 'am'
+                    ? 'ክፍያው ያልተረጋገጠበትን ምክንያት ይግለጹ (ምሳሌ፡ የተሳሳተ የግብይት ቁጥር፣ ያልተሟላ መጠን ወዘተ)...'
+                    : 'Explain why the transaction could not be verified (e.g. invalid reference, incorrect amount)...'
+                }
               />
             </div>
 
@@ -809,14 +849,16 @@ export function AdminDashboardPage({ navigate }) {
                 className="btn btn-secondary"
                 disabled={processingPaymentId === selectedRejectPayment.id}
               >
-                Cancel
+                {language === 'am' ? 'ይቅር' : 'Cancel'}
               </button>
               <button
                 onClick={handleConfirmReject}
                 className="btn btn-danger"
                 disabled={processingPaymentId === selectedRejectPayment.id}
               >
-                {processingPaymentId === selectedRejectPayment.id ? 'Declining...' : 'Confirm Decline'}
+                {processingPaymentId === selectedRejectPayment.id
+                  ? (language === 'am' ? 'ውድቅ በማድረግ ላይ...' : 'Declining...')
+                  : (language === 'am' ? 'ውድቅ አድርግ' : 'Confirm Decline')}
               </button>
             </div>
           </div>
